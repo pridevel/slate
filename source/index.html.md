@@ -33,6 +33,17 @@ This example API documentation page was created with [Slate](https://github.com/
 
 This is some paragraph text. Exciting, no?
 
+Table Header 1 | Table Header 2 | Table Header 3
+-------------- | -------------- | --------------
+Row 1 col 1 | Row 1 col 2 | Row 1 col 3
+Row 2 col 1 | Row 2 col 2 | Row 2 col 3
+
+<!--<table>-->
+<!--  <tr>-->
+<!--  <td>### heading</td>-->
+<!--  </tr>-->
+<!--</table>-->
+
 
 ```ruby
 # This is some Ruby code!
