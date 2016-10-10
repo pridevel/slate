@@ -25,11 +25,12 @@ We have language bindings in Shell, Ruby, and Python! You can view code examples
 
 This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
-```ruby
-    # This is some Ruby code!
-    ```
-
-    ```python
-    # This is some Python code!
-    ```
 > This is a code annotation. It will appear in the area to the right, next to the code samples.
+
+```ruby
+# This is some Ruby code!
+```
+
+```python
+# This is some Python code!
+```
