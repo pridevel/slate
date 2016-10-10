@@ -45,6 +45,7 @@ Row 2 col 1 | Row 2 col 2 | Row 2 col 3
 <!--  </tr>-->
 <!--</table>-->
 
+This text is **bold**, this is *italic*, this is an `inline code block`.
 
 ```ruby
 # This is some Ruby code!
