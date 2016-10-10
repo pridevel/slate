@@ -33,6 +33,13 @@ This example API documentation page was created with [Slate](https://github.com/
 ```
 > This is a code annotation. It will appear in the area to the right, next to the code samples. 
 
+
+Table Header 1 | Table Header 2 | Table Header 3
+-------------- | -------------- | --------------
+Row 1 col 1 | Row 1 col 2 | Row 1 col 3
+Row 2 col 1 | Row 2 col 2 | Row 2 col 3
+
+
 ```python
 # This is some Python code!
 ```
