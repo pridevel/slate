@@ -32,3 +32,4 @@ This example API documentation page was created with [Slate](https://github.com/
     ```python
     # This is some Python code!
     ```
+> This is a code annotation. It will appear in the area to the right, next to the code samples.
