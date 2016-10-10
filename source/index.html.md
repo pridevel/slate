@@ -38,12 +38,6 @@ Table Header 1 | Table Header 2 | Table Header 3
 Row 1 col 1 | Row 1 col 2 | Row 1 col 3
 Row 2 col 1 | Row 2 col 2 | Row 2 col 3
 
-<!--<table>-->
-<!--  <tr>-->
-<!--    <td> table heading1</td>-->
-<!--    <td> table heading2</td>-->
-<!--  </tr>-->
-<!--</table>-->
 
 This text is **bold**, this is *italic*, this is an.
 
