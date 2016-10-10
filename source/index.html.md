@@ -27,7 +27,8 @@ This example API documentation page was created with [Slate](https://github.com/
 
 
 ```ruby
-# This is some Ruby code!
+	my_nums = [1, 2, 3]
+    my_nums.collect { |num| num ** 2 }
 ```
 
 ```python
