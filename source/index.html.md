@@ -53,6 +53,10 @@ This text is **bold**, this is *italic*, this is an.
 * Bullet
 * List
 
+<aside class="warning">
+You must replace `meowmeowmeow` with your personal API key.
+</aside>
+
 ```ruby
 # This is some Ruby code!
 ```
