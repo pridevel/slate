@@ -27,9 +27,9 @@ This example API documentation page was created with [Slate](https://github.com/
 -----
 
 ```ruby
-  # This is some Ruby code!
-  ```
+    # This is some Ruby code!
+    ```
 
-```python
-  # This is some Python code!
-```
+    ```python
+    # This is some Python code!
+    ```
