@@ -33,6 +33,9 @@ This example API documentation page was created with [Slate](https://github.com/
 ```
 > This is a code annotation. It will appear in the area to the right, next to the code samples. 
 
+# heading1
+## heading2
+### heading3
 
 Table Header 1 | Table Header 2 | Table Header 3
 -------------- | -------------- | --------------
@@ -55,7 +58,7 @@ Displaying the types of lists.
 * Bullet
 * List
 
-This is an [Google Page](https://www.google.co.in/) 
+This is an [Google Page](https://www.google.co.in/, blank) 
 
 <aside class="notice">
 You must replace `meowmeowmeow` with your personal API key.
