@@ -27,6 +27,13 @@ This example API documentation page was created with [Slate](https://github.com/
 
 > This is a code annotation. It will appear in the area to the right, next to the code samples.
 
+# Heading 1
+## heading 2
+### Heading 3
+
+This is some paragraph text. Exciting, no?
+
+
 ```ruby
 # This is some Ruby code!
 ```
