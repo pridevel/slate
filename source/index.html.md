@@ -39,6 +39,21 @@ Table Header 1 | Table Header 2 | Table Header 3
 Row 1 col 1 | Row 1 col 2 | Row 1 col 3
 Row 2 col 1 | Row 2 col 2 | Row 2 col 3
 
+This text is **bold line**, this is *italic line*, this is an.
+
+Displaying the types of lists. 
+
+1. This
+2. Is
+3. An
+4. Ordered
+5. List
+
+* This
+* Is
+* A
+* Bullet
+* List
 
 ```python
 # This is some Python code!
