@@ -25,37 +25,7 @@ We have language bindings in Shell, Ruby, and Python! You can view code examples
 
 This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
-> This is a code annotation. It will appear in the area to the right, next to the code samples.
 
-# Heading 1
-## heading 2
-### Heading 3
-
-This is some paragraph text. Exciting, no?
-
-Table Header 1 | Table Header 2 | Table Header 3
--------------- | -------------- | --------------
-Row 1 col 1 | Row 1 col 2 | Row 1 col 3
-Row 2 col 1 | Row 2 col 2 | Row 2 col 3
-
-
-This text is **bold**, this is *italic*, this is an.
-
-1. This
-2. Is
-3. An
-4. Ordered
-5. List
-
-* This
-* Is
-* A
-* Bullet
-* List
-
-<aside class="warning">
-You must replace `meowmeowmeow` with your personal API key.
-</aside>
 
 ```ruby
 # This is some Ruby code!
