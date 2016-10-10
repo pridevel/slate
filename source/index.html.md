@@ -31,6 +31,7 @@ This example API documentation page was created with [Slate](https://github.com/
 	my_nums = [1, 2, 3]
     my_nums.collect { |num| num ** 2 }
 ```
+> This is a code annotation. It will appear in the area to the right, next to the code samples. 
 
 ```python
 # This is some Python code!
