@@ -45,7 +45,19 @@ Row 2 col 1 | Row 2 col 2 | Row 2 col 3
 <!--  </tr>-->
 <!--</table>-->
 
-This text is **bold**, this is *italic*, this is an `inline code block`.
+This text is **bold**, this is *italic*, this is an.
+
+1. This
+2. Is
+3. An
+4. Ordered
+5. List
+
+* This
+* Is
+* A
+* Bullet
+* List
 
 ```ruby
 # This is some Ruby code!
