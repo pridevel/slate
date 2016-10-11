@@ -148,6 +148,8 @@ Ruby's **if** statement takes an expression, which is just a fancy word for some
 If it's not true (that is, false), Ruby doesn't execute that block of code: it skips it and goes on to the next thing, that is **else** statement or **end**.
 When you're done with your **if**, you have to tell Ruby by typing **end**.
 
+If you want to add more options you can use **elsif** statement.
+
 ```ruby
 age = 15
 
@@ -162,10 +164,77 @@ end
 output : you are young!!
 ```
 
+```ruby
+# elsif Example
 
+x = 5, y = 4;
 
+if x < y  
+  puts "x is less than y!"
+elsif x > y
+  puts "x is greater than y!"
+else
+  puts "x equals y!"
+end
 
+```
+## Operators
+* Ruby has three operators:  and (&&), or (||), and not (!)
 
+### And(&&)
+* It evaluates true when both the expressions are true.
+
+TruthTable: 
+
+true && true # => true
+true && false # => false
+false && true # => false
+false && false # => false
+
+```ruby
+# boolean_1 = 77 < 78 && 77 < 77
+boolean_1 = false
+
+# boolean_2 = true && 100 >= 100
+boolean_2 = true
+
+# boolean_3 = 2**3 == 8 && 3**2 == 9
+boolean_3 = true
+```
+### OR(||)
+* it evaluates to true when one or the other or both expressions are true.
+
+true || true # => true
+true || false # => true
+false || true # => true
+false || false # => false
+
+```ruby
+
+# boolean_1 = 2**3 != 3**2 || true
+boolean_1 = true
+
+# boolean_2 = false || -10 > -9
+boolean_2 = false
+
+# boolean_3 = false || false
+boolean_3 = false
+
+```
+
+### NOT(!)
+* It makes true values false, and vice-versa.
+
+!true # => false
+!false # => true
+
+```ruby
+# boolean_1 = !true
+boolean_1 = false
+
+# boolean_2 = !true && !true
+boolean_2 = false
+```
 
 
 
