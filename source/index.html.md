@@ -127,6 +127,24 @@ puts "savi".downcase
     # this is comment.
 
 ```
+* Multi-Line Comment 
+If you want to comment Multiple lines at a time you can use this method.
+If you start with =begin and end with =end, everything between those two expressions will be a comment.
+
+```ruby
+=begin
+
+heyy this is a command
+this 
+is '
+another
+comment 
+=end
+
+```
+
+
+* 
 
 
 
