@@ -78,6 +78,7 @@ Modulo returns the remainder of division. For example, 25 % 7 would be 4, since 
 
 ## Print and Puts Commamds
 The **print** command just takes whatever you give it and prints it to the screen where as **puts** (for "put string") is slightly different: it adds a new (blank) line after the thing you want it to print.
+
 ```ruby
 puts "heyyyyy"
 puts 'Whatssupppp'
