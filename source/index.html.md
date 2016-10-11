@@ -88,7 +88,6 @@ The **print** command just takes whatever you give it and prints it to the scree
     output: heyyyyy
     Whatssupppp
     Hello!World!
-
 ```
 
 
