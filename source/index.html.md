@@ -36,11 +36,12 @@ search: true
 
 * String 
  Strings are the words or phrases. You can define them in single quoutes(' ') or double quotes (" ").
- ```ruby
+
+```ruby
    my_string = "Hello, World!"
  
    my_other_string = 'What's going on?'
- ```
+```
  
 * Number
  Ruby can handle both integers and floating point numbers (numbers with decimals).
@@ -56,16 +57,16 @@ twenty_five_point_two = ten + fifteen_point_two;
 
 * Booleans
  The value of the boolean can be either true or false.
- ```ruby
+```ruby
  my_boolean = true
- ```
+```
 
 ## Variable
 * Variables are the letters or words that stores the single value. 
 
- ```ruby
-  x = 20
- ```
+```ruby
+ x = 20
+```
 
 ## Maths
 * You can perform mathematical operation like Addition (+), Subtraction (-), Division (/), Exponentiation (**),
