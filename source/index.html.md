@@ -142,9 +142,26 @@ comment
 =end
 
 ```
+## Control Flow
+* If statement
+Ruby's **if** statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the **if**.
+If it's not true (that is, false), Ruby doesn't execute that block of code: it skips it and goes on to the next thing, that is **else** statement or **end**.
+When you're done with your **if**, you have to tell Ruby by typing **end**.
 
+```ruby
+age = 15
 
-* 
+if age < 20
+    print "you are young!!"
+    
+else
+    
+print "you have passed ur teenage"
+end
+
+output : you are young!!
+```
+
 
 
 
