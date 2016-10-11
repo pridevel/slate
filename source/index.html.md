@@ -90,7 +90,37 @@ print "World!"
    Whatssupppp
    Hello!World!
 ```
+## Methods on Strings
+* .length 
+ This method return the length of the string (that is, the number of characters—letters, numbers, spaces, and symbols).
 
+```ruby
+"hiee this is savi".length
+
+// output: 17
+```
+* .reverse 
+ This method spits out a backwards version of the string you gave it.
+
+```ruby
+"hello savi".reverse
+
+// output: "ivas olleh"
+```
+
+* .upcase and .downcase
+This methods are used to convert a string to ALL UPPER CASE or all lower case, respectively. 
+
+```ruby
+puts "savi".upcase
+
+puts "savi".downcase
+
+//output: SAVI
+        savi
+```
+
+* 
 
 
 
