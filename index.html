@@ -259,9 +259,26 @@ comment
 
 </code></pre>
 
+<h2 id="control-flow">Control Flow</h2>
+
 <ul>
-<li></li>
+<li>If statement
+Ruby&rsquo;s <strong>if</strong> statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the <strong>if</strong>.
+If it&rsquo;s not true (that is, false), Ruby doesn&rsquo;t execute that block of code: it skips it and goes on to the next thing, that is <strong>else</strong> statement or <strong>end</strong>.
+When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by typing <strong>end</strong>.</li>
 </ul>
+<pre class="highlight ruby"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span>
+    <span class="nb">print</span> <span class="s2">"you are young!!"</span>
+
+<span class="k">else</span>
+
+<span class="nb">print</span> <span class="s2">"you have passed ur teenage"</span>
+<span class="k">end</span>
+
+<span class="n">output</span> <span class="p">:</span> <span class="n">you</span> <span class="n">are</span> <span class="n">young!</span><span class="o">!</span>
+</code></pre>
 
           <h1 id="errors">Errors</h1>
 
