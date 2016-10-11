@@ -119,7 +119,13 @@ puts "savi".downcase
 //output: SAVI
         savi
 ```
+## Comments
+* Single line Comments
+ It is denoted by "#", in front of the line you want to comment out.
+```ruby
+# this is comment.
 
+```
 * 
 
 
