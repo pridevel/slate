@@ -26,6 +26,7 @@ search: true
 *High-level, meaning reading and writing Ruby is really easy—it looks a lot like regular English!
 
 *Interpreted, meaning you don't need a compiler to write and run Ruby. You can write it on your own computer.
+>The interpreter is the program that takes the code you write and runs it. You type code in the editor, the interpreter reads your code, and it shows you the result of running your code in the console. 
 
 *Object-oriented, meaning it allows users to manipulate data structures called objects in order to build and execute programs. All you need to know is everything in Ruby is an object.
 
@@ -40,7 +41,7 @@ search: true
 ```ruby
    my_string = "Hello, World!"
  
-   my_other_string = 'What's going on?'
+   my_other_string = 'What are you doing?'
 ```
  
 * Number
@@ -74,6 +75,21 @@ Modulo (%),Multiplication (*) in Ruby.
 * For example, 2**3 is 8, since 2**3 means "give me 2 * 2 * 2" (2 multiplied together 3 times). 3**2 is 9 (3 * 3), and so on.
 
 Modulo returns the remainder of division. For example, 25 % 7 would be 4, since 7 goes into 25 3 times with 4 left over.
+
+## Print and Puts Commamds
+The **print** command just takes whatever you give it and prints it to the screen where as **puts** (for "put string") is slightly different: it adds a new (blank) line after the thing you want it to print.
+```ruby
+puts "heyyyyy"
+puts 'Whatssupppp'
+
+print "Hello!"
+print "World!"
+
+output: heyyyyy
+    Whatssupppp
+    Hello!World!
+
+```
 
 
 
