@@ -259,42 +259,6 @@ comment
 
 </code></pre>
 
-<h2 id="control-flow">Control Flow</h2>
-
-<ul>
-<li>If statement
-Ruby&rsquo;s <strong>if</strong> statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the <strong>if</strong>.
-If it&rsquo;s not true (that is, false), Ruby doesn&rsquo;t execute that block of code: it skips it and goes on to the next thing, that is <strong>else</strong> statement or <strong>end</strong>.
-When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by typing <strong>end</strong>.</li>
-</ul>
-
-<p>If you want to add more options you can use <strong>elsif</strong> statement.</p>
-<pre class="highlight ruby"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
-
-<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span>
-    <span class="nb">print</span> <span class="s2">"you are young!!"</span>
-
-<span class="k">else</span>
-
-<span class="nb">print</span> <span class="s2">"you have passed ur teenage"</span>
-<span class="k">end</span>
-
-<span class="n">output</span> <span class="p">:</span> <span class="n">you</span> <span class="n">are</span> <span class="n">young!</span><span class="o">!</span>
-</code></pre>
-<pre class="highlight ruby"><code><span class="c1"># elsif Example</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>  
-  <span class="nb">puts</span> <span class="s2">"x is less than y!"</span>
-<span class="k">elsif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
-  <span class="nb">puts</span> <span class="s2">"x is greater than y!"</span>
-<span class="k">else</span>
-  <span class="nb">puts</span> <span class="s2">"x equals y!"</span>
-<span class="k">end</span>
-
-</code></pre>
-
 <h2 id="operators">Operators</h2>
 
 <ul>
@@ -358,6 +322,73 @@ false || false # =&gt; false</p>
 
 <span class="c1"># boolean_2 = !true &amp;&amp; !true</span>
 <span class="n">boolean_2</span> <span class="o">=</span> <span class="kp">false</span>
+</code></pre>
+
+<h2 id="control-flow">Control Flow</h2>
+
+<ul>
+<li>If statement
+Ruby&rsquo;s <strong>if</strong> statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the <strong>if</strong>.
+If it&rsquo;s not true (that is, false), Ruby doesn&rsquo;t execute that block of code: it skips it and goes on to the next thing, that is <strong>else</strong> statement or <strong>end</strong>.
+When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by typing <strong>end</strong>.</li>
+</ul>
+
+<p>If you want to add more options you can use <strong>elsif</strong> statement.</p>
+<pre class="highlight ruby"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span>
+    <span class="nb">print</span> <span class="s2">"you are young!!"</span>
+
+<span class="k">else</span>
+
+<span class="nb">print</span> <span class="s2">"you have passed ur teenage"</span>
+<span class="k">end</span>
+
+<span class="n">output</span> <span class="p">:</span> <span class="n">you</span> <span class="n">are</span> <span class="n">young!</span><span class="o">!</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1"># elsif Example</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>  
+  <span class="nb">puts</span> <span class="s2">"x is less than y!"</span>
+<span class="k">elsif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+  <span class="nb">puts</span> <span class="s2">"x is greater than y!"</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="s2">"x equals y!"</span>
+<span class="k">end</span>
+
+</code></pre>
+
+<h2 id="loops">Loops</h2>
+
+<p>Loops in Ruby are used to execute the same block of code a specified number of times. You can refer more about <a href="https://www.tutorialspoint.com/ruby/ruby_loops.htm">loops</a> here.</p>
+
+<h3 id="while-loop">while loop</h3>
+
+<p>*This loop is used when you want to repeat an action in Ruby while a certain condition is true.</p>
+<pre class="highlight ruby"><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">11</span>
+  <span class="nb">puts</span> <span class="n">counter</span>
+  <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="sr">//</span> <span class="ss">output: </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
+</code></pre>
+
+<h3 id="for-loop">for loop</h3>
+
+<p>*This loop is used when you do know how many times you&rsquo;ll be looping.</p>
+<pre class="highlight ruby"><code><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">5</span>
+   <span class="nb">puts</span> <span class="s2">"Value of local variable is </span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="sr">//</span> <span class="n">output</span><span class="ss">:Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">0</span>
+<span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">1</span>
+<span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">2</span>
+<span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">3</span>
+<span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">4</span>
+<span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">5</span>
 </code></pre>
 
           <h1 id="errors">Errors</h1>
