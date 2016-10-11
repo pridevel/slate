@@ -267,6 +267,8 @@ Ruby&rsquo;s <strong>if</strong> statement takes an expression, which is just a 
 If it&rsquo;s not true (that is, false), Ruby doesn&rsquo;t execute that block of code: it skips it and goes on to the next thing, that is <strong>else</strong> statement or <strong>end</strong>.
 When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by typing <strong>end</strong>.</li>
 </ul>
+
+<p>If you want to add more options you can use <strong>elsif</strong> statement.</p>
 <pre class="highlight ruby"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
 
 <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span>
@@ -278,6 +280,84 @@ When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by t
 <span class="k">end</span>
 
 <span class="n">output</span> <span class="p">:</span> <span class="n">you</span> <span class="n">are</span> <span class="n">young!</span><span class="o">!</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1"># elsif Example</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>  
+  <span class="nb">puts</span> <span class="s2">"x is less than y!"</span>
+<span class="k">elsif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+  <span class="nb">puts</span> <span class="s2">"x is greater than y!"</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="s2">"x equals y!"</span>
+<span class="k">end</span>
+
+</code></pre>
+
+<h2 id="operators">Operators</h2>
+
+<ul>
+<li>Ruby has three operators:  and (&amp;&amp;), or (||), and not (!)</li>
+</ul>
+
+<h3 id="and-amp-amp">And(&amp;&amp;)</h3>
+
+<ul>
+<li>It evaluates true when both the expressions are true.</li>
+</ul>
+
+<p>TruthTable: </p>
+
+<p>true &amp;&amp; true # =&gt; true
+true &amp;&amp; false # =&gt; false
+false &amp;&amp; true # =&gt; false
+false &amp;&amp; false # =&gt; false</p>
+<pre class="highlight ruby"><code><span class="c1"># boolean_1 = 77 &lt; 78 &amp;&amp; 77 &lt; 77</span>
+<span class="n">boolean_1</span> <span class="o">=</span> <span class="kp">false</span>
+
+<span class="c1"># boolean_2 = true &amp;&amp; 100 &gt;= 100</span>
+<span class="n">boolean_2</span> <span class="o">=</span> <span class="kp">true</span>
+
+<span class="c1"># boolean_3 = 2**3 == 8 &amp;&amp; 3**2 == 9</span>
+<span class="n">boolean_3</span> <span class="o">=</span> <span class="kp">true</span>
+</code></pre>
+
+<h3 id="or">OR(||)</h3>
+
+<ul>
+<li>it evaluates to true when one or the other or both expressions are true.</li>
+</ul>
+
+<p>true || true # =&gt; true
+true || false # =&gt; true
+false || true # =&gt; true
+false || false # =&gt; false</p>
+<pre class="highlight ruby"><code>
+<span class="c1"># boolean_1 = 2**3 != 3**2 || true</span>
+<span class="n">boolean_1</span> <span class="o">=</span> <span class="kp">true</span>
+
+<span class="c1"># boolean_2 = false || -10 &gt; -9</span>
+<span class="n">boolean_2</span> <span class="o">=</span> <span class="kp">false</span>
+
+<span class="c1"># boolean_3 = false || false</span>
+<span class="n">boolean_3</span> <span class="o">=</span> <span class="kp">false</span>
+
+</code></pre>
+
+<h3 id="not">NOT(!)</h3>
+
+<ul>
+<li>It makes true values false, and vice-versa.</li>
+</ul>
+
+<p>!true # =&gt; false
+!false # =&gt; true</p>
+<pre class="highlight ruby"><code><span class="c1"># boolean_1 = !true</span>
+<span class="n">boolean_1</span> <span class="o">=</span> <span class="kp">false</span>
+
+<span class="c1"># boolean_2 = !true &amp;&amp; !true</span>
+<span class="n">boolean_2</span> <span class="o">=</span> <span class="kp">false</span>
 </code></pre>
 
           <h1 id="errors">Errors</h1>
