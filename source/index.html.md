@@ -424,16 +424,16 @@ puts my_hash["employee?"]
 
 You can create an empty hash with the new class method.
 Here we are creating an empty hash named as "names".
-
+```ruby
 names = Hash.new
+```
 
 You can also use new to create a hash with a default value, which is otherwise just nil.
-<aside class="notice">
+```ruby
 months = Hash.new( "month" )
 
 months = Hash.new "month"
-</aside>
-
+```
 
 
 
