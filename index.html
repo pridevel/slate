@@ -417,7 +417,6 @@ You can refere more about Arrays <a href="https://ruby-doc.org/core-2.2.0/Array.
 <pre class="highlight ruby"><code><span class="n">my_arr</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="sr">//</span> <span class="n">this</span> <span class="n">array</span> <span class="n">has</span> <span class="n">a</span> <span class="n">length</span> <span class="n">of</span> <span class="mi">10</span> <span class="n">elements</span><span class="p">.</span>
 
-
 <span class="nf">my_other_arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"new"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"hie"</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">100</span><span class="p">];</span> 
 
 </code></pre>
@@ -533,7 +532,36 @@ Hash syntax looks like this:</p>
   key1 =&gt; value1, <br>
   key2 =&gt; value2, <br>
   key3 =&gt; value3 <br>
+}
+&ldquo;`ruby</p>
+
+<p>my_hash = { &quot;name&rdquo; =&gt; &ldquo;Savi&rdquo;,
+  &ldquo;age&rdquo; =&gt; 22,
+  &ldquo;employee?&rdquo; =&gt; true
 }</p>
+
+<p>puts my_hash[&ldquo;name&rdquo;]
+puts my_hash[&ldquo;age&rdquo;]
+puts my_hash[&ldquo;employee?&rdquo;]</p>
+
+<p>//output: Savi
+          22
+          true
+&ldquo;`</p>
+
+<h3 id="creating-hashes">Creating Hashes</h3>
+
+<p>You can create an empty hash with the new class method.
+Here we are creating an empty hash named as &quot;names&rdquo;.</p>
+
+<p>names = Hash.new</p>
+
+<p>You can also use new to create a hash with a default value, which is otherwise just nil.
+<aside class="notice">
+months = Hash.new( &ldquo;month&rdquo; )</p>
+
+<p>months = Hash.new &ldquo;month&rdquo;
+</aside></p>
 
           <h1 id="errors">Errors</h1>
 
