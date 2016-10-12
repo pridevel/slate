@@ -401,10 +401,11 @@ Values are assigned to keys using "=>"
 Hash syntax looks like this:
 
 hash = {
-  key1 => value1,
-  key2 => value2,
-  key3 => value3
+  key1 => value1, <br>
+  key2 => value2, <br>
+  key3 => value3 <br>
 }
+
 
 
 
