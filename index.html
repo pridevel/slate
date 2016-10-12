@@ -394,6 +394,8 @@ The index value starts from <strong>0</strong>.
 Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.
 You can refere more about Arrays <a href="https://ruby-doc.org/core-2.2.0/Array.html">here</a></p>
 
+<h3 id="creating-array">Creating array</h3>
+
 <p>There are two ways to create an empty array:</p>
 
 <ol>
@@ -408,7 +410,9 @@ You can refere more about Arrays <a href="https://ruby-doc.org/core-2.2.0/Array.
 
 </code></pre>
 
-<p>Now we will see how to iterate through the Arrays. A more useful iterator is the <strong>.each</strong> method, which can apply an expression to each element of an object, one at a time. 
+<h3 id="displaying-elements-of-array">Displaying Elements of Array</h3>
+
+<p>Now we will see how to iterate through the elements of an Array. A more useful iterator is the <strong>.each</strong> method, which can apply an expression to each element of an object, one at a time. 
 The syntax looks like this:</p>
 
 <p>object.each { |item| # Do something }</p>
@@ -440,6 +444,60 @@ end</p>
 
 <span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
 </code></pre>
+
+<h3 id="accessing-element-from-array">Accessing Element from Array</h3>
+
+<p>You can also access the single element from the array by specifying its <strong>index</strong>.
+The first element gets index 0, the next gets index 1, the one after that gets index 2, and so on.</p>
+<pre class="highlight ruby"><code><span class="n">demo_array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+
+<span class="nb">print</span> <span class="n">demo_array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="sr">//ou</span><span class="ss">tput: </span><span class="mi">300</span>
+
+</code></pre>
+
+<h3 id="adding-items-to-array">Adding Items to Array</h3>
+
+<p>Arrays are flexible because of the fact that we could easily add or remove an item or element from an Array.
+For adding the element in an Array we use <strong>.push</strong> method. Push method inserts the element at the end of an array.</p>
+<pre class="highlight ruby"><code><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"cat"</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kp">true</span><span class="p">]</span>
+<span class="n">b</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="s2">"dog"</span><span class="p">)</span>
+
+<span class="sr">//</span> <span class="ss">output: </span><span class="p">[</span><span class="s2">"cat"</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kp">true</span><span class="p">,</span> <span class="s2">"dog"</span><span class="p">]</span>
+</code></pre>
+
+<p>If you want to add value to the beginning of an array, you use the <strong>unshift</strong> method.
+<code class="prettyprint">ruby
+b.unshift(&quot;8.53&quot;)
+// output: [&quot;8.53&quot;, &quot;hello&quot;, 100, true, &quot;dog&quot;]
+</code></p>
+
+<h3 id="removing-item-from-array">Removing Item From Array</h3>
+
+<p>To remove an element from array we use <strong>pop</strong> method.
+This method removes an returns the element at the last item of an array.</p>
+<pre class="highlight ruby"><code><span class="n">b</span><span class="p">.</span><span class="nf">pop</span>
+<span class="no">Output</span><span class="p">:</span> <span class="s2">"dog"</span>
+<span class="n">array</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"8.53"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="kp">true</span><span class="p">]</span>
+</code></pre>
+
+<p>To remove the first item, you use the shift method.
+<code class="prettyprint">ruby
+b.shift
+// Output: &quot;6.23&quot;
+array : [&quot;hello&quot;, 100, true]
+</code></p>
+
+<h3 id="replacing-item-in-array">Replacing Item In Array</h3>
+
+<p>If we want to replace a specific item from an array we can do it as follows:</p>
+
+<p>array : 
+b = [&ldquo;hello&rdquo;, 100, true]
+b[1] = 50</p>
+
+<p>// Output: b = [&ldquo;hello&rdquo;, 50, true]</p>
 
           <h1 id="errors">Errors</h1>
 
