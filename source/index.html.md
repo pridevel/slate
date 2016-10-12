@@ -240,7 +240,7 @@ end
 
 #Loops 
 Loops in Ruby are used to execute the same block of code a specified number of times. You can refer more about [loops](https://www.tutorialspoint.com/ruby/ruby_loops.htm) here.
-### while loop
+## while loop
 
 * This loop is used when you want to repeat an action in Ruby while a certain condition is true.
 
@@ -254,7 +254,7 @@ end
 // output: 1 2 3 4 5 6 7 8 9 10
 ```
 
-### for loop
+## for loop
 
 * This loop is used when you do know how many times you'll be looping.
 
