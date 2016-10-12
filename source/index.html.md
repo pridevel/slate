@@ -291,7 +291,6 @@ There are two ways to create an empty array:
 my_arr = Array.new(10)
 // this array has a length of 10 elements.
 
-
 my_other_arr = [1, 2, "new", ["hie",5], 55, 100]; 
 
 ```
@@ -405,15 +404,35 @@ hash = {
   key2 => value2, <br>
   key3 => value3 <br>
 }
+```ruby
 
+my_hash = { "name" => "Savi",
+  "age" => 22,
+  "employee?" => true
+}
 
+puts my_hash["name"]
+puts my_hash["age"]
+puts my_hash["employee?"]
 
+//output: Savi
+          22
+          true
+```
 
+### Creating Hashes
 
+You can create an empty hash with the new class method.
+Here we are creating an empty hash named as "names".
 
- 
+names = Hash.new
 
+You can also use new to create a hash with a default value, which is otherwise just nil.
+<aside class="notice">
+months = Hash.new( "month" )
 
+months = Hash.new "month"
+</aside>
 
 
 
