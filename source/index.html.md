@@ -448,7 +448,7 @@ Accessing the key-value pair from hash is same as accessing the items in an arra
 For accessing the key-value pair from hash we are going to use **each** loop.
 
 ```ruby
-
+// Accessing Hash Values:
 family = { "Homer" => "dad",
   "Marge" => "mom",
   "Lisa" => "sister",
@@ -467,6 +467,18 @@ family.each { |x, y| puts "#{x}: #{y}" }
             Tom: dog
 
 ```
+# Ruby on Rails
+
+Ruby on Rails is an extremely productive web application framework written in Ruby by David Heinemeier Hansson.
+It is a web framework that makes it easy to build powerful web apps in a short amount of time.
+Rails includes everything needed to create a database-driven web application, using the Model-View-Controller pattern.
+Requires fewer lines of code than other frameworks.
+
+## Setting up account on Cloud9.
+
+For setting up your account on cloud9 click [here](https://ide.c9.io)
+
+
 
 
 
