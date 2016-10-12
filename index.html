@@ -203,28 +203,25 @@ Modulo (%),Multiplication (</em>) in Ruby.</li>
 
 <h2 id="methods-on-strings">Methods on Strings</h2>
 
-<ul>
-<li>.length 
-This method return the length of the string (that is, the number of characters—letters, numbers, spaces, and symbols).</li>
-</ul>
+<h3 id="length">.length</h3>
+
+<p>This method return the length of the string (that is, the number of characters—letters, numbers, spaces, and symbols).</p>
 <pre class="highlight ruby"><code><span class="s2">"hiee this is savi"</span><span class="p">.</span><span class="nf">length</span>
 
 <span class="sr">//</span> <span class="ss">output: </span><span class="mi">17</span>
 </code></pre>
 
-<ul>
-<li>.reverse 
-This method spits out a backwards version of the string you gave it.</li>
-</ul>
+<h3 id="reverse">.reverse</h3>
+
+<p>This method spits out a backwards version of the string you gave it.</p>
 <pre class="highlight ruby"><code><span class="s2">"hello savi"</span><span class="p">.</span><span class="nf">reverse</span>
 
 <span class="sr">//</span> <span class="ss">output: </span><span class="s2">"ivas olleh"</span>
 </code></pre>
 
-<ul>
-<li>.upcase and .downcase
-This methods are used to convert a string to ALL UPPER CASE or all lower case, respectively. </li>
-</ul>
+<h3 id="upcase-and-downcase">.upcase and .downcase</h3>
+
+<p>This methods are used to convert a string to ALL UPPER CASE or all lower case, respectively. </p>
 <pre class="highlight ruby"><code><span class="nb">puts</span> <span class="s2">"savi"</span><span class="p">.</span><span class="nf">upcase</span>
 
 <span class="nb">puts</span> <span class="s2">"savi"</span><span class="p">.</span><span class="nf">downcase</span>
@@ -235,19 +232,17 @@ This methods are used to convert a string to ALL UPPER CASE or all lower case, r
 
 <h2 id="comments">Comments</h2>
 
-<ul>
-<li>Single line Comments
-It is denoted by &ldquo;#&rdquo;, in front of the line you want to comment out.</li>
-</ul>
+<h3 id="single-line-comments">Single line Comments</h3>
+
+<p>It is denoted by &ldquo;#&rdquo;, in front of the line you want to comment out.</p>
 <pre class="highlight ruby"><code>    <span class="c1"># this is comment.</span>
 
 </code></pre>
 
-<ul>
-<li>Multi-Line Comment 
-If you want to comment Multiple lines at a time you can use this method.
-If you start with =begin and end with =end, everything between those two expressions will be a comment.</li>
-</ul>
+<h3 id="multi-line-comment">Multi-Line Comment</h3>
+
+<p>If you want to comment Multiple lines at a time you can use this method.
+If you start with =begin and end with =end, everything between those two expressions will be a comment.</p>
 <pre class="highlight ruby"><code><span class="cm">=begin
 
 heyy this is a command
@@ -326,12 +321,11 @@ false || false # =&gt; false</p>
 
 <h2 id="control-flow">Control Flow</h2>
 
-<ul>
-<li>If statement
-Ruby&rsquo;s <strong>if</strong> statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the <strong>if</strong>.
+<h3 id="if-statement">If statement</h3>
+
+<p>Ruby&rsquo;s <strong>if</strong> statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the <strong>if</strong>.
 If it&rsquo;s not true (that is, false), Ruby doesn&rsquo;t execute that block of code: it skips it and goes on to the next thing, that is <strong>else</strong> statement or <strong>end</strong>.
-When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by typing <strong>end</strong>.</li>
-</ul>
+When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by typing <strong>end</strong>.</p>
 
 <p>If you want to add more options you can use <strong>elsif</strong> statement.</p>
 <pre class="highlight ruby"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
@@ -391,6 +385,27 @@ When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by t
 <span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">3</span>
 <span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">4</span>
 <span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">5</span>
+</code></pre>
+
+<h2 id="arrays">Arrays</h2>
+
+<p>Arrays are collection of objects which are ordered and have index.
+The index value starts deom <strong>0</strong>.
+Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.
+You can refere more about Arrays <a href="https://www.tutorialspoint.com/ruby/ruby_arrays.htm, https://ruby-doc.org/core-2.2.0/Array.html">here</a></p>
+
+<p>There are two ways to create an empty array:</p>
+
+<ol>
+<li><p>my_arr = Array.new  =&gt; []</p></li>
+<li><p>my_other_arr = []    =&gt; <a href="Literal Method"></a></p></li>
+</ol>
+<pre class="highlight ruby"><code><span class="n">my_arr</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="sr">//</span> <span class="n">this</span> <span class="n">array</span> <span class="n">has</span> <span class="n">a</span> <span class="n">length</span> <span class="n">of</span> <span class="mi">10</span> <span class="n">elements</span><span class="p">.</span>
+
+
+<span class="nf">my_other_arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"new"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"hie"</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="mi">55</span><span class="p">,</span><span class="mi">100</span><span class="p">];</span> 
+
 </code></pre>
 
           <h1 id="errors">Errors</h1>
