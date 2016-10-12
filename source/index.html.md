@@ -442,6 +442,33 @@ output: dog
 ```
 <hr>
 
+### Accessing Hash Values
+
+Accessing the key-value pair from hash is same as accessing the items in an array.
+For accessing the key-value pair from hash we are going to use **each** loop.
+
+```ruby
+
+family = { "Homer" => "dad",
+  "Marge" => "mom",
+  "Lisa" => "sister",
+  "Maggie" => "sister",
+  "Jane" => "grandpa",
+  "Tom" => "dog"
+}
+
+family.each { |x, y| puts "#{x}: #{y}" }
+
+// output:  Homer: dad
+            Marge: mom
+            Lisa: sister
+            Maggie: sister
+            Jane: grandpa
+            Tom: dog
+
+```
+
+
 
 
 
