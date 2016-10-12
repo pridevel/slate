@@ -145,7 +145,7 @@ comment
 # Operators
 * Ruby has three operators:  and (&&), or (||), and not (!)
 
-### And(&&)
+## And(&&)
 * It evaluates true when both the expressions are true.
 
 TruthTable: 
@@ -165,7 +165,7 @@ boolean_2 = true
 # boolean_3 = 2**3 == 8 && 3**2 == 9
 boolean_3 = true
 ```
-### OR(||)
+## OR(||)
 * it evaluates to true when one or the other or both expressions are true.
 
 true || true # => true,
@@ -186,7 +186,7 @@ boolean_3 = false
 
 ```
 
-### NOT(!)
+## NOT(!)
 * It makes true values false, and vice-versa.
 
 !true # => false,
@@ -272,7 +272,9 @@ Value of local variable is 5
 ```
 
 
-
+#Arrays
+## Array1 
+### Array2
 
 
 
