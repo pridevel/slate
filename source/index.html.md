@@ -374,6 +374,7 @@ Output: "dog"
 array : ["8.53", "hello", 100, true]
 ```
 
+
 To remove the first item, you use the shift method.
 ```ruby
 b.shift
@@ -404,7 +405,7 @@ hash = {
   key2 => value2, <br>
   key3 => value3 <br>
 }
-
+<hr>
 ### Creating Hashes
 
 Using Literal form to create a hash. Here, my_hash is the name of the hash. 
@@ -439,6 +440,7 @@ puts pets["tommy"]
 
 output: dog
 ```
+<hr>
 
 
 
