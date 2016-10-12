@@ -291,7 +291,7 @@ my_arr = Array.new(10)
 // this array has a length of 10 elements.
 
 
-my_other_arr = [1,2, "new", ["hie",5],55,100]; 
+my_other_arr = [1, 2, "new", ["hie",5], 55, 100]; 
 
 ```
 ### Displaying Elements of Array
