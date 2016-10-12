@@ -294,6 +294,7 @@ my_arr = Array.new(10)
 my_other_arr = [1, 2, "new", ["hie",5], 55, 100]; 
 
 ```
+<hr>
 ### Displaying Elements of Array
 Now we will see how to iterate through the elements of an Array. A more useful iterator is the **.each** method, which can apply an expression to each element of an object, one at a time. 
 The syntax looks like this:
@@ -329,7 +330,7 @@ puts "#{nums}"
 
 Output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
-
+<hr>
 ### Accessing Element from Array
 You can also access the single element from the array by specifying its **index**.
 The first element gets index 0, the next gets index 1, the one after that gets index 2, and so on.
@@ -343,7 +344,7 @@ print demo_array[2]
 //output: 300
 
 ```
-
+<hr>
 ### Adding Items to Array
 Arrays are flexible because of the fact that we could easily add or remove an item or element from an Array.
 For adding the element in an Array we use **.push** method. Push method inserts the element at the end of an array.
@@ -361,6 +362,7 @@ If you want to add value to the beginning of an array, you use the **unshift** m
 b.unshift("8.53")
 // output: ["8.53", "hello", 100, true, "dog"]
 ```
+<hr>
 ### Removing Item From Array
 
 To remove an element from array we use **pop** method.
@@ -378,7 +380,6 @@ b.shift
 // Output: "6.23"
 array : ["hello", 100, true]
  ```
-
 <hr> 
 ### Replacing Item In Array
 
