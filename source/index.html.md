@@ -378,7 +378,8 @@ b.shift
 // Output: "6.23"
 array : ["hello", 100, true]
  ```
- 
+
+<hr> 
 ### Replacing Item In Array
 
 If we want to replace a specific item from an array we can do it as follows:
