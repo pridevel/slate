@@ -335,6 +335,7 @@ You can also access the single element from the array by specifying its **index*
 The first element gets index 0, the next gets index 1, the one after that gets index 2, and so on.
 
 ```ruby
+// Accessing Element from Array Example
 demo_array = [100, 200, 300, 400, 500]
 
 print demo_array[2]
@@ -348,6 +349,7 @@ Arrays are flexible because of the fact that we could easily add or remove an it
 For adding the element in an Array we use **.push** method. Push method inserts the element at the end of an array.
 
 ```ruby
+// adding item into array
 b = ["cat", 5, true]
 b.push("dog")
 
@@ -387,7 +389,7 @@ b[1] = 50
 
 // Output: b = ["hello", 50, true]
 
-
+## Hash
 
 
 
