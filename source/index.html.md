@@ -39,9 +39,9 @@ search: true
  Strings are the words or phrases. You can define them in single quoutes(' ') or double quotes (" ").
 
 ```ruby
-   my_string = "Hello, World!"
+my_string = "Hello, World!"
  
-   my_other_string = 'What are you doing?'
+my_other_string = 'What are you doing?'
 ```
  
 * Number
@@ -274,9 +274,9 @@ Value of local variable is 5
 ## Arrays
 
 Arrays are collection of objects which are ordered and have index.
-The index value starts deom **0**.
+The index value starts from **0**.
 Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.
-You can refere more about Arrays [here](https://www.tutorialspoint.com/ruby/ruby_arrays.htm, https://ruby-doc.org/core-2.2.0/Array.html)
+You can refere more about Arrays [here](https://ruby-doc.org/core-2.2.0/Array.html)
 
 
 There are two ways to create an empty array:
@@ -293,9 +293,40 @@ my_arr = Array.new(10)
 my_other_arr = [1,2, "new", ["hie",5],55,100]; 
 
 ```
+Now we will see how to iterate through the Arrays. A more useful iterator is the **.each** method, which can apply an expression to each element of an object, one at a time. 
+The syntax looks like this:
 
+object.each { |item| # Do something }
 
+You can also you below method if ypu don't want to use the '{ }'.
 
+object.each do |item| 
+  # Do something 
+end
+
+```ruby
+
+Ex 1:
+array = [1,2,3,4,5]
+
+array.each do |x|
+  x = x + 10
+  puts "#{x}"
+end
+
+// output:  11
+            12
+            13
+            14
+            15
+
+Ex 2:
+nums = Array.new(10) { |e| e = e * 2 }
+
+puts "#{nums}"
+
+Output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+```
 
 
 
