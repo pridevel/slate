@@ -411,7 +411,7 @@ Using Literal form to create a hash. Here, my_hash is the name of the hash.
 It has 3 key-value pairs. The keys are "name", "age", "employee?" and "Savi", 22, true are its respective value.
 
 ```ruby
-
+// liternal notation
 my_hash = { "name" => "Savi",
   "age" => 22,
   "employee?" => true
@@ -427,19 +427,21 @@ puts my_hash["employee?"]
 ```
 
 You can create an empty hash with the new class method.
-Here we are creating an empty hash named as "names".
+Here we are creating an empty hash named as "pets" and on the next line we are creating a key-value pair for it.
+Here "tommy" is **key** and "dog" is **value**.
 
 ```ruby
-names = Hash.new
+// types to create hashes.
+pets = Hash.new
+pets["tommy"] = "dog"
+
+puts pets["tommy"]
+
+output: dog
 ```
 
-You can also use new to create a hash with a default value, like here we are using "month" which is otherwise just nil.
 
-```ruby
-months = Hash.new( "month" )
 
-months = Hash.new "month"
-```
 
 
 
