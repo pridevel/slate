@@ -169,7 +169,7 @@ my_boolean = true
 </code></li>
 </ul>
 
-<h1 id="variable">Variable</h1>
+<h2 id="variable">Variable</h2>
 
 <ul>
 <li>Variables are the letters or words that stores the single value. </li>
@@ -177,7 +177,7 @@ my_boolean = true
 <pre class="highlight ruby"><code> <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
 </code></pre>
 
-<h1 id="maths">Maths</h1>
+<h2 id="maths">Maths</h2>
 
 <ul>
 <li>You can perform mathematical operation like Addition (+), Subtraction (-), Division (/), Exponentiation (*<em>),
@@ -187,7 +187,7 @@ Modulo (%),Multiplication (</em>) in Ruby.</li>
 
 <p>Modulo returns the remainder of division. For example, 25 % 7 would be 4, since 7 goes into 25 3 times with 4 left over.</p>
 
-<h1 id="print-and-puts-commamds">Print and Puts Commamds</h1>
+<h2 id="print-and-puts-commamds">Print and Puts Commamds</h2>
 
 <p>The <strong>print</strong> command just takes whatever you give it and prints it to the screen where as <strong>puts</strong> (for &ldquo;put string&rdquo;) is slightly different: it adds a new (blank) line after the thing you want it to print.</p>
 <pre class="highlight ruby"><code><span class="nb">puts</span> <span class="s2">"heyyyyy"</span>
@@ -201,7 +201,7 @@ Modulo (%),Multiplication (</em>) in Ruby.</li>
    <span class="no">Hello</span><span class="o">!</span><span class="no">World</span><span class="o">!</span>
 </code></pre>
 
-<h1 id="methods-on-strings">Methods on Strings</h1>
+<h2 id="methods-on-strings">Methods on Strings</h2>
 
 <ul>
 <li>.length 
@@ -233,7 +233,7 @@ This methods are used to convert a string to ALL UPPER CASE or all lower case, r
         <span class="n">savi</span>
 </code></pre>
 
-<h1 id="comments">Comments</h1>
+<h2 id="comments">Comments</h2>
 
 <ul>
 <li>Single line Comments
@@ -259,13 +259,13 @@ comment
 
 </code></pre>
 
-<h1 id="operators">Operators</h1>
+<h2 id="operators">Operators</h2>
 
 <ul>
 <li>Ruby has three operators:  and (&amp;&amp;), or (||), and not (!)</li>
 </ul>
 
-<h2 id="and-amp-amp">And(&amp;&amp;)</h2>
+<h3 id="and-amp-amp">And(&amp;&amp;)</h3>
 
 <ul>
 <li>It evaluates true when both the expressions are true.</li>
@@ -287,7 +287,7 @@ false &amp;&amp; false # =&gt; false</p>
 <span class="n">boolean_3</span> <span class="o">=</span> <span class="kp">true</span>
 </code></pre>
 
-<h2 id="or">OR(||)</h2>
+<h3 id="or">OR(||)</h3>
 
 <ul>
 <li>it evaluates to true when one or the other or both expressions are true.</li>
@@ -309,7 +309,7 @@ false || false # =&gt; false</p>
 
 </code></pre>
 
-<h2 id="not">NOT(!)</h2>
+<h3 id="not">NOT(!)</h3>
 
 <ul>
 <li>It makes true values false, and vice-versa.</li>
@@ -324,7 +324,7 @@ false || false # =&gt; false</p>
 <span class="n">boolean_2</span> <span class="o">=</span> <span class="kp">false</span>
 </code></pre>
 
-<h1 id="control-flow">Control Flow</h1>
+<h2 id="control-flow">Control Flow</h2>
 
 <ul>
 <li>If statement
@@ -360,11 +360,11 @@ When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by t
 
 </code></pre>
 
-<h1 id="loops">Loops</h1>
+<h2 id="loops">Loops</h2>
 
 <p>Loops in Ruby are used to execute the same block of code a specified number of times. You can refer more about <a href="https://www.tutorialspoint.com/ruby/ruby_loops.htm">loops</a> here.</p>
 
-<h2 id="while-loop">while loop</h2>
+<h3 id="while-loop">while loop</h3>
 
 <ul>
 <li>This loop is used when you want to repeat an action in Ruby while a certain condition is true.</li>
@@ -378,11 +378,9 @@ When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by t
 <span class="sr">//</span> <span class="ss">output: </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
 </code></pre>
 
-<h2 id="for-loop">for loop</h2>
+<h3 id="for-loop">for loop</h3>
 
-<ul>
-<li>This loop is used when you do know how many times you&rsquo;ll be looping.</li>
-</ul>
+<p>*This loop is used when you do know how many times you&rsquo;ll be looping.</p>
 <pre class="highlight ruby"><code><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">5</span>
    <span class="nb">puts</span> <span class="s2">"Value of local variable is </span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span>
 <span class="k">end</span>
@@ -394,12 +392,6 @@ When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by t
 <span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">4</span>
 <span class="no">Value</span> <span class="n">of</span> <span class="n">local</span> <span class="n">variable</span> <span class="n">is</span> <span class="mi">5</span>
 </code></pre>
-
-<h1 id="arrays">Arrays</h1>
-
-<h2 id="array1">Array1</h2>
-
-<h3 id="array2">Array2</h3>
 
           <h1 id="errors">Errors</h1>
 
