@@ -552,17 +552,15 @@ puts my_hash[&ldquo;employee?&rdquo;]</p>
 <h3 id="creating-hashes">Creating Hashes</h3>
 
 <p>You can create an empty hash with the new class method.
-Here we are creating an empty hash named as &quot;names&rdquo;.
-<code class="prettyprint">ruby
-names = Hash.new
-</code></p>
+Here we are creating an empty hash named as &quot;names&rdquo;.</p>
+<pre class="highlight ruby"><code><span class="n">names</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span>
+</code></pre>
 
-<p>You can also use new to create a hash with a default value, which is otherwise just nil.
-&ldquo;`ruby
-months = Hash.new( &quot;month&rdquo; )</p>
+<p>You can also use new to create a hash with a default value, which is otherwise just nil.</p>
+<pre class="highlight ruby"><code><span class="n">months</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span> <span class="s2">"month"</span> <span class="p">)</span>
 
-<p>months = Hash.new &ldquo;month&rdquo;
-&ldquo;`</p>
+<span class="n">months</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span> <span class="s2">"month"</span>
+</code></pre>
 
           <h1 id="errors">Errors</h1>
 
