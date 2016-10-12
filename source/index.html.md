@@ -43,7 +43,6 @@ my_string = "Hello, World!"
  
 my_other_string = 'What are you doing?'
 ```
- <hr>
 * Number
  Ruby can handle both integers and floating point numbers (numbers with decimals).
 
@@ -55,13 +54,11 @@ twenty_five_point_two = ten + fifteen_point_two;
 //output: 25.2
 
 ```
-<hr>
 * Booleans
  The value of the boolean can be either true or false.
 ```ruby
  my_boolean = true
 ```
-<hr>
 ## Variable
 * Variables are the letters or words that stores the single value. 
 
