@@ -54,11 +54,13 @@ twenty_five_point_two = ten + fifteen_point_two;
 //output: 25.2
 
 ```
+
 * Booleans
  The value of the boolean can be either true or false.
 ```ruby
  my_boolean = true
 ```
+
 ## Variable
 * Variables are the letters or words that stores the single value. 
 
