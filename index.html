@@ -532,31 +532,33 @@ Hash syntax looks like this:</p>
   key1 =&gt; value1, <br>
   key2 =&gt; value2, <br>
   key3 =&gt; value3 <br>
-}
-&ldquo;`ruby</p>
-
-<p>my_hash = { &quot;name&rdquo; =&gt; &ldquo;Savi&rdquo;,
-  &ldquo;age&rdquo; =&gt; 22,
-  &ldquo;employee?&rdquo; =&gt; true
 }</p>
-
-<p>puts my_hash[&ldquo;name&rdquo;]
-puts my_hash[&ldquo;age&rdquo;]
-puts my_hash[&ldquo;employee?&rdquo;]</p>
-
-<p>//output: Savi
-          22
-          true
-&ldquo;`</p>
 
 <h3 id="creating-hashes">Creating Hashes</h3>
 
+<p>Using Literal form to create a hash. Here, my_hash is the name of the hash. 
+It has 3 key-value pairs. The keys are &ldquo;name&rdquo;, &ldquo;age&rdquo;, &ldquo;employee?&rdquo; and &ldquo;Savi&rdquo;, 22, true are its respective value.</p>
+<pre class="highlight ruby"><code>
+<span class="n">my_hash</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">"name"</span> <span class="o">=&gt;</span> <span class="s2">"Savi"</span><span class="p">,</span>
+  <span class="s2">"age"</span> <span class="o">=&gt;</span> <span class="mi">22</span><span class="p">,</span>
+  <span class="s2">"employee?"</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="p">}</span>
+
+<span class="nb">puts</span> <span class="n">my_hash</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span>
+<span class="nb">puts</span> <span class="n">my_hash</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span>
+<span class="nb">puts</span> <span class="n">my_hash</span><span class="p">[</span><span class="s2">"employee?"</span><span class="p">]</span>
+
+<span class="sr">//ou</span><span class="ss">tput: </span><span class="no">Savi</span>
+          <span class="mi">22</span>
+          <span class="kp">true</span>
+</code></pre>
+
 <p>You can create an empty hash with the new class method.
-Here we are creating an empty hash named as &quot;names&rdquo;.</p>
+Here we are creating an empty hash named as &ldquo;names&rdquo;.</p>
 <pre class="highlight ruby"><code><span class="n">names</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span>
 </code></pre>
 
-<p>You can also use new to create a hash with a default value, which is otherwise just nil.</p>
+<p>You can also use new to create a hash with a default value, like here we are using &ldquo;month&rdquo; which is otherwise just nil.</p>
 <pre class="highlight ruby"><code><span class="n">months</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span> <span class="s2">"month"</span> <span class="p">)</span>
 
 <span class="n">months</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span> <span class="s2">"month"</span>
