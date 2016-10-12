@@ -43,7 +43,7 @@ my_string = "Hello, World!"
  
 my_other_string = 'What are you doing?'
 ```
- 
+ <hr>
 * Number
  Ruby can handle both integers and floating point numbers (numbers with decimals).
 
@@ -55,13 +55,13 @@ twenty_five_point_two = ten + fifteen_point_two;
 //output: 25.2
 
 ```
-
+<hr>
 * Booleans
  The value of the boolean can be either true or false.
 ```ruby
  my_boolean = true
 ```
-
+<hr>
 ## Variable
 * Variables are the letters or words that stores the single value. 
 
@@ -99,6 +99,7 @@ print "World!"
 
 // output: 17
 ```
+<hr>
 ### .reverse 
  This method spits out a backwards version of the string you gave it.
 
@@ -107,7 +108,7 @@ print "World!"
 
 // output: "ivas olleh"
 ```
-
+<hr>
 ### .upcase and .downcase
 This methods are used to convert a string to ALL UPPER CASE or all lower case, respectively. 
 
@@ -127,6 +128,7 @@ puts "savi".downcase
     # this is comment.
 
 ```
+<hr>
 ### Multi-Line Comment 
 If you want to comment Multiple lines at a time you can use this method.
 If you start with =begin and end with =end, everything between those two expressions will be a comment.
@@ -165,6 +167,7 @@ boolean_2 = true
 # boolean_3 = 2**3 == 8 && 3**2 == 9
 boolean_3 = true
 ```
+<hr>
 ### OR(||)
 * it evaluates to true when one or the other or both expressions are true.
 
@@ -185,7 +188,7 @@ boolean_2 = false
 boolean_3 = false
 
 ```
-
+<hr>
 ### NOT(!)
 * It makes true values false, and vice-versa.
 
@@ -199,7 +202,6 @@ boolean_1 = false
 # boolean_2 = !true && !true
 boolean_2 = false
 ```
-
 
 ## Control Flow
 ### If statement
@@ -253,7 +255,7 @@ end
 
 // output: 1 2 3 4 5 6 7 8 9 10
 ```
-
+<hr>
 ### for loop
 
 *This loop is used when you do know how many times you'll be looping.
