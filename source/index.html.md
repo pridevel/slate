@@ -62,21 +62,21 @@ twenty_five_point_two = ten + fifteen_point_two;
  my_boolean = true
 ```
 
-## Variable
+# Variable
 * Variables are the letters or words that stores the single value. 
 
 ```ruby
  x = 20
 ```
 
-## Maths
+# Maths
 * You can perform mathematical operation like Addition (+), Subtraction (-), Division (/), Exponentiation (**),
 Modulo (%),Multiplication (*) in Ruby.
 * For example, 2**3 is 8, since 2**3 means "give me 2 * 2 * 2" (2 multiplied together 3 times). 3**2 is 9 (3 * 3), and so on.
 
 Modulo returns the remainder of division. For example, 25 % 7 would be 4, since 7 goes into 25 3 times with 4 left over.
 
-## Print and Puts Commamds
+# Print and Puts Commamds
 The **print** command just takes whatever you give it and prints it to the screen where as **puts** (for "put string") is slightly different: it adds a new (blank) line after the thing you want it to print.
 
 ```ruby
@@ -90,7 +90,7 @@ print "World!"
    Whatssupppp
    Hello!World!
 ```
-## Methods on Strings
+# Methods on Strings
 * .length 
  This method return the length of the string (that is, the number of characters—letters, numbers, spaces, and symbols).
 
@@ -119,7 +119,7 @@ puts "savi".downcase
 //output: SAVI
         savi
 ```
-## Comments
+# Comments
 * Single line Comments
  It is denoted by "#", in front of the line you want to comment out.
 
@@ -142,7 +142,7 @@ comment
 =end
 
 ```
-## Operators
+# Operators
 * Ruby has three operators:  and (&&), or (||), and not (!)
 
 ### And(&&)
@@ -150,9 +150,9 @@ comment
 
 TruthTable: 
 
-true && true # => true
-true && false # => false
-false && true # => false
+true && true # => true,
+true && false # => false,
+false && true # => false,
 false && false # => false
 
 ```ruby
@@ -168,9 +168,9 @@ boolean_3 = true
 ### OR(||)
 * it evaluates to true when one or the other or both expressions are true.
 
-true || true # => true
-true || false # => true
-false || true # => true
+true || true # => true,
+true || false # => true,
+false || true # => true,
 false || false # => false
 
 ```ruby
@@ -189,7 +189,7 @@ boolean_3 = false
 ### NOT(!)
 * It makes true values false, and vice-versa.
 
-!true # => false
+!true # => false,
 !false # => true
 
 ```ruby
@@ -201,7 +201,7 @@ boolean_2 = false
 ```
 
 
-## Control Flow
+# Control Flow
 * If statement
 Ruby's **if** statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the **if**.
 If it's not true (that is, false), Ruby doesn't execute that block of code: it skips it and goes on to the next thing, that is **else** statement or **end**.
@@ -238,11 +238,11 @@ end
 
 ```
 
-##Loops 
+#Loops 
 Loops in Ruby are used to execute the same block of code a specified number of times. You can refer more about [loops](https://www.tutorialspoint.com/ruby/ruby_loops.htm) here.
 ### while loop
 
-*This loop is used when you want to repeat an action in Ruby while a certain condition is true.
+* This loop is used when you want to repeat an action in Ruby while a certain condition is true.
 
 ```ruby
 counter = 1
@@ -256,7 +256,7 @@ end
 
 ### for loop
 
-*This loop is used when you do know how many times you'll be looping.
+* This loop is used when you do know how many times you'll be looping.
 
 ```ruby
 for i in 0..5
