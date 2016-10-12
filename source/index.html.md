@@ -278,6 +278,7 @@ The index value starts from **0**.
 Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.
 You can refere more about Arrays [here](https://ruby-doc.org/core-2.2.0/Array.html)
 
+### Creating array
 
 There are two ways to create an empty array:
 
@@ -293,7 +294,8 @@ my_arr = Array.new(10)
 my_other_arr = [1,2, "new", ["hie",5],55,100]; 
 
 ```
-Now we will see how to iterate through the Arrays. A more useful iterator is the **.each** method, which can apply an expression to each element of an object, one at a time. 
+### Displaying Elements of Array
+Now we will see how to iterate through the elements of an Array. A more useful iterator is the **.each** method, which can apply an expression to each element of an object, one at a time. 
 The syntax looks like this:
 
 object.each { |item| # Do something }
@@ -327,6 +329,78 @@ puts "#{nums}"
 
 Output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
+
+### Accessing Element from Array
+You can also access the single element from the array by specifying its **index**.
+The first element gets index 0, the next gets index 1, the one after that gets index 2, and so on.
+
+```ruby
+demo_array = [100, 200, 300, 400, 500]
+
+print demo_array[2]
+
+//output: 300
+
+```
+
+### Adding Items to Array
+Arrays are flexible because of the fact that we could easily add or remove an item or element from an Array.
+For adding the element in an Array we use **.push** method. Push method inserts the element at the end of an array.
+
+```ruby
+b = ["cat", 5, true]
+b.push("dog")
+
+// output: ["cat", 5, true, "dog"]
+```
+
+If you want to add value to the beginning of an array, you use the **unshift** method.
+```ruby
+b.unshift("8.53")
+// output: ["8.53", "hello", 100, true, "dog"]
+```
+### Removing Item From Array
+
+To remove an element from array we use **pop** method.
+This method removes an returns the element at the last item of an array.
+
+```ruby
+b.pop
+Output: "dog"
+array : ["8.53", "hello", 100, true]
+```
+
+To remove the first item, you use the shift method.
+```ruby
+b.shift
+// Output: "6.23"
+array : ["hello", 100, true]
+ ```
+ 
+### Replacing Item In Array
+
+If we want to replace a specific item from an array we can do it as follows:
+
+array : 
+b = ["hello", 100, true]
+b[1] = 50
+
+// Output: b = ["hello", 50, true]
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
 
 
 
