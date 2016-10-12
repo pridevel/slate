@@ -496,12 +496,24 @@ array : [&quot;hello&quot;, 100, true]
 <p>If we want to replace a specific item from an array we can do it as follows:</p>
 
 <p>array : 
-b = [&ldquo;hello&rdquo;, 100, true]
-b[1] = 50</p>
+b = [&ldquo;hello&rdquo;, 100, true]</p>
+
+<p>b[1] = 50</p>
 
 <p>// Output: b = [&ldquo;hello&rdquo;, 50, true]</p>
 
 <h2 id="hash">Hash</h2>
+
+<p>A Hash is a collection of key-value pairs like this: &ldquo;animal&rdquo; =&gt; &ldquo;tiger&rdquo;. 
+It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.
+Values are assigned to keys using &ldquo;=&gt;&rdquo;
+Hash syntax looks like this:</p>
+
+<p>hash = {
+  key1 =&gt; value1,
+  key2 =&gt; value2,
+  key3 =&gt; value3
+}</p>
 
           <h1 id="errors">Errors</h1>
 
