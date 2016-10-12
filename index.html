@@ -568,6 +568,30 @@ Here &ldquo;tommy&rdquo; is <strong>key</strong> and &ldquo;dog&rdquo; is <stron
 
 <p><hr></p>
 
+<h3 id="accessing-hash-values">Accessing Hash Values</h3>
+
+<p>Accessing the key-value pair from hash is same as accessing the items in an array.
+For accessing the key-value pair from hash we are going to use <strong>each</strong> loop.</p>
+<pre class="highlight ruby"><code>
+<span class="n">family</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">"Homer"</span> <span class="o">=&gt;</span> <span class="s2">"dad"</span><span class="p">,</span>
+  <span class="s2">"Marge"</span> <span class="o">=&gt;</span> <span class="s2">"mom"</span><span class="p">,</span>
+  <span class="s2">"Lisa"</span> <span class="o">=&gt;</span> <span class="s2">"sister"</span><span class="p">,</span>
+  <span class="s2">"Maggie"</span> <span class="o">=&gt;</span> <span class="s2">"sister"</span><span class="p">,</span>
+  <span class="s2">"Jane"</span> <span class="o">=&gt;</span> <span class="s2">"grandpa"</span><span class="p">,</span>
+  <span class="s2">"Tom"</span> <span class="o">=&gt;</span> <span class="s2">"dog"</span>
+<span class="p">}</span>
+
+<span class="n">family</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">x</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">y</span><span class="si">}</span><span class="s2">"</span> <span class="p">}</span>
+
+<span class="sr">//</span> <span class="ss">output:  </span><span class="no">Homer</span><span class="p">:</span> <span class="n">dad</span>
+            <span class="no">Marge</span><span class="p">:</span> <span class="n">mom</span>
+            <span class="no">Lisa</span><span class="p">:</span> <span class="n">sister</span>
+            <span class="no">Maggie</span><span class="p">:</span> <span class="n">sister</span>
+            <span class="no">Jane</span><span class="p">:</span> <span class="n">grandpa</span>
+            <span class="no">Tom</span><span class="p">:</span> <span class="n">dog</span>
+
+</code></pre>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
