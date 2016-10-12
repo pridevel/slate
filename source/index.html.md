@@ -91,7 +91,7 @@ print "World!"
    Hello!World!
 ```
 ## Methods on Strings
-* .length 
+### .length 
  This method return the length of the string (that is, the number of characters—letters, numbers, spaces, and symbols).
 
 ```ruby
@@ -99,7 +99,7 @@ print "World!"
 
 // output: 17
 ```
-* .reverse 
+### .reverse 
  This method spits out a backwards version of the string you gave it.
 
 ```ruby
@@ -108,7 +108,7 @@ print "World!"
 // output: "ivas olleh"
 ```
 
-* .upcase and .downcase
+### .upcase and .downcase
 This methods are used to convert a string to ALL UPPER CASE or all lower case, respectively. 
 
 ```ruby
@@ -120,14 +120,14 @@ puts "savi".downcase
         savi
 ```
 ## Comments
-* Single line Comments
+### Single line Comments
  It is denoted by "#", in front of the line you want to comment out.
 
 ```ruby
     # this is comment.
 
 ```
-* Multi-Line Comment 
+### Multi-Line Comment 
 If you want to comment Multiple lines at a time you can use this method.
 If you start with =begin and end with =end, everything between those two expressions will be a comment.
 
@@ -202,7 +202,7 @@ boolean_2 = false
 
 
 ## Control Flow
-* If statement
+### If statement
 Ruby's **if** statement takes an expression, which is just a fancy word for something that has a value. If that expression is true, Ruby executes the block of code that follows the **if**.
 If it's not true (that is, false), Ruby doesn't execute that block of code: it skips it and goes on to the next thing, that is **else** statement or **end**.
 When you're done with your **if**, you have to tell Ruby by typing **end**.
@@ -271,7 +271,28 @@ Value of local variable is 4
 Value of local variable is 5
 ```
 
+## Arrays
 
+Arrays are collection of objects which are ordered and have index.
+The index value starts deom **0**.
+Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.
+You can refere more about Arrays [here](https://www.tutorialspoint.com/ruby/ruby_arrays.htm, https://ruby-doc.org/core-2.2.0/Array.html)
+
+
+There are two ways to create an empty array:
+
+1. my_arr = Array.new  => []
+ 
+2. my_other_arr = []    => [] (Literal Method)
+
+```ruby
+my_arr = Array.new(10)
+// this array has a length of 10 elements.
+
+
+my_other_arr = [1,2, "new", ["hie",5],55,100]; 
+
+```
 
 
 
