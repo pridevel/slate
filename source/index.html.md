@@ -385,12 +385,23 @@ If we want to replace a specific item from an array we can do it as follows:
 
 array : 
 b = ["hello", 100, true]
+
 b[1] = 50
 
 // Output: b = ["hello", 50, true]
 
 ## Hash
 
+A Hash is a collection of key-value pairs like this: "animal" => "tiger". 
+It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.
+Values are assigned to keys using "=>"
+Hash syntax looks like this:
+
+hash = {
+  key1 => value1,
+  key2 => value2,
+  key3 => value3
+}
 
 
 
