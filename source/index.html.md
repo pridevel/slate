@@ -358,6 +358,7 @@ b.push("dog")
 ```
 
 If you want to add value to the beginning of an array, you use the **unshift** method.
+
 ```ruby
 b.unshift("8.53")
 // output: ["8.53", "hello", 100, true, "dog"]
@@ -376,6 +377,7 @@ array : ["8.53", "hello", 100, true]
 
 
 To remove the first item, you use the shift method.
+
 ```ruby
 b.shift
 // Output: "6.23"
