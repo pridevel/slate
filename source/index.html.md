@@ -283,9 +283,9 @@ You can refere more about Arrays [here](https://ruby-doc.org/core-2.2.0/Array.ht
 
 There are two ways to create an empty array:
 
-1. my_arr = Array.new  => []
+1. my_arr = Array.new   // creates and empty array which looks like '[]'.
  
-2. my_other_arr = []    => [] (Literal Method)
+2. my_other_arr = []    // this is Literal Method to create empty array.
 
 ```ruby
 my_arr = Array.new(10)
@@ -508,21 +508,34 @@ To learn more about the subfolders you can visit the [rails documentation sectio
 In the console (**Right Lower part**), type the command 
     **pwd**: This command tells you which directory you are currrently in.
      
-    `// output in the console: /home/ubuntu/workspace`.
+```ruby
+
+pwd
+// output in the console: /home/ubuntu/workspace
+```
      
      **ls**: This command gives the folders and files in the directory.
      
-     `//output in the console: Gemfile  Gemfile.lock  README.md  README.rdoc  Rakefile  app/  bin/  config/  config.ru  db/  lib/  log/  public/  test/  tmp/  vendor/`.
+```ruby
+
+ls
+//output in the console: Gemfile  Gemfile.lock  README.md  README.rdoc  Rakefile  app/  bin/  config/  config.ru  db/  lib/  log/  public/  test/  tmp/  vendor/
+```
      
      **cd filename**: This command is used to change the directory.
      
      **ruby -v**: This command gives you the version of the ruby that is installed.
      
-     `//output in the console: ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]`.
+```ruby
+ruby -v
+//output in the console: ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux].
+``` 
+         **rails -v**: This command gives you the version of the rails that is installed.
      
-     **rails -v**: This command gives you the version of the rails that is installed.
-     
-     `//output in the console: Rails 4.2.5`.
+```ruby
+rails -v
+//output in the console: Rails 4.2.5
+```
      
 <hr>
 
@@ -534,13 +547,19 @@ But here we will see the steps to install rails on Cloud9.
 
 * We will start by creating an rails application and command to create the same is as follows:
 
-`rails new application_name`
+```ruby
+ rails new application_name
 
-`example: rails new blog` 
- This statement creates a rails application with the name **blog**.
+ example: rails new blog
+```
+
+This statement creates a rails application with the name **blog**.
 
 * After creating the application we can navigate to that folder by:
- `cd blog`
+```ruby
+ cd blog
+```
+
  This folder has auto-generated files and folders which will be useful further while developing the application. 
 
 <hr>
@@ -549,14 +568,19 @@ But here we will see the steps to install rails on Cloud9.
 
 * To start the rails server you can use the command: 
 
-`rails server -p $PORT -b $IP` or 
+```ruby
+ rails server -p $PORT -b $IP or 
 
-`rails s -p $PORT -b $IP`
+ rails s -p $PORT -b $IP
+```
 
 When you type this command in the rails console you will get a popup which will have the url link, where you can view your application.
 Click on that popup box and you can see your application running.
 
-* To Stop the server simply do `Ctrl + C`
+* To Stop the server simply do 
+```ruby
+ Ctrl + C
+```
 
 
 
