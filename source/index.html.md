@@ -508,21 +508,21 @@ To learn more about the subfolders you can visit the [rails documentation sectio
 In the console (**Right Lower part**), type the command 
     **pwd**: This command tells you which directory you are currrently in.
      
-     '// output in the console: /home/ubuntu/workspace'
+     `// output in the console: /home/ubuntu/workspace`.
      
      **ls**: This command gives the folders and files in the directory.
      
-     '//output in the console: Gemfile  Gemfile.lock  README.md  README.rdoc  Rakefile  app/  bin/  config/  config.ru  db/  lib/  log/  public/  test/  tmp/  vendor/'.
+     `//output in the console: Gemfile  Gemfile.lock  README.md  README.rdoc  Rakefile  app/  bin/  config/  config.ru  db/  lib/  log/  public/  test/  tmp/  vendor/`.
      
      **cd**: This command is used to change the directory.
      
      **ruby -v**: This command gives you the version of the ruby that is installed.
      
-     '//output in the console: ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux] '
+     `//output in the console: ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]`.
      
      **rails -v**: This command gives you the version of the rails that is installed.
      
-     '//output in the console: Rails 4.2.5'
+     `//output in the console: Rails 4.2.5`.
      
      
 
