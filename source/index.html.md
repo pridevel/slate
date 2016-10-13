@@ -492,13 +492,39 @@ Step 3: Choose the template in which you want to use to build your project, here
 
 Step 4: Create Workspace and you are good to go.
 
+After successfully creating your workspace, you will be redirected to a window which is been divided into 3 parts. 
 
+* The **Left most** part shows a folder with the same name as you have given to your project. When you click on it, the folder unfolds to show bunch of another subfolders.
+To learn more about the subfolders you can visit the [rails documentation section 3.2](http://guides.rubyonrails.org/getting_started.html#what-is-rails-questionmark).
 
+* The **Right Upper part** of the window is where you are going to write your code.
 
+* The **Right Lower part** of the window is the console, where you can test your code, check the version of ruby, write rails commands. 
 
+<hr>
 
+## Rails Commands
 
-
+In the console (**Right Lower part**), type the command 
+    **pwd**: This command tells you which directory you are currrently in.
+     
+     '// output in the console: /home/ubuntu/workspace'
+     
+     **ls**: This command gives the folders and files in the directory.
+     
+     '//output in the console: Gemfile  Gemfile.lock  README.md  README.rdoc  Rakefile  app/  bin/  config/  config.ru  db/  lib/  log/  public/  test/  tmp/  vendor/'.
+     
+     **cd**: This command is used to change the directory.
+     
+     **ruby -v**: This command gives you the version of the ruby that is installed.
+     
+     '//output in the console: ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux] '
+     
+     **rails -v**: This command gives you the version of the rails that is installed.
+     
+     '//output in the console: Rails 4.2.5'
+     
+     
 
 
 
