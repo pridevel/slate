@@ -526,7 +526,7 @@ In the console (**Right Lower part**), type the command
      
 <hr>
 
-## Installing Rails: 
+## Installing Rails
 
 If you wish to install Rails on your PC you can visit [this](http://guides.railsgirls.com/install#setup-for-windows) website.
 
@@ -535,11 +535,28 @@ But here we will see the steps to install rails on Cloud9.
 * We will start by creating an rails application and command to create the same is as follows:
 
 `rails new application_name`
-`example: rails new blog` Creates a rails application with the name **blog**.
+
+`example: rails new blog` 
+ This statement creates a rails application with the name **blog**.
 
 * After creating the application we can navigate to that folder by:
  `cd blog`
  This folder has auto-generated files and folders which will be useful further while developing the application. 
+
+<hr>
+
+## To Start Rails Server
+
+* To start the rails server you can use the command: 
+
+`rails server -p $PORT -b $IP` or 
+
+`rails s -p $PORT -b $IP`
+
+When you type this command in the rails console you will get a popup which will have the url link, where you can view your application.
+Click on that popup box and you can see your application running.
+
+* To Stop the server simply do `Ctrl + C`
 
 
 
