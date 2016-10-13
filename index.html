@@ -651,7 +651,7 @@ To learn more about the subfolders you can visit the <a href="http://guides.ruby
 
 <p><hr></p>
 
-<h2 id="installing-rails">Installing Rails:</h2>
+<h2 id="installing-rails">Installing Rails</h2>
 
 <p>If you wish to install Rails on your PC you can visit <a href="http://guides.railsgirls.com/install#setup-for-windows">this</a> website.</p>
 
@@ -661,13 +661,34 @@ To learn more about the subfolders you can visit the <a href="http://guides.ruby
 <li>We will start by creating an rails application and command to create the same is as follows:</li>
 </ul>
 
-<p><code class="prettyprint">rails new application_name</code>
-<code class="prettyprint">example: rails new blog</code> Creates a rails application with the name <strong>blog</strong>.</p>
+<p><code class="prettyprint">rails new application_name</code></p>
+
+<p><code class="prettyprint">example: rails new blog</code> 
+ This statement creates a rails application with the name <strong>blog</strong>.</p>
 
 <ul>
 <li>After creating the application we can navigate to that folder by:
 <code class="prettyprint">cd blog</code>
 This folder has auto-generated files and folders which will be useful further while developing the application. </li>
+</ul>
+
+<p><hr></p>
+
+<h2 id="to-start-rails-server">To Start Rails Server</h2>
+
+<ul>
+<li>To start the rails server you can use the command: </li>
+</ul>
+
+<p><code class="prettyprint">rails server -p $PORT -b $IP</code> or </p>
+
+<p><code class="prettyprint">rails s -p $PORT -b $IP</code></p>
+
+<p>When you type this command in the rails console you will get a popup which will have the url link, where you can view your application.
+Click on that popup box and you can see your application running.</p>
+
+<ul>
+<li>To Stop the server simply do <code class="prettyprint">Ctrl + C</code></li>
 </ul>
 
           <h1 id="errors">Errors</h1>
