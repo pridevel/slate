@@ -531,6 +531,7 @@ ls
 ```ruby
 ruby -v
 //output in the console: ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux].
+
 ``` 
          **rails -v**: This command gives you the version of the rails that is installed.
      
@@ -558,11 +559,17 @@ But here we will see the steps to install rails on Cloud9.
 This statement creates a rails application with the name **blog**.
 
 * After creating the application we can navigate to that folder by:
+* 
 ```ruby
  cd blog
+ 
+ bundle install
 ```
 
  This folder has auto-generated files and folders which will be useful further while developing the application. 
+ 
+* After being in the application folder(blog), type "bundle install". This command will install all the gems required for the application which are located in the "Gemfile".
+  If you get any error while running the "bundle install" try using "bundle update" command.
 
 <hr>
 
@@ -579,7 +586,10 @@ This statement creates a rails application with the name **blog**.
 When you type this command in the rails console you will get a popup which will have the url link, where you can view your application.
 Click on that popup box and you can see your application running.
 
+Also you can go to the "Preview" at the top in the navbar and select "Preview Running Application".
+
 * To Stop the server simply do 
+
 ```ruby
  Ctrl + C
 ```
