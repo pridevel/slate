@@ -597,7 +597,31 @@ Here we don't have to individually create model files, views files, etc.
 Obvioulsy this save our lot of time, so we can say that scaffolding is shortcut to create our rails application skeleton.
 To know more about scaffolding you can visit [here](https://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm).
 
+```ruby
 
+rails generate scaffold Post
+
+//This command will create a model Post. It will also create accompanying views and a controller that contains the relevant CRUD actions and it also creates routes and database file. 
+
+```
+
+## Controller
+
+The controller is used to co-ordinate the function between user model and view.
+It receives the request from the application and matches with the particular route.
+The controller has different actions and each action is associated with particular route. 
+Each action's responsibility is to collect information and provied it to the view.
+Controller names starts with capital letter.
+
+```ruby
+
+rails generate controller controller_name
+
+Example: rails generate controller Post.
+```
+>Controller classes inherit from ApplicationController, which is the other file in the controllers folder: application.rb.
+
+## View 
 
 
 
