@@ -648,6 +648,7 @@ To learn more about the subfolders you can visit the <a href="http://guides.ruby
 <p><strong>ruby -v</strong>: This command gives you the version of the ruby that is installed.</p>
 <pre class="highlight ruby"><code><span class="n">ruby</span> <span class="o">-</span><span class="n">v</span>
 <span class="sr">//ou</span><span class="n">tput</span> <span class="k">in</span> <span class="n">the</span> <span class="ss">console: </span><span class="n">ruby</span> <span class="mi">2</span><span class="o">.</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="n">p0</span> <span class="p">(</span><span class="mi">2015</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">25</span> <span class="n">revision</span> <span class="mi">53290</span><span class="p">)</span> <span class="p">[</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="p">]</span><span class="o">.</span>
+
 </code></pre>
 
 <p><strong>rails -v</strong>: This command gives you the version of the rails that is installed.</p>
@@ -674,13 +675,21 @@ To learn more about the subfolders you can visit the <a href="http://guides.ruby
 <p>This statement creates a rails application with the name <strong>blog</strong>.</p>
 
 <ul>
-<li>After creating the application we can navigate to that folder by:
-<code class="prettyprint">ruby
-cd blog
-</code></li>
+<li>After creating the application we can navigate to that folder by:</li>
+<li>
+&ldquo;`ruby
+cd blog</li>
 </ul>
 
+<p>bundle install
+&rdquo;`</p>
+
 <p>This folder has auto-generated files and folders which will be useful further while developing the application. </p>
+
+<ul>
+<li>After being in the application folder(blog), type &ldquo;bundle install&rdquo;. This command will install all the gems required for the application which are located in the &ldquo;Gemfile&rdquo;.
+If you get any error while running the &ldquo;bundle install&rdquo; try using &ldquo;bundle update&rdquo; command.</li>
+</ul>
 
 <p><hr></p>
 
@@ -697,12 +706,13 @@ cd blog
 <p>When you type this command in the rails console you will get a popup which will have the url link, where you can view your application.
 Click on that popup box and you can see your application running.</p>
 
+<p>Also you can go to the &ldquo;Preview&rdquo; at the top in the navbar and select &ldquo;Preview Running Application&rdquo;.</p>
+
 <ul>
-<li>To Stop the server simply do 
-<code class="prettyprint">ruby
-Ctrl + C
-</code></li>
+<li>To Stop the server simply do </li>
 </ul>
+<pre class="highlight ruby"><code> <span class="no">Ctrl</span> <span class="o">+</span> <span class="no">C</span>
+</code></pre>
 
           <h1 id="errors">Errors</h1>
 
