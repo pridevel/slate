@@ -715,6 +715,31 @@ The functionalities that are by-default created for us by using the scaffold com
 Here we don&rsquo;t have to individually create model files, views files, etc.
 Obvioulsy this save our lot of time, so we can say that scaffolding is shortcut to create our rails application skeleton.
 To know more about scaffolding you can visit <a href="https://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm">here</a>.</p>
+<pre class="highlight ruby"><code>
+<span class="n">rails</span> <span class="n">generate</span> <span class="n">scaffold</span> <span class="no">Post</span>
+
+<span class="sr">//</span><span class="no">This</span> <span class="n">command</span> <span class="n">will</span> <span class="n">create</span> <span class="n">a</span> <span class="n">model</span> <span class="no">Post</span><span class="o">.</span> <span class="no">It</span> <span class="n">will</span> <span class="n">also</span> <span class="n">create</span> <span class="n">accompanying</span> <span class="n">views</span> <span class="n">and</span> <span class="n">a</span> <span class="n">controller</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">relevant</span> <span class="no">CRUD</span> <span class="n">actions</span> <span class="n">and</span> <span class="n">it</span> <span class="n">also</span> <span class="n">creates</span> <span class="n">routes</span> <span class="n">and</span> <span class="n">database</span> <span class="n">file</span><span class="o">.</span> 
+
+</code></pre>
+
+<h2 id="controller">Controller</h2>
+
+<p>The controller is used to co-ordinate the function between user model and view.
+It receives the request from the application and matches with the particular route.
+The controller has different actions and each action is associated with particular route. 
+Each action&rsquo;s responsibility is to collect information and provied it to the view.
+Controller names starts with capital letter.</p>
+<pre class="highlight ruby"><code>
+<span class="n">rails</span> <span class="n">generate</span> <span class="n">controller</span> <span class="n">controller_name</span>
+
+<span class="no">Example</span><span class="p">:</span> <span class="n">rails</span> <span class="n">generate</span> <span class="n">controller</span> <span class="no">Post</span><span class="o">.</span>
+</code></pre>
+
+<blockquote>
+<p>Controller classes inherit from ApplicationController, which is the other file in the controllers folder: application.rb.</p>
+</blockquote>
+
+<h2 id="view">View</h2>
 
           <h1 id="errors">Errors</h1>
 
