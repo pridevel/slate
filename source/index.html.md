@@ -503,8 +503,6 @@ To learn more about the subfolders you can visit the [rails documentation sectio
 
 * The **Right Lower part** of the window is the console, where you can test your code, check the version of ruby, write rails commands. 
 
-<hr>
-
 ## Rails Commands
 
 In the console (**Right Lower part**), type the command 
@@ -539,8 +537,6 @@ ruby -v
 rails -v
 //output in the console: Rails 4.2.5
 ```
-     
-<hr>
 
 ## Installing Rails
 
@@ -571,7 +567,6 @@ This statement creates a rails application with the name **blog**.
 * After being in the application folder(blog), type "bundle install". This command will install all the gems required for the application which are located in the "Gemfile".
   If you get any error while running the "bundle install" try using "bundle update" command.
 
-<hr>
 
 ## To Start Rails Server
 
@@ -594,7 +589,13 @@ Also you can go to the "Preview" at the top in the navbar and select "Preview Ru
  Ctrl + C
 ```
 
+## Scaffolding 
 
+Rails gives us a special shortcut called **Scaffolding** by using which we can build few functionalities very quickly.
+The functionalities that are by-default created for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
+Here we don't have to individually create model files, views files, etc.
+Obvioulsy this save our lot of time, so we can say that scaffolding is shortcut to create our rails application skeleton.
+To know more about scaffolding you can visit [here](https://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm).
 
 
 
