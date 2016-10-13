@@ -478,7 +478,19 @@ Requires fewer lines of code than other frameworks.
 
 For setting up your account on cloud9 click [here](https://ide.c9.io)
 
+Visit the link mentioned above and create your account on Cloud9.
+Cloud9 allows you to store your project work on cloud so that you can access it from anywhere, at any point till you have your internet connection.
+It store your data for free. Also it has paid storage. For more information you can visit the site.
 
+After successfully creating an account on Cloud9, follow the steps to create workspace for your project.
+
+Step 1:  Click on the create a new workspace (+), you will be redirect to a new page where you will be fill up your project information.
+
+Step 2: Enter your Project Name and Description. Select the "Hosted workspace" option as **Public**.
+
+Step 3: Choose the template in which you want to use to build your project, here we will choose "Ruby on Rails".
+
+Step 4: Create Workspace and you are good to go.
 
 
 
