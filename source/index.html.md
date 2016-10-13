@@ -492,7 +492,7 @@ Step 3: Choose the template in which you want to use to build your project, here
 
 Step 4: Create Workspace and you are good to go.
 
-After successfully creating your workspace, you will be redirected to a window which is been divided into 3 parts. 
+After successfully creating your workspace, you will be redirected to a window where you can see that a default rails application is already been created for you,which is been divided into 3 parts. 
 
 * The **Left most** part shows a folder with the same name as you have given to your project. When you click on it, the folder unfolds to show bunch of another subfolders.
 To learn more about the subfolders you can visit the [rails documentation section 3.2](http://guides.rubyonrails.org/getting_started.html#what-is-rails-questionmark).
@@ -524,11 +524,22 @@ In the console (**Right Lower part**), type the command
      
      `//output in the console: Rails 4.2.5`.
      
-     
+<hr>
 
+## Installing Rails: 
 
+If you wish to install Rails on your PC you can visit [this](http://guides.railsgirls.com/install#setup-for-windows) website.
 
+But here we will see the steps to install rails on Cloud9.
 
+* We will start by creating an rails application and command to create the same is as follows:
+
+`rails new application_name`
+`example: rails new blog` Creates a rails application with the name **blog**.
+
+* After creating the application we can navigate to that folder by:
+ `cd blog`
+ This folder has auto-generated files and folders which will be useful further while developing the application. 
 
 
 
