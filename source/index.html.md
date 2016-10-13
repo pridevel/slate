@@ -623,12 +623,11 @@ Example: rails generate controller Post.
 
 ## View 
 
+The view displays the information which a user of the website can see and make interaction.
+View templates are written in Embedded Ruby(eRuby) language. 
+The data between view and controller is shared through mutually accessible variables.
 
-
-
-
-
-
+To know more about view you can refer [Rails Guides](guides.rubyonrails.org/getting_started.html#what-is-rails-questionmark).
 
 
 
