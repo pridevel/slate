@@ -708,6 +708,78 @@ Click on that popup box and you can see your application running.</p>
 <pre class="highlight ruby"><code> <span class="no">Ctrl</span> <span class="o">+</span> <span class="no">C</span>
 </code></pre>
 
+<h2 id="setting-git">Setting Git</h2>
+
+<p>Any time you are setting git on your personal computer or for your application, follow the steps below:
+You have to do this just once before starting up with any project work. You can know more about git by going to their wesite at <a href="https://git-scm.com/">git-scm</a>.
+The <strong>git</strong> helps us to save our work as we progress with our application building process.
+You can always track your work and if you ever make mistakes or screw up the with the code.</p>
+
+<h3 id="configuring-git-to-your-application">Configuring git to your application</h3>
+<pre class="highlight ruby"><code><span class="n">cd</span> <span class="n">project_name</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">user</span><span class="p">.</span><span class="nf">name</span> <span class="s2">"Your Name"</span>      <span class="o">/</span><span class="sr">/ configuring our application with git.
+git config --global user.email "your@email.com"
+git config --global push.default matching   /</span><span class="o">/</span> <span class="n">as</span> <span class="kp">new</span> <span class="n">versions</span> <span class="n">of</span> <span class="n">git</span> <span class="n">come</span> <span class="n">out</span> <span class="n">it</span> <span class="n">should</span> <span class="n">still</span> <span class="n">work</span> <span class="n">the</span> <span class="n">same</span> <span class="k">for</span> <span class="n">us</span><span class="p">.</span>
+<span class="nf">git</span> <span class="n">init</span>                <span class="sr">//</span> <span class="n">initializing</span> <span class="n">empty</span> <span class="n">git</span> <span class="n">reepository</span>
+<span class="n">git</span> <span class="n">add</span> <span class="p">.</span>               <span class="nf">/</span><span class="o">/</span> <span class="n">adding</span> <span class="n">everything</span> <span class="k">in</span> <span class="n">this</span> <span class="n">directory</span> <span class="n">on</span> <span class="n">git</span><span class="o">.</span> <span class="p">(</span><span class="s1">'.'</span> <span class="n">means</span> <span class="n">all</span><span class="p">)</span>
+<span class="n">git</span> <span class="n">status</span>              <span class="sr">//</span> <span class="n">it</span> <span class="n">gives</span> <span class="n">the</span> <span class="n">names</span> <span class="n">of</span> <span class="n">the</span> <span class="n">files</span> <span class="n">newly</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">git</span><span class="p">.</span>
+<span class="nf">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">"Initial commit"</span>     <span class="o">/</span><span class="sr">/ saving all the files on git with the message.
+
+</span></code></pre>
+
+<p><hr></p>
+
+<h3 id="steps-to-set-an-github-account">Steps to set an github account</h3>
+
+<p>Step 1: Go to <a href="https://github.com/">Github</a> and create your <strong>free</strong> account.</p>
+
+<p>Step 2: Go to https://c9.io/account/services, In the Github section click on &ldquo;Connect&rdquo;.</p>
+
+<p>Step 3: Type the console command: cat ~/.ssh/id_rsa.pub 
+  <strong>This command will print the SSH Key in the console output.</strong></p>
+
+<p>Step 4: Copy the SSH Key generated in the console, go to https://github.com/settings/keys and on that page you need to fill up the &ldquo;title&rdquo; and paste the SSH keys in the &ldquo;Keys&rdquo; input box.
+     Click on <strong>Add Key</strong> Button.</p>
+
+<p>** NOW WE ARE SUCCESSFULLY CONNTED TO GITHUB **</p>
+
+<p><hr></p>
+
+<h3 id="creating-repository-on-github">Creating Repository on Github</h3>
+
+<p>Step 1: Login to your github account or if you are alreay logged in go to the home page.</p>
+
+<p>Step 2: Click on the (+) sign on the top-right near your avatar.
+        Click on new repository option from the dropdown list.</p>
+
+<p>Step 3: You can start filling up the information. Give the name  for your repository, but for consistency name your repository same as your application_name.
+        You can skip the description if you want to.
+        You can choose a public repository if you want to share your code with other developers, or if you want to go for private you actually need to pay for an account.</p>
+
+<p>Step 4: After clicking on &ldquo;Create Repository&rdquo; you will be redirect to a new page with Url as <strong>https://github.com/User_name/application_name</strong>.
+        Click on the <strong>SSH</strong> button next to HTTPS.</p>
+
+<p>*<em>Copy the command: git remote add origin git@github.com:yourusername/application_name.git *</em>
+        and paste it in the console. <code class="prettyprint">(This command means that we are able to add out code to the particular address on github. )</code></p>
+<pre class="highlight ruby"><code><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="vi">@github</span><span class="p">.</span><span class="nf">com</span><span class="ss">:yourusername</span><span class="o">/</span><span class="n">application_name</span><span class="p">.</span><span class="nf">git</span>
+
+<span class="sr">//</span> <span class="ss">output: </span><span class="n">you</span> <span class="n">will</span> <span class="n">not</span> <span class="n">get</span> <span class="n">any</span> <span class="n">output</span><span class="o">.</span> <span class="no">Next</span> <span class="n">step</span> <span class="n">explains</span> <span class="n">you</span> <span class="n">the</span> <span class="n">verification</span><span class="o">.</span>
+</code></pre>
+
+<p>Step 5: in console type &ldquo;git remote&rdquo;.</p>
+<pre class="highlight ruby"><code><span class="n">git</span> <span class="n">remote</span>
+
+<span class="sr">//ou</span><span class="ss">tput: </span><span class="n">origin</span>
+</code></pre>
+
+<p>Step 6: in the console type command &ldquo;git push origin master&rdquo;. This command will push the copy of your application on the github.
+        Now if you go back to the page (https://github.com/User_name/application_name) mentioned in <strong>Step 4</strong> and refresh the page you can see the copy of your application on that page.</p>
+<pre class="highlight ruby"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+
+</code></pre>
+
+<p>So now we have successfully sent a copy of our application on the github.</p>
+
 <h2 id="scaffolding">Scaffolding</h2>
 
 <p>Rails gives us a special shortcut called <strong>Scaffolding</strong> by using which we can build few functionalities very quickly.
@@ -729,6 +801,10 @@ It receives the request from the application and matches with the particular rou
 The controller has different actions and each action is associated with particular route. 
 Each action&rsquo;s responsibility is to collect information and provied it to the view.
 Controller names starts with capital letter.</p>
+
+<blockquote>
+<p>Location of the controller file: You can find controller files in : /app/controller .</p>
+</blockquote>
 <pre class="highlight ruby"><code>
 <span class="n">rails</span> <span class="n">generate</span> <span class="n">controller</span> <span class="n">controller_name</span>
 
@@ -746,7 +822,13 @@ View templates are written in Embedded Ruby(eRuby) language.
 Each controller has its associated view. The view name is same same as that of the corresponding controller name.
 The data between view and controller is shared through mutually accessible variables.</p>
 
+<blockquote>
+<p>Location : You can find the views in /app/views .</p>
+</blockquote>
+
 <p>To know more about view you can refer <a href="guides.rubyonrails.org/getting_started.html#what-is-rails-questionmark">Rails Guides</a>.</p>
+
+<h2 id="routes">Routes</h2>
 
           <h1 id="errors">Errors</h1>
 
