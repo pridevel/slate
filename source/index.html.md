@@ -776,12 +776,13 @@ Step 3: Underneath the sqlite gem defined in the gem file add this piece of code
 ```ruby
 Step 3: 
 In Gemfile: 
-# Use postgresql as the database for production
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
 
+    # Use postgresql as the database for production
+    group :production do
+      gem 'pg'
+      gem 'rails_12factor'
+    end
+```
 
  In console:
  
