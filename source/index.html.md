@@ -806,6 +806,7 @@ Step 1: Create an account on heroku.com and Sing in into the account.
 Step 2: In the console write 
 
 ```ruby
+    // Setting up Heroku, Step 2.
     heroku login                     // this will prompt to login with the same credentials as that of heroku account.
 ```        
         Enter your email
@@ -814,6 +815,7 @@ Step 2: In the console write
 Step 3: In the console
 
 ``` ruby
+ // Setting up Heroku, Step 3.
     heroku keys:add  // this will eastablish communication between cloud9 and heroku.
 ```
 
@@ -822,6 +824,7 @@ Step 3: In the console
 Step 4: In the console
 
 ```ruby 
+ // Setting up Heroku, Step 4.
  heroku create        // create a server in heroku
  
  // output : Git remote heroku added       // if everything is done correctly you get this output.
@@ -832,6 +835,7 @@ Step 4: In the console
 Step 5: In the console
 
 ```ruby 
+ // Setting up Heroku, Step 5.
  git push heroku     // this will save the copy of your application on the heroku server.
  
 ```
@@ -840,6 +844,7 @@ Step 6: In the console
 You can repeat the following steps whenever you want to save a copy of your application to Github or Heroku.
 
 ```ruby
+ // Setting up Heroku, Step 6.
     git status
     git add .
     git commit -m "commit message"
