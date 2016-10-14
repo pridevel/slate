@@ -609,7 +609,6 @@ git status              // it gives the names of the files newly added to the gi
 git commit -m "Initial commit"     // saving all the files on git with the message.
 
 ```
-<hr>
 
 ### Steps to set an github account
 
