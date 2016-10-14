@@ -766,15 +766,19 @@ Step 1: Go to Gemfile.
 
 Step 2: Search a gem name 'sqlite3'.
         And modify it as `gem 'sqlite3', group: [:development, :test]`.
+        
 ```ruby
-    Steps 2:
+    // Configuring Heroku on cloud9 Steps 2:
     `gem 'sqlite3', group: [:development, :test]`
 ```        
+
  This means that we are limiting out database gem sqlite to development and test environment.
  
 Step 3: Underneath the sqlite gem defined in the gem file add this piece of code.
+
 ```ruby
 Step 3: 
+    // Configuring Heroku on cloud9 Steps 3:
 In Gemfile: 
 
     # Use postgresql as the database for production
