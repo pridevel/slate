@@ -73,7 +73,7 @@ twenty_five_point_two = ten + fifteen_point_two;
  output: 20
 ```
 
-With variables we can do something called string interplation, which means we can insert variables inside a string.
+* With variables we can do something called string interplation, which means we can insert variables inside a string.
 To do this we need to use rubys special command **#{}** inside this curly braces{} we can specify our variables.
 
 ```ruby
