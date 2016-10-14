@@ -589,6 +589,85 @@ Also you can go to the "Preview" at the top in the navbar and select "Preview Ru
  Ctrl + C
 ```
 
+## Setting Git 
+
+Any time you are setting git on your personal computer or for your application, follow the steps below:
+You have to do this just once before starting up with any project work. You can know more about git by going to their wesite at [git-scm](https://git-scm.com/).
+The **git** helps us to save our work as we progress with our application building process.
+You can always track your work and if you ever make mistakes or screw up the with the code.
+
+### Configuring git to your application
+
+```ruby
+cd project_name
+git config --global user.name "Your Name"      // configuring our application with git.
+git config --global user.email "your@email.com"
+git config --global push.default matching   // as new versions of git come out it should still work the same for us.
+git init                // initializing empty git reepository
+git add .               // adding everything in this directory on git. ('.' means all)
+git status              // it gives the names of the files newly added to the git.
+git commit -m "Initial commit"     // saving all the files on git with the message.
+
+```
+<hr>
+
+### Steps to set an github account
+
+Step 1: Go to [Github](https://github.com/) and create your **free** account.
+
+Step 2: Go to https://c9.io/account/services, In the Github section click on "Connect".
+
+Step 3: Type the console command: cat ~/.ssh/id_rsa.pub 
+  **This command will print the SSH Key in the console output.**
+  
+Step 4: Copy the SSH Key generated in the console, go to https://github.com/settings/keys and on that page you need to fill up the "title" and paste the SSH keys in the "Keys" input box.
+     Click on **Add Key** Button.
+    
+** NOW WE ARE SUCCESSFULLY CONNTED TO GITHUB **
+
+<hr>
+
+### Creating Repository on Github
+     
+Step 1: Login to your github account or if you are alreay logged in go to the home page.
+
+Step 2: Click on the (+) sign on the top-right near your avatar.
+        Click on new repository option from the dropdown list.
+        
+Step 3: You can start filling up the information. Give the name  for your repository, but for consistency name your repository same as your application_name.
+        You can skip the description if you want to.
+        You can choose a public repository if you want to share your code with other developers, or if you want to go for private you actually need to pay for an account.
+        
+Step 4: After clicking on "Create Repository" you will be redirect to a new page with Url as **https://github.com/User_name/application_name**.
+        Click on the **SSH** button next to HTTPS.
+        
+        **Copy the command: git remote add origin git@github.com:yourusername/application_name.git **
+        and paste it in the console. `(This command means that we are able to add out code to the particular address on github. )`
+        
+```ruby
+git remote add origin git@github.com:yourusername/application_name.git
+
+// output: you will not get any output. Next step explains you the verification.
+```
+        
+Step 5: in console type "git remote".
+
+```ruby
+git remote
+
+//output: origin
+```
+
+Step 6: in the console type command "git push origin master". This command will push the copy of your application on the github.
+        Now if you go back to the page (https://github.com/User_name/application_name) mentioned in **Step 4** and refresh the page you can see the copy of your application on that page.
+
+```ruby
+git push origin master
+
+```
+
+So now we have successfully sent a copy of our application on the github.
+
 ## Scaffolding 
 
 Rails gives us a special shortcut called **Scaffolding** by using which we can build few functionalities very quickly.
@@ -612,6 +691,7 @@ It receives the request from the application and matches with the particular rou
 The controller has different actions and each action is associated with particular route. 
 Each action's responsibility is to collect information and provied it to the view.
 Controller names starts with capital letter.
+>Location of the controller file: You can find controller files in : /app/controller .
 
 ```ruby
 
@@ -627,8 +707,11 @@ The view displays the information which a user of the website can see and make i
 View templates are written in Embedded Ruby(eRuby) language. 
 Each controller has its associated view. The view name is same same as that of the corresponding controller name.
 The data between view and controller is shared through mutually accessible variables.
+>Location : You can find the views in /app/views .
 
 To know more about view you can refer [Rails Guides](guides.rubyonrails.org/getting_started.html#what-is-rails-questionmark).
+
+## Routes
 
 
 
