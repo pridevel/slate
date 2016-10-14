@@ -173,8 +173,22 @@ my_boolean = true
 
 <ul>
 <li>Variables are the letters or words that stores the single value. </li>
+<li>They are the labels for a piece of memory where we store our data such as objects, arrays, numbers, strings, etc.</li>
+<li>We can aslo assign one variable to other variable.</li>
 </ul>
 <pre class="highlight ruby"><code> <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+ <span class="nb">puts</span> <span class="n">x</span>
+
+ <span class="ss">output: </span><span class="mi">20</span>
+</code></pre>
+
+<p>With variables we can do something called string interplation, which means we can insert variables inside a string.
+To do this we need to use rubys special command <strong>#{}</strong> inside this curly braces{} we can specify our variables.</p>
+<pre class="highlight ruby"><code>    <span class="n">var</span> <span class="nb">name</span> <span class="o">=</span> <span class="s2">"Savitri"</span>
+
+    <span class="nb">puts</span> <span class="s2">"Hello, my name is </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2"> !!"</span>
+
+  <span class="sr">//</span> <span class="ss">output: </span><span class="no">Hello</span><span class="p">,</span> <span class="n">my</span> <span class="nb">name</span> <span class="n">is</span> <span class="no">Savitri</span> <span class="o">!!</span>
 </code></pre>
 
 <h2 id="maths">Maths</h2>
@@ -590,6 +604,69 @@ For accessing the key-value pair from hash we are going to use <strong>each</str
             <span class="no">Jane</span><span class="p">:</span> <span class="n">grandpa</span>
             <span class="no">Tom</span><span class="p">:</span> <span class="n">dog</span>
 
+</code></pre>
+
+<h2 id="methods-or-functions">Methods Or Functions</h2>
+
+<p>Methods Or Functions are body of code which we can reuse or call whenever needed.
+The syntax says that we are defining a method called <strong>welcome</strong> and the <strong>end</strong> is declared when the method is complete.
+We can define any complex functionality or output the statements etc.
+The function or method can have single or multiple parameters. And we need to define this parameters when we are calling the function.</p>
+<pre class="highlight ruby"><code><span class="no">Syntax</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">method_name</span>
+    <span class="sr">//</span><span class="n">body</span> <span class="p">.</span><span class="nf">.</span> <span class="sr">//</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>In the first example we are defining a method called welcome, which simply outputs the message &ldquo;Welcome to Ruby&rdquo; when we call that method.</p>
+<pre class="highlight ruby"><code><span class="no">Ex</span> <span class="mi">1</span><span class="p">.</span>
+<span class="nf">def</span> <span class="n">welcome</span>
+    <span class="nb">puts</span> <span class="s2">"Welcome to Ruby"</span>
+<span class="k">end</span>
+
+<span class="n">welcome</span> <span class="sr">//</span> <span class="n">calling</span> <span class="n">the</span> <span class="nb">method</span><span class="p">.</span> 
+
+<span class="nf">output</span><span class="p">:</span> <span class="no">Welcome</span> <span class="n">to</span> <span class="no">Ruby</span>
+
+</code></pre>
+
+<p>In second example, we are defining say_name function which has one parameter name. Here name is a temporary variable which holds the value that we are going to pass when we call that function.</p>
+<pre class="highlight ruby"><code>
+<span class="no">Ex</span> <span class="mi">2</span><span class="p">.</span>
+
+<span class="nf">def</span> <span class="n">say_name</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Hi, my name is </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">. Nice to meet you!!"</span>
+<span class="k">end</span>
+
+<span class="n">say_name</span><span class="p">(</span><span class="s2">"Savitri"</span><span class="p">)</span>
+
+<span class="sr">//ou</span><span class="ss">tput: </span><span class="no">Hi</span><span class="p">,</span> <span class="n">my</span> <span class="nb">name</span> <span class="n">is</span> <span class="no">Savitri</span><span class="o">.</span> <span class="no">Nice</span> <span class="n">to</span> <span class="n">meet</span> <span class="n">you!</span><span class="o">!</span>
+</code></pre>
+
+<h2 id="class">Class</h2>
+
+<p>Classes in Ruby always is prefixed with the class keyword followed by the class name which start with a capital word.
+It is a blueprint for some kind of object. 
+In a class we can store variable, aslo we can define methods and access them.</p>
+<pre class="highlight ruby"><code><span class="ss">syntax: </span><span class="k">class</span> <span class="nc">Welcome</span>
+
+        <span class="k">end</span>
+</code></pre>
+
+<p>In the example we are declaring a class called &ldquo;Welcome&rdquo;, which has a method called hello.</p>
+<pre class="highlight ruby"><code><span class="no">Example</span><span class="p">:</span> 
+
+<span class="k">class</span> <span class="nc">Welcome</span>
+    <span class="k">def</span> <span class="nf">hello</span>
+        <span class="nb">puts</span> <span class="s2">"Hello World!!"</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">var</span> <span class="n">obj</span> <span class="o">=</span> <span class="no">Welcome</span><span class="p">.</span><span class="nf">new</span>   <span class="sr">//</span> <span class="n">creating</span> <span class="n">an</span> <span class="n">object</span><span class="p">.</span>
+
+<span class="nf">obj</span><span class="p">.</span><span class="nf">hello</span>             <span class="sr">//</span><span class="n">calling</span> <span class="n">hello</span> <span class="nb">method</span> <span class="n">of</span> <span class="no">Welcome</span> <span class="k">class</span><span class="p">.</span>
+
+<span class="nf">/</span><span class="o">/</span><span class="ss">output: </span><span class="no">Hello</span> <span class="no">World</span><span class="o">!!</span>
 </code></pre>
 
 <h1 id="ruby-on-rails">Ruby on Rails</h1>
