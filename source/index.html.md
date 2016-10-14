@@ -63,9 +63,25 @@ twenty_five_point_two = ten + fifteen_point_two;
 
 ## Variable
 * Variables are the letters or words that stores the single value. 
+* They are the labels for a piece of memory where we store our data such as objects, arrays, numbers, strings, etc.
+* We can aslo assign one variable to other variable.
 
 ```ruby
  x = 20
+ puts x
+ 
+ output: 20
+```
+
+With variables we can do something called string interplation, which means we can insert variables inside a string.
+To do this we need to use rubys special command **#{}** inside this curly braces{} we can specify our variables.
+
+```ruby
+    var name = "Savitri"
+    
+    puts "Hello, my name is #{name} !!"
+    
+  // output: Hello, my name is Savitri !!
 ```
 
 ## Maths
@@ -469,6 +485,78 @@ family.each { |x, y| puts "#{x}: #{y}" }
             Tom: dog
 
 ```
+
+## Methods Or Functions
+
+Methods Or Functions are body of code which we can reuse or call whenever needed.
+The syntax says that we are defining a method called **welcome** and the **end** is declared when the method is complete.
+We can define any complex functionality or output the statements etc.
+The function or method can have single or multiple parameters. And we need to define this parameters when we are calling the function.
+
+```ruby
+Syntax:
+def method_name
+    //body .. //
+end
+```
+In the first example we are defining a method called welcome, which simply outputs the message "Welcome to Ruby" when we call that method.
+
+```ruby
+Ex 1.
+def welcome
+    puts "Welcome to Ruby"
+end
+
+welcome // calling the method. 
+
+output: Welcome to Ruby
+
+```
+In second example, we are defining say_name function which has one parameter name. Here name is a temporary variable which holds the value that we are going to pass when we call that function.
+
+```ruby
+
+Ex 2.
+
+def say_name(name)
+    puts "Hi, my name is #{name}. Nice to meet you!!"
+end
+
+say_name("Savitri")
+
+//output: Hi, my name is Savitri. Nice to meet you!!
+```
+
+## Class
+
+Classes in Ruby always is prefixed with the class keyword followed by the class name which start with a capital word.
+It is a blueprint for some kind of object. 
+In a class we can store variable, aslo we can define methods and access them.
+
+```ruby 
+syntax: class Welcome
+
+        end
+```        
+
+In the example we are declaring a class called "Welcome", which has a method called hello.
+
+```ruby
+Example: 
+
+class Welcome
+    def hello
+        puts "Hello World!!"
+    end
+end
+
+var obj = Welcome.new   // creating an object.
+
+obj.hello             //calling hello method of Welcome class.
+
+//output: Hello World!!
+```
+
 # Ruby on Rails
 
 Ruby on Rails is an extremely productive web application framework written in Ruby by David Heinemeier Hansson.
