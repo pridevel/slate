@@ -879,12 +879,12 @@ Steps 2:
 Step 3: 
 In Gemfile: </p>
 
-<h1 id="use-postgresql-as-the-database-for-production">Use postgresql as the database for production</h1>
-
-<p>group :production do
-  gem &#39;pg&rsquo;
-  gem &#39;rails_12factor&rsquo;
-end</p>
+<p># Use postgresql as the database for production
+    group :production do
+      gem &#39;pg&rsquo;
+      gem &#39;rails_12factor&rsquo;
+    end
+&rdquo;`</p>
 
 <p>In console:</p>
 
@@ -894,7 +894,7 @@ end</p>
 
 <p>git add .       // add all the changes to git.</p>
 
-<p>git commit -m &quot;Commit Message&rdquo;     // commiting changes to the git.</p>
+<p>git commit -m &ldquo;Commit Message&rdquo;     // commiting changes to the git.</p>
 
 <p>git push                    // sending the changes on the git.</p>
 <pre class="highlight plaintext"><code>
