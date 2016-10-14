@@ -867,24 +867,24 @@ It provides us with the <strong>domain</strong> or <strong>web-address</strong> 
 <p>Step 1: Go to Gemfile.</p>
 
 <p>Step 2: Search a gem name &lsquo;sqlite3&rsquo;.
-        And modify it as <code class="prettyprint">gem &#39;sqlite3&#39;, group: [:development, :test]</code>.
-<code class="prettyprint">ruby
-    Steps 2:
-    `gem &#39;sqlite3&#39;, group: [:development, :test]`
-</code><br>
- This means that we are limiting out database gem sqlite to development and test environment.</p>
+        And modify it as <code class="prettyprint">gem &#39;sqlite3&#39;, group: [:development, :test]</code>.</p>
+<pre class="highlight ruby"><code>    <span class="sr">//</span> <span class="no">Configuring</span> <span class="no">Heroku</span> <span class="n">on</span> <span class="n">cloud9</span> <span class="no">Steps</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="sb">`gem 'sqlite3', group: [:development, :test]`</span>
+</code></pre>
 
-<p>Step 3: Underneath the sqlite gem defined in the gem file add this piece of code.
-&ldquo;`ruby
-Step 3: 
-In Gemfile: </p>
+<p>This means that we are limiting out database gem sqlite to development and test environment.</p>
 
-<p># Use postgresql as the database for production
-    group :production do
-      gem &#39;pg&rsquo;
-      gem &#39;rails_12factor&rsquo;
-    end
-&rdquo;`</p>
+<p>Step 3: Underneath the sqlite gem defined in the gem file add this piece of code.</p>
+<pre class="highlight ruby"><code><span class="no">Step</span> <span class="mi">3</span><span class="p">:</span> 
+    <span class="sr">//</span> <span class="no">Configuring</span> <span class="no">Heroku</span> <span class="n">on</span> <span class="n">cloud9</span> <span class="no">Steps</span> <span class="mi">3</span><span class="p">:</span>
+<span class="no">In</span> <span class="no">Gemfile</span><span class="p">:</span> 
+
+    <span class="c1"># Use postgresql as the database for production</span>
+    <span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+      <span class="n">gem</span> <span class="s1">'pg'</span>
+      <span class="n">gem</span> <span class="s1">'rails_12factor'</span>
+    <span class="k">end</span>
+</code></pre>
 <pre class="highlight ruby"><code> <span class="no">In</span> <span class="ss">console:
 
  </span><span class="n">bundle</span> <span class="n">install</span> <span class="o">--</span><span class="n">without</span> <span class="n">production</span>       <span class="sr">//</span><span class="n">this</span> <span class="n">command</span> <span class="n">fetch</span> <span class="n">the</span> <span class="n">gem</span> <span class="n">from</span> <span class="n">the</span> <span class="n">internet</span> <span class="n">and</span> <span class="n">installs</span> <span class="n">it</span> <span class="k">in</span> <span class="n">our</span> <span class="n">application</span><span class="p">.</span>
