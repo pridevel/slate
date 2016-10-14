@@ -767,8 +767,8 @@ Step 1: Go to Gemfile.
 Step 2: Search a gem name 'sqlite3'.
         And modify it as `gem 'sqlite3', group: [:development, :test]`.
 ```ruby
-Steps 2:
-`gem 'sqlite3', group: [:development, :test]`
+    Steps 2:
+    `gem 'sqlite3', group: [:development, :test]`
 ```        
  This means that we are limiting out database gem sqlite to development and test environment.
  
@@ -784,6 +784,7 @@ In Gemfile:
     end
 ```
 
+```ruby 
  In console:
  
  bundle install --without production       //this command fetch the gem from the internet and installs it in our application.
