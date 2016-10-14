@@ -745,7 +745,7 @@ git remote
 //output: origin
 ```
 
-Step 6: in the console type command "git push origin master". This command will push the copy of your application on the github.
+Step 6: in the console type command "git push origin master". This command will **push the copy of your application** on the github.
         Now if you go back to the page (https://github.com/User_name/application_name) mentioned in **Step 4** and refresh the page you can see the copy of your application on that page.
 
 ```ruby
@@ -754,6 +754,97 @@ git push origin master
 ```
 
 So now we have successfully sent a copy of our application on the github.
+
+## Heroku setup
+
+Heroku allows us to deploy our application to web. Which means that we are sending the copy of our application to another server where people can view our application.
+It provides us with the **domain** or **web-address** where we can visit to see our application.
+
+### Configuring Heroku on cloud9
+
+Step 1: Go to Gemfile.
+
+Step 2: Search a gem name 'sqlite3'.
+        And modify it as `gem 'sqlite3', group: [:development, :test]`.
+```ruby
+Steps 2:
+`gem 'sqlite3', group: [:development, :test]`
+```        
+ This means that we are limiting out database gem sqlite to development and test environment.
+ 
+Step 3: Underneath the sqlite gem defined in the gem file add this piece of code.
+```ruby
+Step 3: 
+In Gemfile: 
+# Use postgresql as the database for production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+
+ In console:
+ 
+ bundle install --without production       //this command fetch the gem from the internet and installs it in our application.
+ 
+ git status       // check the status of files that are modified.
+ 
+ git add .       // add all the changes to git.
+ 
+ git commit -m "Commit Message"     // commiting changes to the git.
+ 
+ git push                    // sending the changes on the git.
+ 
+```
+
+### Setting up Heroku
+
+Step 1: Create an account on heroku.com and Sing in into the account.
+
+Step 2: In the console write 
+
+```ruby
+    heroku login                     // this will prompt to login with the same credentials as that of heroku account.
+```        
+        Enter your email
+        Enter your password          // the cursor would not move or nothing will appear when you are typing the password.
+
+Step 3: In the console
+
+``` ruby
+    heroku keys:add  // this will eastablish communication between cloud9 and heroku.
+```
+
+`This will ask you the confirmation whether you want to use the same public key. **Choose Yes(Y)**.`
+
+Step 4: In the console
+
+```ruby 
+ heroku create        // create a server in heroku
+ 
+ // output : Git remote heroku added       // if everything is done correctly you get this output.
+```
+
+>While executing step 4 you will find a URL in the console. Save that URL somewhere because thats the URL for your application or the production or live application.
+
+Step 5: In the console
+
+```ruby 
+ git push heroku     // this will save the copy of your application on the heroku server.
+ 
+```
+
+Step 6: In the console 
+You can repeat the following steps whenever you want to save a copy of your application to Github or Heroku.
+
+```ruby
+    git status
+    git add .
+    git commit -m "commit message"
+    git push 
+    git push heroku 
+    
+```
 
 ## Scaffolding 
 
