@@ -904,20 +904,23 @@ In Gemfile: </p>
 <p>Step 1: Create an account on heroku.com and Sing in into the account.</p>
 
 <p>Step 2: In the console write </p>
-<pre class="highlight ruby"><code>    <span class="n">heroku</span> <span class="n">login</span>                     <span class="sr">//</span> <span class="n">this</span> <span class="n">will</span> <span class="n">prompt</span> <span class="n">to</span> <span class="n">login</span> <span class="n">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">credentials</span> <span class="n">as</span> <span class="n">that</span> <span class="n">of</span> <span class="n">heroku</span> <span class="n">account</span><span class="o">.</span>
+<pre class="highlight ruby"><code>    <span class="sr">//</span> <span class="no">Setting</span> <span class="n">up</span> <span class="no">Heroku</span><span class="p">,</span> <span class="no">Step</span> <span class="mi">2</span><span class="p">.</span>
+    <span class="nf">heroku</span> <span class="n">login</span>                     <span class="sr">//</span> <span class="n">this</span> <span class="n">will</span> <span class="n">prompt</span> <span class="n">to</span> <span class="n">login</span> <span class="n">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">credentials</span> <span class="n">as</span> <span class="n">that</span> <span class="n">of</span> <span class="n">heroku</span> <span class="n">account</span><span class="o">.</span>
 </code></pre>
 
 <p>Enter your email
         Enter your password          // the cursor would not move or nothing will appear when you are typing the password.</p>
 
 <p>Step 3: In the console</p>
-<pre class="highlight ruby"><code>    <span class="n">heroku</span> <span class="n">keys</span><span class="ss">:add</span>  <span class="o">/</span><span class="sr">/ this will eastablish communication between cloud9 and heroku.
+<pre class="highlight ruby"><code> <span class="sr">//</span> <span class="no">Setting</span> <span class="n">up</span> <span class="no">Heroku</span><span class="p">,</span> <span class="no">Step</span> <span class="mi">3</span><span class="p">.</span>
+    <span class="nf">heroku</span> <span class="n">keys</span><span class="ss">:add</span>  <span class="o">/</span><span class="sr">/ this will eastablish communication between cloud9 and heroku.
 </span></code></pre>
 
 <p><code class="prettyprint">This will ask you the confirmation whether you want to use the same public key. **Choose Yes(Y)**.</code></p>
 
 <p>Step 4: In the console</p>
-<pre class="highlight ruby"><code> <span class="n">heroku</span> <span class="n">create</span>        <span class="sr">//</span> <span class="n">create</span> <span class="n">a</span> <span class="n">server</span> <span class="k">in</span> <span class="n">heroku</span>
+<pre class="highlight ruby"><code> <span class="sr">//</span> <span class="no">Setting</span> <span class="n">up</span> <span class="no">Heroku</span><span class="p">,</span> <span class="no">Step</span> <span class="mi">4</span><span class="p">.</span>
+ <span class="nf">heroku</span> <span class="n">create</span>        <span class="sr">//</span> <span class="n">create</span> <span class="n">a</span> <span class="n">server</span> <span class="k">in</span> <span class="n">heroku</span>
 
  <span class="sr">//</span> <span class="n">output</span> <span class="p">:</span> <span class="no">Git</span> <span class="n">remote</span> <span class="n">heroku</span> <span class="n">added</span>       <span class="sr">//</span> <span class="k">if</span> <span class="n">everything</span> <span class="n">is</span> <span class="n">done</span> <span class="n">correctly</span> <span class="n">you</span> <span class="n">get</span> <span class="n">this</span> <span class="n">output</span><span class="o">.</span>
 </code></pre>
@@ -927,13 +930,15 @@ In Gemfile: </p>
 </blockquote>
 
 <p>Step 5: In the console</p>
-<pre class="highlight ruby"><code> <span class="n">git</span> <span class="n">push</span> <span class="n">heroku</span>     <span class="sr">//</span> <span class="n">this</span> <span class="n">will</span> <span class="n">save</span> <span class="n">the</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">your</span> <span class="n">application</span> <span class="n">on</span> <span class="n">the</span> <span class="n">heroku</span> <span class="n">server</span><span class="o">.</span>
+<pre class="highlight ruby"><code> <span class="sr">//</span> <span class="no">Setting</span> <span class="n">up</span> <span class="no">Heroku</span><span class="p">,</span> <span class="no">Step</span> <span class="mi">5</span><span class="p">.</span>
+ <span class="nf">git</span> <span class="n">push</span> <span class="n">heroku</span>     <span class="sr">//</span> <span class="n">this</span> <span class="n">will</span> <span class="n">save</span> <span class="n">the</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">your</span> <span class="n">application</span> <span class="n">on</span> <span class="n">the</span> <span class="n">heroku</span> <span class="n">server</span><span class="o">.</span>
 
 </code></pre>
 
 <p>Step 6: In the console 
 You can repeat the following steps whenever you want to save a copy of your application to Github or Heroku.</p>
-<pre class="highlight ruby"><code>    <span class="n">git</span> <span class="n">status</span>
+<pre class="highlight ruby"><code> <span class="sr">//</span> <span class="no">Setting</span> <span class="n">up</span> <span class="no">Heroku</span><span class="p">,</span> <span class="no">Step</span> <span class="mi">6</span><span class="p">.</span>
+    <span class="nf">git</span> <span class="n">status</span>
     <span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
     <span class="nf">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">"commit message"</span>
     <span class="n">git</span> <span class="n">push</span> 
