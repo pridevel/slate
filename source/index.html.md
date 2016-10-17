@@ -910,11 +910,12 @@ Example: rails generate controller Post.
 
 //output: 
 
+The controller file is created in the controllers folder.
+ 
 class PostsController < ApplicationController
 end
 
 ```
->Controller classes inherit from ApplicationController, which is the other file in the controllers folder: application.rb.
 
 ## View 
 
@@ -924,7 +925,7 @@ Each controller has its associated view. The view name is same same as that of t
 The data between view and controller is shared through mutually accessible variables.
 >Location : You can find the views in /app/views .
 
-To know more about view you can refer [Rails Guides](guides.rubyonrails.org/getting_started.html#what-is-rails-questionmark).
+To know more about view you can refer [Rails Guides](http://guides.rubyonrails.org/layouts_and_rendering.html).
 
 ## Routes
 
