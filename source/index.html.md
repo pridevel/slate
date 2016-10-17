@@ -974,9 +974,9 @@ Example:
 
 Model | Class
 ------|-------
-Book	books
-Mouse	mice
-Person	people
+Book  |	books
+Mouse | mice
+Person|	people
 
 ```ruby
 Syntax: rails generate model Modelname
