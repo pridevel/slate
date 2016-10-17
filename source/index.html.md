@@ -938,7 +938,7 @@ To know more about view you can refer [Rails Guides](http://guides.rubyonrails.o
 
 The routes are loacted in the **config/routes.rb**.
 When you go the routes file loacated at the above position you can find the commented code in it.
-That code is nothing but the examples of routes provided by rails to you, so that you can create your own routes.
+That code is nothing but the examples of routes provided by rails to you, so that you can understand how to create your own routes.
 
 The special keyword used to create routes for our application is **resources**.
 Instead of declaring separate routes for your index, show, new, edit, create, update and destroy actions,we can do it in a single line by using resources keyword.
@@ -960,7 +960,35 @@ resources :recipes
 resources :books
 ```
 
+##Active Records
 
+Active Records are the Model from the MVC.
+The Model is used to connect controller with the database.
+Each Model object has CRUD (Create, Read, Update, and Delete) methods for database access.
+
+The Model files are named in **singular-** with first letter **capital**, whereas the assciated Database table name is **plural** and written in **CamelCase**.
+
+We put the validation to our code in the Model files. The model files are inherited from **ActiveRecord::Base** class.
+
+Example:
+
+Model | Class
+------|-------
+Book	books
+Mouse	mice
+Person	people
+
+```ruby
+Syntax: rails generate model Modelname
+
+Example: rails generate model Book
+```
+ 
+When we create a Model using rails generator, an associated migration file is also create in the **db** folder with the timestamp.
+This migration file is nothing but the database in which we can define multiple columns with their datatypes.
+By default rails creates a **primary-key** column in every database table with datatype as **integer**.
+ 
+>Location of model file is app/models folder.
 
 
 
