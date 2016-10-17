@@ -1027,7 +1027,7 @@ To know more about view you can refer <a href="http://guides.rubyonrails.org/lay
 
 <p>The routes are loacted in the <strong>config/routes.rb</strong>.
 When you go the routes file loacated at the above position you can find the commented code in it.
-That code is nothing but the examples of routes provided by rails to you, so that you can create your own routes.</p>
+That code is nothing but the examples of routes provided by rails to you, so that you can understand how to create your own routes.</p>
 
 <p>The special keyword used to create routes for our application is <strong>resources</strong>.
 Instead of declaring separate routes for your index, show, new, edit, create, update and destroy actions,we can do it in a single line by using resources keyword.
@@ -1046,6 +1046,42 @@ The resources tells rails that you want to create routes that matches particular
 
 <span class="n">resources</span> <span class="ss">:books</span>
 </code></pre>
+
+<h2 id="active-records">Active Records</h2>
+
+<p>Active Records are the Model from the MVC.
+The Model is used to connect controller with the database.
+Each Model object has CRUD (Create, Read, Update, and Delete) methods for database access.</p>
+
+<p>The Model files are named in <strong>singular-</strong> with first letter <strong>capital</strong>, whereas the assciated Database table name is <strong>plural</strong> and written in <strong>CamelCase</strong>.</p>
+
+<p>We put the validation to our code in the Model files. The model files are inherited from <strong>ActiveRecord::Base</strong> class.</p>
+
+<p>Example:</p>
+
+<table><thead>
+<tr>
+<th>Model</th>
+<th>Class</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p>Book    books
+Mouse   mice
+Person  people</p>
+<pre class="highlight ruby"><code><span class="no">Syntax</span><span class="p">:</span> <span class="n">rails</span> <span class="n">generate</span> <span class="n">model</span> <span class="no">Modelname</span>
+
+<span class="no">Example</span><span class="p">:</span> <span class="n">rails</span> <span class="n">generate</span> <span class="n">model</span> <span class="no">Book</span>
+</code></pre>
+
+<p>When we create a Model using rails generator, an associated migration file is also create in the <strong>db</strong> folder with the timestamp.
+This migration file is nothing but the database in which we can define multiple columns with their datatypes.
+By default rails creates a <strong>primary-key</strong> column in every database table with datatype as <strong>integer</strong>.</p>
+
+<blockquote>
+<p>Location of model file is app/models folder.</p>
+</blockquote>
 
           <h1 id="errors">Errors</h1>
 
