@@ -671,9 +671,10 @@ Click on that popup box and you can see your application running.
 
 Also you can go to the "Preview" at the top in the navbar and select "Preview Running Application".
 
-* To Stop the server simply do 
+* To Stop the server simply do Ctrl + C
 
 ```ruby
+// to stop rails server.
  Ctrl + C
 ```
 
@@ -728,7 +729,7 @@ Step 3: You can start filling up the information. Give the name  for your reposi
 Step 4: After clicking on "Create Repository" you will be redirect to a new page with Url as **https://github.com/User_name/application_name**.
         Click on the **SSH** button next to HTTPS.
         
-        **Copy the command: git remote add origin git@github.com:yourusername/application_name.git **
+        **Copy the command: git remote add origin git@github.com:yourusername/application_name.git**
         and paste it in the console. `(This command means that we are able to add out code to the particular address on github. )`
         
 ```ruby
@@ -919,12 +920,18 @@ end
 
 ## View 
 
-The view displays the information which a user of the website can see and make interaction.
-View templates are written in Embedded Ruby(eRuby) language. 
-Each controller has its associated view. The view name is same same as that of the corresponding controller name.
+The view displays the information which a user of the website can see and interact with the website.
+
+When we create the controller, it automatically creates a sub-folder under **app/views** with the same name as that of the corresponding controller's name. 
+The files that we create in views has same name as that of the method_name that we define in the controller's class.
+
+View templates are written in Embedded Ruby(eRuby) language. That is why ruby code is embedded inside the erb tags (<% ruby...code %>).
+Also the view files has the extension of **.erb** .
 The data between view and controller is shared through mutually accessible variables.
+
 >Location : You can find the views in /app/views .
 
+To know more about ERB you can refer [this](https://docs.puppet.com/puppet/latest/reference/lang_template_erb.html) page.
 To know more about view you can refer [Rails Guides](http://guides.rubyonrails.org/layouts_and_rendering.html).
 
 ## Routes
