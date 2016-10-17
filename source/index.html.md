@@ -940,18 +940,24 @@ The routes are loacted in the **config/routes.rb**.
 When you go the routes file loacated at the above position you can find the commented code in it.
 That code is nothing but the examples of routes provided by rails to you, so that you can create your own routes.
 
-You can also view the routes in the console by using the command **bundle exec rake routes**.
-
 The special keyword used to create routes for our application is **resources**.
 Instead of declaring separate routes for your index, show, new, edit, create, update and destroy actions,we can do it in a single line by using resources keyword.
 The resources tells rails that you want to create routes that matches particular controller's actions.
+
+You can also view the routes or url associated with the specific controller action in the console by using the command **bundle exec rake routes**.
 
 For more information about routes you can visit [Rails Guides](http://guides.rubyonrails.org/routing.html).
 
 ```ruby
 // to define routes.
+
 Syntax :
+resources :controller_name
+
+Example
 resources :recipes
+
+resources :books
 ```
 
 
