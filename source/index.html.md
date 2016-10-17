@@ -859,19 +859,31 @@ You can repeat the following steps whenever you want to save a copy of your appl
 
 ## Scaffolding 
 
-Rails gives us a special shortcut called **Scaffolding** by using which we can build few functionalities very quickly.
-The functionalities that are by-default created for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
-Here we don't have to individually create model files, views files, etc.
-Obvioulsy this save our lot of time, so we can say that scaffolding is shortcut to create our rails application skeleton.
+Rails gives us a special shortcut called **Scaffolding** by using which we can get a default rails generated skeleton structure of files.
+This helps us to know about the rails file structure a bit and how rails work.
+The default structure created by rails for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
+Here we don't have to individually create model files, views files, etc which saves a lot of time of ours to design the file structure, so we can say that scaffolding is shortcut to create our rails application skeleton.
+You can go through the file structure that is created, aslo you can go through the list of files that are created by rails on the console when you execute the sacffol command.
+
+One thing you need to do after successfully executing the scaffold command is that you need to do database migration. Basically what it does is perepares the database where we can store our data.
 To know more about scaffolding you can visit [here](https://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm).
 
 ```ruby
+Syntax: rails generate scaffold Application_name
 
-rails generate scaffold Post
+Example: rails generate scaffold Post
 
 //This command will create a model Post. It will also create accompanying views and a controller that contains the relevant CRUD actions and it also creates routes and database file. 
 
 ```
+
+```ruby 
+// execute this command after successfully executing scaffold command.
+
+bundle exec rake db:migrate           
+```
+
+>It is recommended that after running the migration file, restart your serve.
 
 ## Controller
 
