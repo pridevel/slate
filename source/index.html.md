@@ -863,7 +863,7 @@ Rails gives us a special shortcut called **Scaffolding** by using which we can g
 This helps us to know about the rails file structure a bit and also how rails work.
 The default structure created by rails for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
 Here we don't have to individually create model files, views files, etc which saves a lot of time of ours to design the file structure, so we can say that scaffolding is shortcut to create our rails application skeleton.
-You can go through the file structure that is created, aslo you can go through the list of files that are created by rails on the console when you execute the sacffol command.
+You can go through the file structure that is created, also you can go through the list of files that are created by rails on the console when you execute the sacffol command.
 
 One thing you need to do after successfully executing the scaffold command is that you need to do database migration. Basically what it does is perepares the database where we can store our data.
 To know more about scaffolding you can visit [here](https://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm).
@@ -877,6 +877,8 @@ Example: rails generate scaffold Post
 
 ```
 
+The **bundle exec rake db:migrate** command is going to look into the **migrate** folder and check the file and run them. Once the databaseis created successfully, you will get a confirmation in the console.
+
 ```ruby 
 // execute this command after successfully executing scaffold command.
 
@@ -887,11 +889,17 @@ bundle exec rake db:migrate
 
 ## Controller
 
-The controller is used to co-ordinate the function between user model and view.
-It receives the request from the application and matches with the particular route.
-The controller has different actions and each action is associated with particular route. 
+The controller is used to co-ordinate the function between user, model and view.
+It receives the request from the application and matches with the particular route. 
+
+The controller has class and class has different functions or methods which are called as **actions**.
+Their are different actions like index, new, show, create, update, edit, delete and each action is associated with particular route. Also you can create your own methods.
 Each action's responsibility is to collect information and provied it to the view.
 Controller names starts with capital letter.
+
+The class in the controller inherits the property of the parent controller **ApplicationController** which is loacted in controllers folder **application_controller.rb** file.
+ApplicationController is again inherited from rails **ActionController::Base** class.
+
 >Location of the controller file: You can find controller files in : /app/controller .
 
 ```ruby
@@ -899,6 +907,12 @@ Controller names starts with capital letter.
 rails generate controller controller_name
 
 Example: rails generate controller Post.
+
+//output: 
+
+class PostsController < ApplicationController
+end
+
 ```
 >Controller classes inherit from ApplicationController, which is the other file in the controllers folder: application.rb.
 
