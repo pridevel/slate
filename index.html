@@ -1025,6 +1025,28 @@ To know more about view you can refer <a href="http://guides.rubyonrails.org/lay
 
 <h2 id="routes">Routes</h2>
 
+<p>The routes are loacted in the <strong>config/routes.rb</strong>.
+When you go the routes file loacated at the above position you can find the commented code in it.
+That code is nothing but the examples of routes provided by rails to you, so that you can create your own routes.</p>
+
+<p>The special keyword used to create routes for our application is <strong>resources</strong>.
+Instead of declaring separate routes for your index, show, new, edit, create, update and destroy actions,we can do it in a single line by using resources keyword.
+The resources tells rails that you want to create routes that matches particular controller&rsquo;s actions.</p>
+
+<p>You can also view the routes or url associated with the specific controller action in the console by using the command <strong>bundle exec rake routes</strong>.</p>
+
+<p>For more information about routes you can visit <a href="http://guides.rubyonrails.org/routing.html">Rails Guides</a>.</p>
+<pre class="highlight ruby"><code><span class="sr">//</span> <span class="n">to</span> <span class="n">define</span> <span class="n">routes</span><span class="o">.</span>
+
+<span class="no">Syntax</span> <span class="p">:</span>
+<span class="n">resources</span> <span class="ss">:controller_name</span>
+
+<span class="no">Example</span>
+<span class="n">resources</span> <span class="ss">:recipes</span>
+
+<span class="n">resources</span> <span class="ss">:books</span>
+</code></pre>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
