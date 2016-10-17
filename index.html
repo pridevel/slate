@@ -782,9 +782,10 @@ Click on that popup box and you can see your application running.</p>
 <p>Also you can go to the &ldquo;Preview&rdquo; at the top in the navbar and select &ldquo;Preview Running Application&rdquo;.</p>
 
 <ul>
-<li>To Stop the server simply do </li>
+<li>To Stop the server simply do Ctrl + C</li>
 </ul>
-<pre class="highlight ruby"><code> <span class="no">Ctrl</span> <span class="o">+</span> <span class="no">C</span>
+<pre class="highlight ruby"><code><span class="sr">//</span> <span class="n">to</span> <span class="n">stop</span> <span class="n">rails</span> <span class="n">server</span><span class="o">.</span>
+ <span class="no">Ctrl</span> <span class="o">+</span> <span class="no">C</span>
 </code></pre>
 
 <h2 id="setting-git">Setting Git</h2>
@@ -836,7 +837,7 @@ git config --global push.default matching   /</span><span class="o">/</span> <sp
 <p>Step 4: After clicking on &ldquo;Create Repository&rdquo; you will be redirect to a new page with Url as <strong>https://github.com/User_name/application_name</strong>.
         Click on the <strong>SSH</strong> button next to HTTPS.</p>
 
-<p>*<em>Copy the command: git remote add origin git@github.com:yourusername/application_name.git *</em>
+<p><strong>Copy the command: git remote add origin git@github.com:yourusername/application_name.git</strong>
         and paste it in the console. <code class="prettyprint">(This command means that we are able to add out code to the particular address on github. )</code></p>
 <pre class="highlight ruby"><code><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="vi">@github</span><span class="p">.</span><span class="nf">com</span><span class="ss">:yourusername</span><span class="o">/</span><span class="n">application_name</span><span class="p">.</span><span class="nf">git</span>
 
@@ -1006,16 +1007,21 @@ ApplicationController is again inherited from rails <strong>ActionController::Ba
 
 <h2 id="view">View</h2>
 
-<p>The view displays the information which a user of the website can see and make interaction.
-View templates are written in Embedded Ruby(eRuby) language. 
-Each controller has its associated view. The view name is same same as that of the corresponding controller name.
+<p>The view displays the information which a user of the website can see and interact with the website.</p>
+
+<p>When we create the controller, it automatically creates a sub-folder under <strong>app/views</strong> with the same name as that of the corresponding controller&rsquo;s name. 
+The files that we create in views has same name as that of the method_name that we define in the controller&rsquo;s class.</p>
+
+<p>View templates are written in Embedded Ruby(eRuby) language. That is why ruby code is embedded inside the erb tags (&lt;% ruby&hellip;code %&gt;).
+Also the view files has the extension of <strong>.erb</strong> .
 The data between view and controller is shared through mutually accessible variables.</p>
 
 <blockquote>
 <p>Location : You can find the views in /app/views .</p>
 </blockquote>
 
-<p>To know more about view you can refer <a href="http://guides.rubyonrails.org/layouts_and_rendering.html">Rails Guides</a>.</p>
+<p>To know more about ERB you can refer <a href="https://docs.puppet.com/puppet/latest/reference/lang_template_erb.html">this</a> page.
+To know more about view you can refer <a href="http://guides.rubyonrails.org/layouts_and_rendering.html">Rails Guides</a>.</p>
 
 <h2 id="routes">Routes</h2>
 
