@@ -952,7 +952,7 @@ You can repeat the following steps whenever you want to save a copy of your appl
 This helps us to know about the rails file structure a bit and also how rails work.
 The default structure created by rails for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
 Here we don&rsquo;t have to individually create model files, views files, etc which saves a lot of time of ours to design the file structure, so we can say that scaffolding is shortcut to create our rails application skeleton.
-You can go through the file structure that is created, aslo you can go through the list of files that are created by rails on the console when you execute the sacffol command.</p>
+You can go through the file structure that is created, also you can go through the list of files that are created by rails on the console when you execute the sacffol command.</p>
 
 <p>One thing you need to do after successfully executing the scaffold command is that you need to do database migration. Basically what it does is perepares the database where we can store our data.
 To know more about scaffolding you can visit <a href="https://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm">here</a>.</p>
@@ -963,6 +963,8 @@ To know more about scaffolding you can visit <a href="https://www.tutorialspoint
 <span class="sr">//</span><span class="no">This</span> <span class="n">command</span> <span class="n">will</span> <span class="n">create</span> <span class="n">a</span> <span class="n">model</span> <span class="no">Post</span><span class="o">.</span> <span class="no">It</span> <span class="n">will</span> <span class="n">also</span> <span class="n">create</span> <span class="n">accompanying</span> <span class="n">views</span> <span class="n">and</span> <span class="n">a</span> <span class="n">controller</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">relevant</span> <span class="no">CRUD</span> <span class="n">actions</span> <span class="n">and</span> <span class="n">it</span> <span class="n">also</span> <span class="n">creates</span> <span class="n">routes</span> <span class="n">and</span> <span class="n">database</span> <span class="n">file</span><span class="o">.</span> 
 
 </code></pre>
+
+<p>The <strong>bundle exec rake db:migrate</strong> command is going to look into the <strong>migrate</strong> folder and check the file and run them. Once the databaseis created successfully, you will get a confirmation in the console.</p>
 <pre class="highlight ruby"><code><span class="sr">//</span> <span class="n">execute</span> <span class="n">this</span> <span class="n">command</span> <span class="n">after</span> <span class="n">successfully</span> <span class="n">executing</span> <span class="n">scaffold</span> <span class="n">command</span><span class="p">.</span>
 
 <span class="nf">bundle</span> <span class="nb">exec</span> <span class="n">rake</span> <span class="n">db</span><span class="ss">:migrate</span>           
@@ -974,11 +976,16 @@ To know more about scaffolding you can visit <a href="https://www.tutorialspoint
 
 <h2 id="controller">Controller</h2>
 
-<p>The controller is used to co-ordinate the function between user model and view.
-It receives the request from the application and matches with the particular route.
-The controller has different actions and each action is associated with particular route. 
+<p>The controller is used to co-ordinate the function between user, model and view.
+It receives the request from the application and matches with the particular route. </p>
+
+<p>The controller has class and class has different functions or methods which are called as <strong>actions</strong>.
+Their are different actions like index, new, show, create, update, edit, delete and each action is associated with particular route. Also you can create your own methods.
 Each action&rsquo;s responsibility is to collect information and provied it to the view.
 Controller names starts with capital letter.</p>
+
+<p>The class in the controller inherits the property of the parent controller <strong>ApplicationController</strong> which is loacted in controllers folder <strong>application_controller.rb</strong> file.
+ApplicationController is again inherited from rails <strong>ActionController::Base</strong> class.</p>
 
 <blockquote>
 <p>Location of the controller file: You can find controller files in : /app/controller .</p>
@@ -986,7 +993,13 @@ Controller names starts with capital letter.</p>
 <pre class="highlight ruby"><code>
 <span class="n">rails</span> <span class="n">generate</span> <span class="n">controller</span> <span class="n">controller_name</span>
 
-<span class="no">Example</span><span class="p">:</span> <span class="n">rails</span> <span class="n">generate</span> <span class="n">controller</span> <span class="no">Post</span><span class="o">.</span>
+<span class="no">Example</span><span class="p">:</span> <span class="n">rails</span> <span class="n">generate</span> <span class="n">controller</span> <span class="no">Post</span><span class="p">.</span>
+
+<span class="nf">/</span><span class="o">/</span><span class="ss">output: 
+
+</span><span class="k">class</span> <span class="nc">PostsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+<span class="k">end</span>
+
 </code></pre>
 
 <blockquote>
