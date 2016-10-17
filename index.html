@@ -948,17 +948,29 @@ You can repeat the following steps whenever you want to save a copy of your appl
 
 <h2 id="scaffolding">Scaffolding</h2>
 
-<p>Rails gives us a special shortcut called <strong>Scaffolding</strong> by using which we can build few functionalities very quickly.
-The functionalities that are by-default created for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
-Here we don&rsquo;t have to individually create model files, views files, etc.
-Obvioulsy this save our lot of time, so we can say that scaffolding is shortcut to create our rails application skeleton.
+<p>Rails gives us a special shortcut called <strong>Scaffolding</strong> by using which we can get a default rails generated skeleton structure of files.
+This helps us to know about the rails file structure a bit and how rails work.
+The default structure created by rails for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
+Here we don&rsquo;t have to individually create model files, views files, etc which saves a lot of time of ours to design the file structure, so we can say that scaffolding is shortcut to create our rails application skeleton.
+You can go through the file structure that is created, aslo you can go through the list of files that are created by rails on the console when you execute the sacffol command.</p>
+
+<p>One thing you need to do after successfully executing the scaffold command is that you need to do database migration. Basically what it does is perepares the database where we can store our data.
 To know more about scaffolding you can visit <a href="https://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm">here</a>.</p>
-<pre class="highlight ruby"><code>
-<span class="n">rails</span> <span class="n">generate</span> <span class="n">scaffold</span> <span class="no">Post</span>
+<pre class="highlight ruby"><code><span class="no">Syntax</span><span class="p">:</span> <span class="n">rails</span> <span class="n">generate</span> <span class="n">scaffold</span> <span class="no">Application_name</span>
+
+<span class="no">Example</span><span class="p">:</span> <span class="n">rails</span> <span class="n">generate</span> <span class="n">scaffold</span> <span class="no">Post</span>
 
 <span class="sr">//</span><span class="no">This</span> <span class="n">command</span> <span class="n">will</span> <span class="n">create</span> <span class="n">a</span> <span class="n">model</span> <span class="no">Post</span><span class="o">.</span> <span class="no">It</span> <span class="n">will</span> <span class="n">also</span> <span class="n">create</span> <span class="n">accompanying</span> <span class="n">views</span> <span class="n">and</span> <span class="n">a</span> <span class="n">controller</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">relevant</span> <span class="no">CRUD</span> <span class="n">actions</span> <span class="n">and</span> <span class="n">it</span> <span class="n">also</span> <span class="n">creates</span> <span class="n">routes</span> <span class="n">and</span> <span class="n">database</span> <span class="n">file</span><span class="o">.</span> 
 
 </code></pre>
+<pre class="highlight ruby"><code><span class="sr">//</span> <span class="n">execute</span> <span class="n">this</span> <span class="n">command</span> <span class="n">after</span> <span class="n">successfully</span> <span class="n">executing</span> <span class="n">scaffold</span> <span class="n">command</span><span class="p">.</span>
+
+<span class="nf">bundle</span> <span class="nb">exec</span> <span class="n">rake</span> <span class="n">db</span><span class="ss">:migrate</span>           
+</code></pre>
+
+<blockquote>
+<p>It is recommended that after running the migration file, restart your serve.</p>
+</blockquote>
 
 <h2 id="controller">Controller</h2>
 
