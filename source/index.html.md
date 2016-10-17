@@ -860,7 +860,7 @@ You can repeat the following steps whenever you want to save a copy of your appl
 ## Scaffolding 
 
 Rails gives us a special shortcut called **Scaffolding** by using which we can get a default rails generated skeleton structure of files.
-This helps us to know about the rails file structure a bit and how rails work.
+This helps us to know about the rails file structure a bit and also how rails work.
 The default structure created by rails for us by using the scaffold command are the Model, View, Controller, Database, Routes, Css files etc.
 Here we don't have to individually create model files, views files, etc which saves a lot of time of ours to design the file structure, so we can say that scaffolding is shortcut to create our rails application skeleton.
 You can go through the file structure that is created, aslo you can go through the list of files that are created by rails on the console when you execute the sacffol command.
