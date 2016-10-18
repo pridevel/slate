@@ -1050,19 +1050,31 @@ The resources tells rails that you want to create routes that matches particular
 <h2 id="active-records">Active Records</h2>
 
 <p>Active Records are the Model from the MVC.
-The Model is used to connect controller with the database.
+The Model is used to manage the data and store the data in the database.
 Each Model object has CRUD (Create, Read, Update, and Delete) methods for database access.</p>
 
-<p>The Model files are named in <strong>singular-</strong> with first letter <strong>capital</strong>, whereas the assciated Database table name is <strong>plural</strong> and written in <strong>CamelCase</strong>.</p>
+<p>The Model files are named in <strong>singular-</strong> with first letter <strong>capital</strong>, whereas the assciated Database table name is <strong>plural</strong> and written in <strong>CamelCase</strong>.
+The model files are inherited from <strong>ActiveRecord::Base</strong> class.</p>
 
-<p>We put the validation to our code in the Model files. The model files are inherited from <strong>ActiveRecord::Base</strong> class.</p>
+<p>We put the validation to our code in the Model files. Validations are used so that we can store correct data in our database.
+For example we want to store correct email address or we want all fields of the for to be filled properly.
+To know more about validation visit <a href="http://doc.bccnsoft.com/docs/rails-guides-3.2-en/active_record_validations_callbacks.html">here</a>.</p>
+<pre class="highlight ruby"><code><span class="sr">//</span>  <span class="no">Validation</span> <span class="no">Example</span><span class="p">:</span>
+
+<span class="k">class</span> <span class="nc">Employee</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">validates</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:presence</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="k">end</span>
+
+<span class="no">Employee</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Savitri M"</span><span class="p">).</span><span class="nf">valid?</span> <span class="c1"># =&gt; true</span>
+<span class="no">Employee</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="mi">123</span><span class="p">).</span><span class="nf">valid?</span> <span class="c1"># =&gt; false</span>
+</code></pre>
 
 <p>Example:</p>
 
 <table><thead>
 <tr>
 <th>Model</th>
-<th>Class</th>
+<th>Table</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -1090,6 +1102,8 @@ By default rails creates a <strong>primary-key</strong> column in every database
 <blockquote>
 <p>Location of model file is app/models folder.</p>
 </blockquote>
+
+<h2 id="association">Association</h2>
 
           <h1 id="errors">Errors</h1>
 
