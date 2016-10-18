@@ -1022,18 +1022,23 @@ Employee.create(:name => nil).valid? # => false
 
 Example:
 
-Model | Table
-------|-------
-Book  |	books
-Mouse | mice
-Person|	people
+Model     | Table
+----------|-------
+Book      |	books
+OrderItem | order_items
+Person    |	people
 
 ```ruby
 Syntax: rails generate model Modelname
 
 Example: rails generate model Book
 ```
- 
+
+**Database:** Databases are like the hard-drive of the web. We store information to the database permanently and then we access this information later whenever we want.
+For example we create an account on facebook, post pictures, comment on pictures do lot of stuff. This all information is stored in the facebook's database which we are able to access the next day we login to our facebook account.
+Database are like spreadsheets with rows and columns.
+
+**Migration:**  A migration is a way to update the database with a new table, or changes to an existing table.
 When we create a Model using rails generator, an associated migration file is also create in the **db** folder with the timestamp.
 This migration file is nothing but the database table in which we can define multiple columns with their datatypes.
 By default rails creates a **primary-key** column in every database table with datatype as **integer**.
@@ -1073,6 +1078,60 @@ Types Of Association:
 * has_and_belongs_to_many 
 
 To know more about "Association" visit [here](http://doc.bccnsoft.com/docs/rails-guides-3.2-en/association_basics.html).
+
+## REST (Represenatational State Transfer)
+
+REST says that `Refer to "thing" on a web as "resource"` AND  `you should be able to 1) Create 2)Read 3)Update 4) Delete (CRUD)this resources`.
+The resource can be a facebook profile or linkedIn Profile or a picture on Instagram etc.
+
+CRUD example, suppose you want to create an account on facebook you first create an user-profile when we login for the first time, so this represent your **CREATE** action.
+Then you are able to view your profile that you have created, this represent your **READ** action. If you wish to make some changes in your profile you can edit your profile, this represent **UPDATE** action.
+And if you wish to delete your profile you can delete it, this represent to the **DELETE** action.
+
+Most of the modern webs follows this concept of REST, where you can Create, Read, Update, Delete resources on web.
+
+### HTTP Request
+
+GET: This is most commom type of http request.  
+Whenever you want to open a particular page or website like facebook.com or youtube.com you are sending a HTTP Request that has GET method.
+
+POST: Whenever you are submitting a form you are sending a HTTP Request that has POST method.
+For example whenever you are submitting the Facebook's user-profile form you are sending POST request to their server.
+
+PUT/ PATCH: Whenever you are updating data on the web you are sending PUT/ PATCH request to the server.
+PUT	is used to completely update a resource. For example, updating your user profile on facebook or linkedIn etc.
+PATCH is used to partially update a resource. For example, when we are just updating the password for your user profile.
+
+DELETE: Whenever you want to delete data from web you will find that the request method is DELETE.
+
+###Processing HTTP Request: 
+
+1. Browser send HTTp request to the web-server.
+2. The web-server catch that request and sends it to the Routes file in the rails application.
+3. The routes file communicates with the controller
+4. The controller then gathers the data from **Model file** and Template from **View file** and sends it back to the web-serverwhich then packages everything as HTTP Response.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
