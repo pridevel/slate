@@ -738,6 +738,24 @@ To learn more about the subfolders you can visit the <a href="http://guides.ruby
 <pre class="highlight ruby"><code><span class="n">rails</span> <span class="o">-</span><span class="n">v</span>
 <span class="sr">//ou</span><span class="n">tput</span> <span class="k">in</span> <span class="n">the</span> <span class="ss">console: </span><span class="no">Rails</span> <span class="mi">4</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">5</span>
 </code></pre>
+<pre class="highlight ruby"><code><span class="sr">//</span><span class="no">To</span> <span class="n">access</span> <span class="n">rails</span> <span class="n">console</span>
+<span class="no">Commamd</span><span class="p">:</span> 
+<span class="n">bundle</span> <span class="nb">exec</span> <span class="n">rails</span> <span class="n">console</span>
+
+<span class="no">Other</span> <span class="no">Commands</span> <span class="n">you</span> <span class="n">can</span> <span class="n">type</span> <span class="k">in</span> <span class="n">rails</span> <span class="n">console</span><span class="p">.</span> 
+
+<span class="nf">a</span><span class="o">.</span>  <span class="no">Contact</span><span class="p">.</span><span class="nf">new</span>                               <span class="sr">//</span> <span class="n">used</span> <span class="k">for</span> <span class="n">creating</span> <span class="no">Contact</span> <span class="n">object</span>
+<span class="n">b</span><span class="o">.</span>  <span class="vi">@contact</span> <span class="o">=</span> <span class="no">Contact</span><span class="p">.</span><span class="nf">new</span>                   <span class="sr">//s</span><span class="n">toring</span> <span class="n">the</span> <span class="n">obj</span> <span class="k">in</span> <span class="n">variable</span> <span class="vi">@contact</span>
+<span class="n">c</span><span class="o">.</span>  <span class="vi">@contact</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="err">“</span><span class="nb">name</span><span class="err">”</span>                  <span class="o">/</span><span class="sr">/adding name/use</span><span class="n">r</span> <span class="nb">name</span> <span class="k">in</span> <span class="n">db</span>
+<span class="n">d</span><span class="o">.</span>  <span class="vi">@contact</span><span class="p">.</span><span class="nf">email</span> <span class="o">=</span> <span class="n">xyz</span><span class="vi">@example</span><span class="p">.</span><span class="nf">com</span>       <span class="sr">//</span><span class="n">dding</span> <span class="n">email</span> <span class="k">in</span> <span class="n">db</span>
+<span class="n">e</span><span class="o">.</span>  <span class="vi">@contact</span><span class="p">.</span><span class="nf">save</span>                          <span class="sr">//s</span><span class="n">aving</span> <span class="n">the</span> <span class="n">data</span> <span class="k">in</span> <span class="n">db</span> 
+<span class="n">f</span><span class="o">.</span>  <span class="no">Contact</span><span class="p">.</span><span class="nf">first</span>                         <span class="sr">//</span> <span class="n">to</span> <span class="n">view</span> <span class="n">the</span> <span class="n">data</span> <span class="n">at</span> <span class="n">first</span> <span class="n">position</span> <span class="n">existing</span> <span class="k">in</span> <span class="n">db</span><span class="o">/</span><span class="n">table</span>
+<span class="n">g</span><span class="o">.</span>  <span class="no">Contact</span><span class="p">.</span><span class="nf">second</span>                       <span class="sr">//</span><span class="n">to</span> <span class="n">view</span> <span class="n">data</span> <span class="n">at</span> <span class="n">second</span> <span class="n">position</span> <span class="n">existing</span> <span class="k">in</span> <span class="n">the</span> <span class="n">db</span><span class="o">/</span><span class="n">table</span>
+<span class="n">h</span><span class="o">.</span>  <span class="no">Contact</span><span class="p">.</span><span class="nf">all</span>                         <span class="sr">//</span><span class="n">to</span> <span class="n">view</span> <span class="n">all</span> <span class="n">data</span> <span class="k">in</span> <span class="n">database</span><span class="p">.</span>
+<span class="nf">i</span><span class="p">.</span>  <span class="nf">exit</span>                               <span class="sr">//</span><span class="n">to</span> <span class="n">come</span> <span class="n">out</span> <span class="n">of</span> <span class="n">console</span>
+<span class="n">j</span><span class="p">.</span>  <span class="nf">reload!</span>                            <span class="sr">//</span><span class="n">refresh</span> <span class="n">the</span> <span class="n">db</span> <span class="k">if</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">made</span> <span class="n">to</span> <span class="n">it</span><span class="o">.</span>
+
+</code></pre>
 
 <h2 id="installing-rails">Installing Rails</h2>
 
@@ -859,6 +877,11 @@ git config --global push.default matching   /</span><span class="o">/</span> <sp
 <pre class="highlight ruby"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
 
 </code></pre>
+<pre class="highlight ruby"><code><span class="sr">//</span><span class="n">to</span> <span class="n">create</span> <span class="kp">new</span> <span class="n">branch</span> <span class="n">use</span> <span class="n">command</span>
+<span class="no">Syntax</span><span class="p">:</span> <span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">branch_name</span>
+
+<span class="no">Ex</span><span class="p">:</span> <span class="n">git</span> <span class="n">checkout</span> <span class="err">–</span><span class="n">b</span> <span class="n">site_pages</span>
+</code></pre>
 
 <p>So now we have successfully sent a copy of our application on the github.</p>
 
@@ -949,6 +972,8 @@ You can repeat the following steps whenever you want to save a copy of your appl
     <span class="n">git</span> <span class="n">push</span> 
     <span class="n">git</span> <span class="n">push</span> <span class="n">heroku</span> 
 
+</code></pre>
+<pre class="highlight ruby"><code><span class="n">heroku</span> <span class="n">domains</span>             <span class="sr">//</span> <span class="n">it</span> <span class="n">gives</span> <span class="n">the</span> <span class="n">url</span><span class="o">/</span><span class="n">link</span> <span class="k">for</span> <span class="n">your</span> <span class="n">domain</span>
 </code></pre>
 
 <h2 id="scaffolding">Scaffolding</h2>
