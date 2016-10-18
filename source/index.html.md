@@ -963,16 +963,30 @@ resources :books
 ##Active Records
 
 Active Records are the Model from the MVC.
-The Model is used to connect controller with the database.
+The Model is used to manage the data and store the data in the database.
 Each Model object has CRUD (Create, Read, Update, and Delete) methods for database access.
 
 The Model files are named in **singular-** with first letter **capital**, whereas the assciated Database table name is **plural** and written in **CamelCase**.
+The model files are inherited from **ActiveRecord::Base** class.
 
-We put the validation to our code in the Model files. The model files are inherited from **ActiveRecord::Base** class.
+We put the validation to our code in the Model files. Validations are used so that we can store correct data in our database.
+For example we want to store correct email address or we want all fields of the for to be filled properly.
+To know more about validation visit [here](http://doc.bccnsoft.com/docs/rails-guides-3.2-en/active_record_validations_callbacks.html).
+
+```ruby
+//  Validation Example:
+
+class Employee < ActiveRecord::Base
+  validates :name, :presence => true
+end
+ 
+Employee.create(:name => "Savitri M").valid? # => true
+Employee.create(:name => 123).valid? # => false
+```
 
 Example:
 
-Model | Class
+Model | Table
 ------|-------
 Book  |	books
 Mouse | mice
@@ -990,7 +1004,7 @@ By default rails creates a **primary-key** column in every database table with d
  
 >Location of model file is app/models folder.
 
-
+## Association
 
 
 
