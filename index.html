@@ -252,7 +252,11 @@ Modulo (%),Multiplication (</em>) in Ruby.</li>
 
 <h2 id="comments">Comments</h2>
 
-<h3 id="single-line-comments">Single line Comments</h3>
+<p>Comments are used when we want to add some information about the code which we dont want to be executed.
+This helps the developer to remember why he has written the piece of code or it describes the functionality of the code.
+There are two ways in which we can add comment to the ruby code 1) Single-Line Comment 2) Multi-Line Comment</p>
+
+<h3 id="single-line-comment">Single-line Comment</h3>
 
 <p>It is denoted by &ldquo;#&rdquo;, in front of the line you want to comment out.</p>
 <pre class="highlight ruby"><code>    <span class="c1"># this is comment.</span>
@@ -309,7 +313,7 @@ false &amp;&amp; false # =&gt; false</p>
 <h3 id="or">OR(||)</h3>
 
 <ul>
-<li>it evaluates to true when one or the other or both expressions are true.</li>
+<li>It evaluates to true when one or the other or both expressions are true.</li>
 </ul>
 
 <p>true || true # =&gt; true,
@@ -402,7 +406,9 @@ When you&rsquo;re done with your <strong>if</strong>, you have to tell Ruby by t
 
 <h3 id="for-loop">for loop</h3>
 
-<p>*This loop is used when you do know how many times you&rsquo;ll be looping.</p>
+<ul>
+<li>This loop is used when you do know how many times you&rsquo;ll be looping.</li>
+</ul>
 <pre class="highlight ruby"><code><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">5</span>
    <span class="nb">puts</span> <span class="s2">"Value of local variable is </span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span>
 <span class="k">end</span>
@@ -751,13 +757,11 @@ To learn more about the subfolders you can visit the <a href="http://guides.ruby
 
 <ul>
 <li>After creating the application we can navigate to that folder by:</li>
-<li>
-&ldquo;`ruby
-cd blog</li>
 </ul>
+<pre class="highlight ruby"><code> <span class="n">cd</span> <span class="n">blog</span>
 
-<p>bundle install
-&rdquo;`</p>
+ <span class="n">bundle</span> <span class="n">install</span>
+</code></pre>
 
 <p>This folder has auto-generated files and folders which will be useful further while developing the application. </p>
 
@@ -1053,10 +1057,10 @@ The resources tells rails that you want to create routes that matches particular
 The Model is used to manage the data and store the data in the database.
 Each Model object has CRUD (Create, Read, Update, and Delete) methods for database access.</p>
 
-<p>The Model files are named in <strong>singular-</strong> with first letter <strong>capital</strong>, whereas the assciated Database table name is <strong>plural</strong> and written in <strong>CamelCase</strong>.
+<p>The Model files names are <strong>singular</strong> with first letter <strong>capital</strong>, whereas the assciated Database table name is <strong>plural</strong> and written in <strong>CamelCase</strong>.
 The model files are inherited from <strong>ActiveRecord::Base</strong> class.</p>
 
-<p>We put the validation to our code in the Model files. Validations are used so that we can store correct data in our database.
+<p>Since the data we enter into databse is defined in rails Model we put the <strong>validation</strong> to our data in the Model files. Validations are used so that we can store correct data in our database.
 For example we want to store correct email address or we want all fields of the for to be filled properly.
 To know more about validation visit <a href="http://doc.bccnsoft.com/docs/rails-guides-3.2-en/active_record_validations_callbacks.html">here</a>.</p>
 <pre class="highlight ruby"><code><span class="sr">//</span>  <span class="no">Validation</span> <span class="no">Example</span><span class="p">:</span>
@@ -1066,7 +1070,7 @@ To know more about validation visit <a href="http://doc.bccnsoft.com/docs/rails-
 <span class="k">end</span>
 
 <span class="no">Employee</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Savitri M"</span><span class="p">).</span><span class="nf">valid?</span> <span class="c1"># =&gt; true</span>
-<span class="no">Employee</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="mi">123</span><span class="p">).</span><span class="nf">valid?</span> <span class="c1"># =&gt; false</span>
+<span class="no">Employee</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="kp">nil</span><span class="p">).</span><span class="nf">valid?</span> <span class="c1"># =&gt; false</span>
 </code></pre>
 
 <p>Example:</p>
@@ -1096,7 +1100,7 @@ To know more about validation visit <a href="http://doc.bccnsoft.com/docs/rails-
 </code></pre>
 
 <p>When we create a Model using rails generator, an associated migration file is also create in the <strong>db</strong> folder with the timestamp.
-This migration file is nothing but the database in which we can define multiple columns with their datatypes.
+This migration file is nothing but the database table in which we can define multiple columns with their datatypes.
 By default rails creates a <strong>primary-key</strong> column in every database table with datatype as <strong>integer</strong>.</p>
 
 <blockquote>
@@ -1104,6 +1108,22 @@ By default rails creates a <strong>primary-key</strong> column in every database
 </blockquote>
 
 <h2 id="association">Association</h2>
+
+<p>In our application we have multiple Models and we would also like to have some connection between those models, so to do that rails provides us with <strong>Association</strong>.
+Association in rails is used to connect tow or more Models.</p>
+
+<p>Types Of Association:</p>
+
+<ul>
+<li>belongs_to</li>
+<li>has_one</li>
+<li>has_many</li>
+<li>has_many :through</li>
+<li>has_one :through</li>
+<li>has_and_belongs_to_many </li>
+</ul>
+
+<p>To know more about &ldquo;Association&rdquo; visit <a href="http://doc.bccnsoft.com/docs/rails-guides-3.2-en/association_basics.html">here</a>.</p>
 
           <h1 id="errors">Errors</h1>
 
