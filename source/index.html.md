@@ -631,6 +631,26 @@ rails -v
 //output in the console: Rails 4.2.5
 ```
 
+```ruby
+//To access rails console
+Commamd: 
+bundle exec rails console
+
+Other Commands you can type in rails console. 
+
+a.  Contact.new                               // used for creating Contact object
+b.	@contact = Contact.new                   //storing the obj in variable @contact
+c.	@contact.name = “name”                  //adding name/user name in db
+d.	@contact.email = xyz@example.com       //dding email in db
+e.	@contact.save                          //saving the data in db 
+f.	Contact.first                         // to view the data at first position existing in db/table
+g.	Contact.second                       //to view data at second position existing in the db/table
+h.	Contact.all                         //to view all data in database.
+i.	exit                               //to come out of console
+j.	reload!                            //refresh the db if any changes made to it.
+
+```
+
 ## Installing Rails
 
 If you wish to install Rails on your PC you can visit [this](http://guides.railsgirls.com/install#setup-for-windows) website.
@@ -759,6 +779,13 @@ git push origin master
 
 ```
 
+```ruby
+//to create new branch use command
+Syntax: git checkout -b branch_name
+
+Ex: git checkout –b site_pages
+```
+
 So now we have successfully sent a copy of our application on the github.
 
 ## Heroku setup
@@ -861,6 +888,10 @@ You can repeat the following steps whenever you want to save a copy of your appl
     git push 
     git push heroku 
     
+```
+
+```ruby
+heroku domains             // it gives the url/link for your domain
 ```
 
 ## Scaffolding 
