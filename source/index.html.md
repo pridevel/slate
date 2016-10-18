@@ -649,7 +649,7 @@ f.	Contact.first                         // to view the data at first position e
 g.	Contact.second                       //to view data at second position existing in the db/table
 h.	Contact.all                         //to view all data in database.
 i.	exit                               //to come out of console
-j.	reload!                            //refresh the db if any changes made to it.
+j.	reload!                            //refresh the database if any changes made to it.
 
 ```
 
@@ -975,6 +975,8 @@ When we create the controller, it automatically creates a sub-folder under **app
 The files that we create in views has same name as that of the method_name that we define in the controller's class.
 
 View templates are written in Embedded Ruby(eRuby) language. That is why ruby code is embedded inside the erb tags (<% ruby...code %>).
+When you use <%= %> you render the expression value to your output. 
+While <% %> is to write some Ruby code that won't be rendered to final output.
 Also the view files has the extension of **.erb** .
 The data between view and controller is shared through mutually accessible variables.
 
@@ -1148,14 +1150,18 @@ PATCH is used to partially update a resource. For example, when we are just upda
 
 DELETE: Whenever you want to delete data from web you will find that the request method is DELETE.
 
-###Processing HTTP Request: 
+###Processing HTTP Request
 
 1. Browser send HTTp request to the web-server.
 2. The web-server catch that request and sends it to the Routes file in the rails application.
 3. The routes file communicates with the controller
 4. The controller then gathers the data from **Model file** and Template from **View file** and sends it back to the web-serverwhich then packages everything as HTTP Response.
 
+## User management
 
+Rails uses special gem called "devise" for managing the user.
+You can visit the [github documentation](https://github.com/plataformatec/devise) to follow the steps about the installation of the devise gem.
+For checking the latest version of the devise gem visit [here](https://rubygems.org/gems/devise/versions/3.5.6)
 
 
 
