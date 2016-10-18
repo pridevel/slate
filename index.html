@@ -754,7 +754,7 @@ To learn more about the subfolders you can visit the <a href="http://guides.ruby
 <span class="n">g</span><span class="o">.</span>  <span class="no">Contact</span><span class="p">.</span><span class="nf">second</span>                       <span class="sr">//</span><span class="n">to</span> <span class="n">view</span> <span class="n">data</span> <span class="n">at</span> <span class="n">second</span> <span class="n">position</span> <span class="n">existing</span> <span class="k">in</span> <span class="n">the</span> <span class="n">db</span><span class="o">/</span><span class="n">table</span>
 <span class="n">h</span><span class="o">.</span>  <span class="no">Contact</span><span class="p">.</span><span class="nf">all</span>                         <span class="sr">//</span><span class="n">to</span> <span class="n">view</span> <span class="n">all</span> <span class="n">data</span> <span class="k">in</span> <span class="n">database</span><span class="p">.</span>
 <span class="nf">i</span><span class="p">.</span>  <span class="nf">exit</span>                               <span class="sr">//</span><span class="n">to</span> <span class="n">come</span> <span class="n">out</span> <span class="n">of</span> <span class="n">console</span>
-<span class="n">j</span><span class="p">.</span>  <span class="nf">reload!</span>                            <span class="sr">//</span><span class="n">refresh</span> <span class="n">the</span> <span class="n">db</span> <span class="k">if</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">made</span> <span class="n">to</span> <span class="n">it</span><span class="o">.</span>
+<span class="n">j</span><span class="p">.</span>  <span class="nf">reload!</span>                            <span class="sr">//</span><span class="n">refresh</span> <span class="n">the</span> <span class="n">database</span> <span class="k">if</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">made</span> <span class="n">to</span> <span class="n">it</span><span class="o">.</span>
 
 </code></pre>
 
@@ -1054,6 +1054,8 @@ ApplicationController is again inherited from rails <strong>ActionController::Ba
 The files that we create in views has same name as that of the method_name that we define in the controller&rsquo;s class.</p>
 
 <p>View templates are written in Embedded Ruby(eRuby) language. That is why ruby code is embedded inside the erb tags (&lt;% ruby&hellip;code %&gt;).
+When you use &lt;%= %&gt; you render the expression value to your output. 
+While &lt;% %&gt; is to write some Ruby code that won&rsquo;t be rendered to final output.
 Also the view files has the extension of <strong>.erb</strong> .
 The data between view and controller is shared through mutually accessible variables.</p>
 <pre class="highlight ruby"><code><span class="sr">//</span><span class="no">Example</span> <span class="n">of</span> <span class="no">View</span> <span class="no">File</span>
@@ -1234,7 +1236,7 @@ PATCH is used to partially update a resource. For example, when we are just upda
 
 <p>DELETE: Whenever you want to delete data from web you will find that the request method is DELETE.</p>
 
-<h3 id="processing-http-request">Processing HTTP Request:</h3>
+<h3 id="processing-http-request">Processing HTTP Request</h3>
 
 <ol>
 <li>Browser send HTTp request to the web-server.</li>
@@ -1242,6 +1244,12 @@ PATCH is used to partially update a resource. For example, when we are just upda
 <li>The routes file communicates with the controller</li>
 <li>The controller then gathers the data from <strong>Model file</strong> and Template from <strong>View file</strong> and sends it back to the web-serverwhich then packages everything as HTTP Response.</li>
 </ol>
+
+<h2 id="user-management">User management</h2>
+
+<p>Rails uses special gem called &ldquo;devise&rdquo; for managing the user.
+You can visit the <a href="https://github.com/plataformatec/devise">github documentation</a> to follow the steps about the installation of the devise gem.
+For checking the latest version of the devise gem visit <a href="https://rubygems.org/gems/devise/versions/3.5.6">here</a></p>
 
           <h1 id="errors">Errors</h1>
 
