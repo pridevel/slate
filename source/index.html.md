@@ -934,6 +934,37 @@ View templates are written in Embedded Ruby(eRuby) language. That is why ruby co
 Also the view files has the extension of **.erb** .
 The data between view and controller is shared through mutually accessible variables.
 
+```ruby
+//Example of View File
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= link_to 'Show', recipe %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe', new_recipe_path %>
+
+```
+
 >Location : You can find the views in /app/views .
 
 To know more about ERB you can refer [this](https://docs.puppet.com/puppet/latest/reference/lang_template_erb.html) page.
@@ -1006,6 +1037,24 @@ Example: rails generate model Book
 When we create a Model using rails generator, an associated migration file is also create in the **db** folder with the timestamp.
 This migration file is nothing but the database table in which we can define multiple columns with their datatypes.
 By default rails creates a **primary-key** column in every database table with datatype as **integer**.
+
+Basic datatypes supported by migration file are:
+
+* string − is used when we want to store data as small data types such as a name.
+
+* text − is used when we want to store data as longer pieces of textual data, such as the description.
+
+* integer − is used when we want to store data as whole numbers.
+
+* float − is used when we want to store data as decimals.
+
+* datetime and timestamp − store the date and time into a column.
+
+* date and time − store either the date only or time only.
+
+* binary −is used when we want to store data such as images, audio, or movies.
+
+* Boolean − is used when we want to store data as true or false values.
  
 >Location of model file is app/models folder.
 
