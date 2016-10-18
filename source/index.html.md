@@ -780,10 +780,21 @@ git push origin master
 ```
 
 ```ruby
-//to create new branch use command
-Syntax: git checkout -b branch_name
+Syntax: git checkout -b branch_name   //to create new branch
 
-Ex: git checkout –b site_pages
+Ex: git checkout –b site_pages        // creates a branch called ad site_pages in github directory.
+
+Syntax: git checkout branch_name      // to change the branch 
+
+Ex: git checkout development          // here we are changing out branch to development
+
+Syntax: 
+git checkout branch_name     // going to the branch with which we want to merge our branch
+git merge branch_name        // combine two branches
+
+Ex: git checkout master           // going on master branch
+git merge layout_improvements     // combining layout_improvements branch with master branch
+
 ```
 
 So now we have successfully sent a copy of our application on the github.
