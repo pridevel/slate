@@ -1019,6 +1019,35 @@ The files that we create in views has same name as that of the method_name that 
 <p>View templates are written in Embedded Ruby(eRuby) language. That is why ruby code is embedded inside the erb tags (&lt;% ruby&hellip;code %&gt;).
 Also the view files has the extension of <strong>.erb</strong> .
 The data between view and controller is shared through mutually accessible variables.</p>
+<pre class="highlight ruby"><code><span class="sr">//</span><span class="no">Example</span> <span class="n">of</span> <span class="no">View</span> <span class="no">File</span>
+
+<span class="o">&lt;</span><span class="nb">p</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"notice"</span><span class="o">&gt;&lt;</span><span class="sx">%= notice %&gt;&lt;/p&gt;
+
+&lt;h1&gt;Listing Recipes&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th colspan=</span><span class="s2">"3"</span><span class="o">&gt;&lt;</span><span class="sr">/th&gt;
+    &lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="sr">/thead&gt;
+
+  &lt;tbody&gt;
+    &lt;% @recipes.each do |recipe| %&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;%= link_to 'Show', recipe %&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;&lt;</span><span class="sx">%= link_to 'Edit', edit_recipe_path(recipe) %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%=</span> <span class="n">link_to</span> <span class="s1">'Destroy'</span><span class="p">,</span> <span class="n">recipe</span><span class="p">,</span> <span class="ss">method: :delete</span><span class="p">,</span> <span class="ss">data: </span><span class="p">{</span> <span class="ss">confirm: </span><span class="s1">'Are you sure?'</span> <span class="p">}</span> <span class="o">%&gt;&lt;</span><span class="sr">/td&gt;
+      &lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span>
+  <span class="o">&lt;</span><span class="sr">/tbody&gt;
+&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sx">%= link_to 'New Recipe', new_recipe_path %&gt;
+
+</span></code></pre>
 
 <blockquote>
 <p>Location : You can find the views in /app/views .</p>
@@ -1102,6 +1131,19 @@ To know more about validation visit <a href="http://doc.bccnsoft.com/docs/rails-
 <p>When we create a Model using rails generator, an associated migration file is also create in the <strong>db</strong> folder with the timestamp.
 This migration file is nothing but the database table in which we can define multiple columns with their datatypes.
 By default rails creates a <strong>primary-key</strong> column in every database table with datatype as <strong>integer</strong>.</p>
+
+<p>Basic datatypes supported by migration file are:</p>
+
+<ul>
+<li><p>string − is used when we want to store data as small data types such as a name.</p></li>
+<li><p>text − is used when we want to store data as longer pieces of textual data, such as the description.</p></li>
+<li><p>integer − is used when we want to store data as whole numbers.</p></li>
+<li><p>float − is used when we want to store data as decimals.</p></li>
+<li><p>datetime and timestamp − store the date and time into a column.</p></li>
+<li><p>date and time − store either the date only or time only.</p></li>
+<li><p>binary −is used when we want to store data such as images, audio, or movies.</p></li>
+<li><p>Boolean − is used when we want to store data as true or false values.</p></li>
+</ul>
 
 <blockquote>
 <p>Location of model file is app/models folder.</p>
