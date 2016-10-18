@@ -974,7 +974,7 @@ Each Model object has CRUD (Create, Read, Update, and Delete) methods for databa
 The Model files names are **singular** with first letter **capital**, whereas the assciated Database table name is **plural** and written in **CamelCase**.
 The model files are inherited from **ActiveRecord::Base** class.
 
-We put the validation to our code in the Model files. Validations are used so that we can store correct data in our database.
+Since the data we enter into databse is defined in rails Model we put the **validation** to our data in the Model files. Validations are used so that we can store correct data in our database.
 For example we want to store correct email address or we want all fields of the for to be filled properly.
 To know more about validation visit [here](http://doc.bccnsoft.com/docs/rails-guides-3.2-en/active_record_validations_callbacks.html).
 
@@ -986,7 +986,7 @@ class Employee < ActiveRecord::Base
 end
  
 Employee.create(:name => "Savitri M").valid? # => true
-Employee.create(:name => 123).valid? # => false
+Employee.create(:name => nil).valid? # => false
 ```
 
 Example:
