@@ -136,7 +136,12 @@ puts "savi".downcase
         savi
 ```
 ## Comments
-### Single line Comments
+
+Comments are used when we want to add some information about the code which we dont want to be executed.
+This helps the developer to remember why he has written the piece of code or it describes the functionality of the code.
+There are two ways in which we can add comment to the ruby code 1) Single-Line Comment 2) Multi-Line Comment
+
+### Single-line Comment
  It is denoted by "#", in front of the line you want to comment out.
 
 ```ruby
@@ -184,7 +189,7 @@ boolean_3 = true
 ```
 <hr>
 ### OR(||)
-* it evaluates to true when one or the other or both expressions are true.
+* It evaluates to true when one or the other or both expressions are true.
 
 true || true # => true,
 true || false # => true,
@@ -273,7 +278,7 @@ end
 <hr>
 ### for loop
 
-*This loop is used when you do know how many times you'll be looping.
+* This loop is used when you do know how many times you'll be looping.
 
 ```ruby
 for i in 0..5
@@ -643,7 +648,7 @@ But here we will see the steps to install rails on Cloud9.
 This statement creates a rails application with the name **blog**.
 
 * After creating the application we can navigate to that folder by:
-* 
+
 ```ruby
  cd blog
  
@@ -966,7 +971,7 @@ Active Records are the Model from the MVC.
 The Model is used to manage the data and store the data in the database.
 Each Model object has CRUD (Create, Read, Update, and Delete) methods for database access.
 
-The Model files are named in **singular-** with first letter **capital**, whereas the assciated Database table name is **plural** and written in **CamelCase**.
+The Model files names are **singular** with first letter **capital**, whereas the assciated Database table name is **plural** and written in **CamelCase**.
 The model files are inherited from **ActiveRecord::Base** class.
 
 We put the validation to our code in the Model files. Validations are used so that we can store correct data in our database.
@@ -999,25 +1004,26 @@ Example: rails generate model Book
 ```
  
 When we create a Model using rails generator, an associated migration file is also create in the **db** folder with the timestamp.
-This migration file is nothing but the database in which we can define multiple columns with their datatypes.
+This migration file is nothing but the database table in which we can define multiple columns with their datatypes.
 By default rails creates a **primary-key** column in every database table with datatype as **integer**.
  
 >Location of model file is app/models folder.
 
-## Association
+## Association 
 
+In our application we have multiple Models and we would also like to have some connection between those models, so to do that rails provides us with **Association**.
+Association in rails is used to connect tow or more Models.
 
+Types Of Association:
 
+* belongs_to
+* has_one
+* has_many
+* has_many :through
+* has_one :through
+* has_and_belongs_to_many 
 
-
-
-
-
-
-
-
-
-
+To know more about "Association" visit [here](http://doc.bccnsoft.com/docs/rails-guides-3.2-en/association_basics.html).
 
 
 
