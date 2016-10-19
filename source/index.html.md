@@ -1319,6 +1319,155 @@ num3 = num1+num2
 
 ```
 
+## Boolean 
+
+Boolean value returns true or false as an output. Based on the value of the booleans you can use conditions in your code or manipulate some code etc.
+
+```javascript
+2>3
+// output: false
+
+5!=5
+// output: false
+
+3==3
+// output: true
+
+2 == "2"
+// output: true
+
+```
+
+## Control Flow 
+
+Control Flow includes "If-else" statement.
+It means that depending upon the condition either one piece of code will execute or the other piece of code will execute.
+
+```javascript
+
+Syntax 
+
+if(condition){
+    // some code
+}
+else
+{
+    //some other code
+}
+
+Example: 
+
+if(2 < 5)
+{
+    alert("2 is less than 5");
+}
+else
+{
+    alert("False");
+}
+
+```
+## Comments
+
+To use comments you need to put two forward slashes (//) in front of any statement that you need to comment out.
+To do multiple line comment you need to use /* ... */ symbols.
+Comments are simply used to add some side notes when we are writing the code. 
+It helps you to remember why you have written a piece of code, so that even if you come back after a long time you would be able to continue with the same flow.
+
+```javascript
+// hello, this is a commented statement
+
+/* this
+ is 
+ multi-line
+ comment.
+ */ 
+
+```
+
+## Loops
+
+Loops in javascript are kind of iterators, they allows us to write a piece of code and repeate the code number of times we want to depending upon some condition.
+Their are two types of loops 1) For loop 2) While loop.
+
+** while loop**
+
+while loop executes the piece of code till the while condition is setting to false.
+
+```javascript
+Syntax 
+
+while(condition){
+    // code //
+}
+
+Example
+
+var i = 1;
+
+while(i<5)
+{
+    console.log(i);
+    i = i + 1;
+}
+
+//output: 
+1
+2
+3
+4
+5
+```
+
+**For loop**
+
+The for loop also executes a piece of code till the time a condition is satisfied.
+In for loop we write 3 statements, 1)In the first statement we declare a variable and initialize it 2)In second statement we put our condition 3)In third statement we increment/decrement the variable.
+
+```javascript
+
+for(var i = 0; i<5; i++){
+    console.log(i);
+}
+
+//output :
+0
+1
+2
+3
+4
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
