@@ -1392,6 +1392,117 @@ If you try to add number and string it will do the string concatenation operatio
 
 </code></pre>
 
+<h2 id="boolean">Boolean</h2>
+
+<p>Boolean value returns true or false as an output. Based on the value of the booleans you can use conditions in your code or manipulate some code etc.</p>
+<pre class="highlight javascript"><code><span class="mi">2</span><span class="o">&gt;</span><span class="mi">3</span>
+<span class="c1">// output: false</span>
+
+<span class="mi">5</span><span class="o">!=</span><span class="mi">5</span>
+<span class="c1">// output: false</span>
+
+<span class="mi">3</span><span class="o">==</span><span class="mi">3</span>
+<span class="c1">// output: true</span>
+
+<span class="mi">2</span> <span class="o">==</span> <span class="s2">"2"</span>
+<span class="c1">// output: true</span>
+
+</code></pre>
+
+<h2 id="control-flow">Control Flow</h2>
+
+<p>Control Flow includes &ldquo;If-else&rdquo; statement.
+It means that depending upon the condition either one piece of code will execute or the other piece of code will execute.</p>
+<pre class="highlight javascript"><code>
+<span class="nx">Syntax</span> 
+
+<span class="k">if</span><span class="p">(</span><span class="nx">condition</span><span class="p">){</span>
+    <span class="c1">// some code</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="c1">//some other code</span>
+<span class="p">}</span>
+
+<span class="nl">Example</span><span class="p">:</span> 
+
+<span class="k">if</span><span class="p">(</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"2 is less than 5"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"False"</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre>
+
+<h2 id="comments">Comments</h2>
+
+<p>To use comments you need to put two forward slashes (//) in front of any statement that you need to comment out.
+To do multiple line comment you need to use /* &hellip; */ symbols.
+Comments are simply used to add some side notes when we are writing the code. 
+It helps you to remember why you have written a piece of code, so that even if you come back after a long time you would be able to continue with the same flow.</p>
+<pre class="highlight javascript"><code><span class="c1">// hello, this is a commented statement</span>
+
+<span class="cm">/* this
+ is 
+ multi-line
+ comment.
+ */</span> 
+
+</code></pre>
+
+<h2 id="loops">Loops</h2>
+
+<p>Loops in javascript are kind of iterators, they allows us to write a piece of code and repeate the code number of times we want to depending upon some condition.
+Their are two types of loops 1) For loop 2) While loop.</p>
+
+<p>** while loop**</p>
+
+<p>while loop executes the piece of code till the while condition is setting to false.</p>
+<pre class="highlight javascript"><code><span class="nx">Syntax</span> 
+
+<span class="k">while</span><span class="p">(</span><span class="nx">condition</span><span class="p">){</span>
+    <span class="c1">// code //</span>
+<span class="p">}</span>
+
+<span class="nx">Example</span>
+
+<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="k">while</span><span class="p">(</span><span class="nx">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//output: </span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+</code></pre>
+
+<p><strong>For loop</strong></p>
+
+<p>The for loop also executes a piece of code till the time a condition is satisfied.
+In for loop we write 3 statements, 1)In the first statement we declare a variable and initialize it 2)In second statement we put our condition 3)In third statement we increment/decrement the variable.</p>
+<pre class="highlight javascript"><code>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//output :</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+
+</code></pre>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
