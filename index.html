@@ -1258,21 +1258,39 @@ You can create a separate javascript file with &ldquo;.js&rdquo; extension and s
 Once you have save saved the file successfully, you can give the link to that file by specifying the path under <strong>head</strong> tag, in <strong>script</strong> tag.</li>
 </ul>
 <pre class="highlight javascript"><code>
-<span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
-</span>    <span class="c1">//here demo.js is your external javascript file.</span>
-    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"demo.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script&gt; </span><span class="err"> 
-</span>  <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+    <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span>        <span class="c1">//here demo.js is your external javascript file.</span>
+        <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"demo.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script&gt; </span><span class="err"> 
+</span>      <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
 </span>
-  <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
-</span>  <span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
-</span>
-<span class="o">&lt;</span><span class="sr">/html&gt; </span><span class="err"> 
+      <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/html&gt; </span><span class="err"> 
 </span>
 </code></pre>
+
+<ul>
+<li><strong>Internal</strong>
+In this type you can directly include javascript code in the HTML code under <strong>head</strong> tags.</li>
+</ul>
+<pre class="highlight javascript"><code>    <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span>        <span class="c1">//here demo.js is your external javascript file.</span>
+        <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s2">"Hello from inside of the HTML"</span><span class="p">);</span>
+            <span class="nx">prompt</span><span class="p">(</span><span class="s2">"What is ypur Name?"</span><span class="p">)</span>
+        <span class="o">&lt;</span><span class="sr">/script&gt; </span><span class="err"> 
+</span>      <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span>
+      <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Welcome</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/html&gt;</span><span class="err"> 
+</span></code></pre>
 
           <h1 id="errors">Errors</h1>
 
