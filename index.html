@@ -1460,7 +1460,7 @@ Their are two types of loops 1) For loop 2) While loop.</p>
 
 <p><strong>While loop</strong></p>
 
-<p>while loop executes the piece of code till the while condition is setting to false.</p>
+<p>While loop executes the piece of code till the while condition is sets to false.</p>
 <pre class="highlight javascript"><code><span class="nx">Syntax</span> 
 
 <span class="k">while</span><span class="p">(</span><span class="nx">condition</span><span class="p">){</span>
@@ -1488,7 +1488,7 @@ Their are two types of loops 1) For loop 2) While loop.</p>
 <p><strong>For loop</strong></p>
 
 <p>The for loop also executes a piece of code till the time a condition is satisfied.
-In for loop we write 3 statements, 1)In the first statement we declare a variable and initialize it 2)In second statement we put our condition 3)In third statement we increment/decrement the variable.</p>
+In for loop we write 3 statements, 1) In the first statement we declare a variable and initialize it 2) In second statement we put our condition 3) In third statement we increment/decrement the variable.</p>
 <pre class="highlight javascript"><code>
 <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
@@ -1500,6 +1500,52 @@ In for loop we write 3 statements, 1)In the first statement we declare a variabl
 <span class="mi">2</span>
 <span class="mi">3</span>
 <span class="mi">4</span>
+
+</code></pre>
+
+<h2 id="array">Array</h2>
+
+<p>Arrays are used to store a collection of data.  It lets you store multiple values together such as numbers, strings, arrays, etc.</p>
+
+<p>Types to declare Array</p>
+
+<p>1) var x = new Array</p>
+
+<p>2) []  // creates an empty array</p>
+
+<p>To insert an element in an array we use .push method.
+To remove an element in an array we use .pop method.</p>
+<pre class="highlight javascript"><code>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span>
+
+<span class="c1">//output: []</span>
+
+<span class="nx">x</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">"string"</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">33</span><span class="p">)</span>
+
+<span class="c1">//output: ["string",5,33]</span>
+
+<span class="nx">x</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span>
+<span class="c1">//output: 33         //returns an item that is removed from an array.</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+<span class="c1">//output: ["string",5]</span>
+
+</code></pre>
+
+<h2 id="functions">Functions</h2>
+
+<p>Functions in javascript helps us to reuse a block of code, so that we dont have to keep rewriting thing in multiple parts of our program.
+We write function name in camelCase. To declare a function we use a special keyword <strong>function</strong>.</p>
+<pre class="highlight javascript"><code>
+<span class="c1">// declaring the add function with two parameters.</span>
+<span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>  <span class="c1">// calling the add function by passing the parameters.</span>
+
+<span class="c1">//output: 11</span>
 
 </code></pre>
 
