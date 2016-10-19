@@ -1175,6 +1175,7 @@ Once you have save saved the file successfully, you can give the link to that fi
 
 ```javascript
 
+    <DOCTYPE html>
     <html>
       <head>
         <title>Javascript Test</title>
@@ -1193,10 +1194,11 @@ Once you have save saved the file successfully, you can give the link to that fi
 In this type you can directly include javascript code in the HTML code under **head** tags.
 
 ```javascript
+      <DOCTYPE html>
     <html>
       <head>
         <title>Javascript Test</title>
-        //include javascript internally.
+        //internal javascript.
         <script>
             alert("Hello from inside of the HTML");
             prompt("What is ypur Name?")
@@ -1209,7 +1211,42 @@ In this type you can directly include javascript code in the HTML code under **h
     </html> 
 ```
 
+## Variable 
 
+They allows us to label a piece of code so that we can reuse it later.
+Always declare the code in either <script></script> tags or in the javascript file.
+A variable can hold string, numbers, arrays etc. values.
+In the example we declare the variable in side the script tag.
+
+```javascript
+     <DOCTYPE html>
+    <html>
+      <head>
+        <title>Javascript Test</title>
+        <script>
+         var name = "Savi"; 
+            alert(name);  // This prints the Value stored in the name variable in the alert box.
+        </script>  
+      </head>
+      
+      <body>
+            <h1>Welcome</h1>
+      </body>
+    </html>
+```
+
+## String
+
+Strings are declared inside the quotation marks ("" ,''), else you will get an error.
+There are few operations that you can do on strings,you can do string **concatenation**, means you can add two or more strings to form a large string.
+
+```javascript
+
+// you can run this command in the broswers console.
+ "My name is" + " Savitri M."
+ // output: "my name is Savitri M"
+
+```
 
 
 
