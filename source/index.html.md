@@ -1237,7 +1237,7 @@ In the example we declare the variable in side the script tag.
 
 ## String
 
-Strings are declared inside the quotation marks ("" ,''), else you will get an error.
+Strings are declared inside the quotation marks (" " ,' '), else you will get an error.
 There are few operations that you can do on strings,you can do string **concatenation**, means you can add two or more strings to form a large string.
 
 ```javascript
@@ -1248,10 +1248,76 @@ There are few operations that you can do on strings,you can do string **concaten
 
 ```
 
+**Length of string**
 
+To find the length of a string you can use **.length** method.
 
+```javascript
+var name = "Savitri";
 
+console.log(name.length);
 
+//output: 7 (displayed in the browser console.)
+
+```
+
+**Substring** 
+
+Substring method is used to divide the string into parts.
+
+```javascript
+
+var name = " My name is Savitri";
+
+console.log(name.substring(0,11 ));
+//output:  My name is
+```
+
+## Maths
+
+You can perform few mathematical operations like addition, substraction, multiple, divide, etc. in the browser console to practise and if you want you can use it in your application.
+You can perform mathematical operations on numbers only. 
+If you try to add number and string it will do the string concatenation operation.
+
+```javascript
+
+Example of Maths 
+
+87*69
+ // output: 6003
+3.2+2.66
+ // output: 5.86
+55/10
+ // output: 5.5
+20%4
+ // output:0
+20+60-40*5
+// output: -120
+
+Maths on numbers and string:
+
+"hello"+5
+ // output: "hello5"
+"hello"/5
+ // output: NaN
+"hello"*5
+ // output: NaN
+ 
+Using variable: 
+
+num1 =50 
+// output: 50
+
+num2 = 60
+// output: 60
+
+num1*num2
+// output: 3000
+ 
+num3 = num1+num2
+// output: 110
+
+```
 
 
 
