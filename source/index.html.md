@@ -1196,7 +1196,7 @@ In this type you can directly include javascript code in the HTML code under **h
     <html>
       <head>
         <title>Javascript Test</title>
-        //here demo.js is your external javascript file.
+        //include javascript internally.
         <script>
             alert("Hello from inside of the HTML");
             prompt("What is ypur Name?")
