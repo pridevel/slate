@@ -1258,6 +1258,7 @@ You can create a separate javascript file with &ldquo;.js&rdquo; extension and s
 Once you have save saved the file successfully, you can give the link to that file by specifying the path under <strong>head</strong> tag, in <strong>script</strong> tag.</li>
 </ul>
 <pre class="highlight javascript"><code>
+    <span class="o">&lt;</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
@@ -1276,10 +1277,11 @@ Once you have save saved the file successfully, you can give the link to that fi
 <li><strong>Internal</strong>
 In this type you can directly include javascript code in the HTML code under <strong>head</strong> tags.</li>
 </ul>
-<pre class="highlight javascript"><code>    <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+<pre class="highlight javascript"><code>      <span class="o">&lt;</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
-</span>        <span class="c1">//include javascript internally.</span>
+</span>        <span class="c1">//internal javascript.</span>
         <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
             <span class="nx">alert</span><span class="p">(</span><span class="s2">"Hello from inside of the HTML"</span><span class="p">);</span>
             <span class="nx">prompt</span><span class="p">(</span><span class="s2">"What is ypur Name?"</span><span class="p">)</span>
@@ -1291,6 +1293,39 @@ In this type you can directly include javascript code in the HTML code under <st
 </span>      <span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
 </span>    <span class="o">&lt;</span><span class="sr">/html&gt;</span><span class="err"> 
 </span></code></pre>
+
+<h2 id="variable">Variable</h2>
+
+<p>They allows us to label a piece of code so that we can reuse it later.
+Always declare the code in either <script></script> tags or in the javascript file.
+A variable can hold string, numbers, arrays etc. values.
+In the example we declare the variable in side the script tag.</p>
+<pre class="highlight javascript"><code>     <span class="o">&lt;</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+         <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Savi"</span><span class="p">;</span> 
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// This prints the Value stored in the name variable in the alert box.</span>
+        <span class="o">&lt;</span><span class="sr">/script&gt; </span><span class="err"> 
+</span>      <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span>
+      <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Welcome</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></code></pre>
+
+<h2 id="string">String</h2>
+
+<p>Strings are declared inside the quotation marks (&ldquo;&rdquo; ,&ldquo;), else you will get an error.
+There are few operations that you can do on strings,you can do string <strong>concatenation</strong>, means you can add two or more strings to form a large string.</p>
+<pre class="highlight javascript"><code>
+<span class="c1">// you can run this command in the broswers console.</span>
+ <span class="s2">"My name is"</span> <span class="o">+</span> <span class="s2">" Savitri M."</span>
+ <span class="c1">// output: "my name is Savitri M"</span>
+
+</code></pre>
 
           <h1 id="errors">Errors</h1>
 
