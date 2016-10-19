@@ -1392,7 +1392,7 @@ Their are two types of loops 1) For loop 2) While loop.
 
 **While loop**
 
-while loop executes the piece of code till the while condition is setting to false.
+While loop executes the piece of code till the while condition is sets to false.
 
 ```javascript
 Syntax 
@@ -1422,7 +1422,7 @@ while(i<5)
 **For loop**
 
 The for loop also executes a piece of code till the time a condition is satisfied.
-In for loop we write 3 statements, 1)In the first statement we declare a variable and initialize it 2)In second statement we put our condition 3)In third statement we increment/decrement the variable.
+In for loop we write 3 statements, 1) In the first statement we declare a variable and initialize it 2) In second statement we put our condition 3) In third statement we increment/decrement the variable.
 
 ```javascript
 
@@ -1438,6 +1438,65 @@ for(var i = 0; i<5; i++){
 4
 
 ```
+
+## Array
+
+Arrays are used to store a collection of data.  It lets you store multiple values together such as numbers, strings, arrays, etc.
+
+Types to declare Array
+
+1) var x = new Array
+
+2) []  // creates an empty array
+
+To insert an element in an array we use .push method.
+To remove an element in an array we use .pop method.
+
+```javascript
+
+var x = new Array
+
+//output: []
+
+x.push("string",5,33)
+
+//output: ["string",5,33]
+
+x.pop()
+//output: 33         //returns an item that is removed from an array.
+
+console.log(x);
+//output: ["string",5]
+
+```
+
+## Functions
+
+Functions in javascript helps us to reuse a block of code, so that we dont have to keep rewriting thing in multiple parts of our program.
+We write function name in camelCase. To declare a function we use a special keyword **function**.
+
+```javascript
+
+// declaring the add function with two parameters.
+var add = function(a,b)
+{
+    console.log(a + b);
+}
+ 
+add(5,6)  // calling the add function by passing the parameters.
+
+//output: 11
+
+```
+
+
+
+
+
+
+
+
+
 
 
 
