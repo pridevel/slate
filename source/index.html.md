@@ -1179,7 +1179,8 @@ Once you have save saved the file successfully, you can give the link to that fi
 <html>
   <head>
     <title>Javascript Test</title>
-    <script src="demo.js"></script>  // here demo.js is your external javascript file.
+    //here demo.js is your external javascript file.
+    <script src="demo.js"></script>  
   </head>
   
   <body>
