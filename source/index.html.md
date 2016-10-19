@@ -1390,7 +1390,7 @@ It helps you to remember why you have written a piece of code, so that even if y
 Loops in javascript are kind of iterators, they allows us to write a piece of code and repeate the code number of times we want to depending upon some condition.
 Their are two types of loops 1) For loop 2) While loop.
 
-** while loop**
+**While loop**
 
 while loop executes the piece of code till the while condition is setting to false.
 
