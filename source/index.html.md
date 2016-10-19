@@ -21,16 +21,16 @@ search: true
  
 ## Introduction 
 
-*Ruby is a powerful, flexible programming language you can use in web/Internet development, to process text, to create games, and as part of the popular Ruby on Rails web framework. Ruby is:
+* Ruby is a powerful, flexible programming language you can use in web/Internet development, to process text, to create games, and as part of the popular Ruby on Rails web framework. Ruby is:
 
-*High-level, meaning reading and writing Ruby is really easy—it looks a lot like regular English!
+* High-level, meaning reading and writing Ruby is really easy—it looks a lot like regular English!
 
-*Interpreted, meaning you don't need a compiler to write and run Ruby. You can write it on your own computer.
->The interpreter is the program that takes the code you write and runs it. You type code in the editor, the interpreter reads your code, and it shows you the result of running your code in the console. 
+* Interpreted, meaning you don't need a compiler to write and run Ruby. You can write it on your own computer.
+The interpreter is the program that takes the code you write and runs it. You type code in the editor, the interpreter reads your code, and it shows you the result of running your code in the console. 
 
-*Object-oriented, meaning it allows users to manipulate data structures called objects in order to build and execute programs. All you need to know is everything in Ruby is an object.
+* Object-oriented, meaning it allows users to manipulate data structures called objects in order to build and execute programs. All you need to know is everything in Ruby is an object.
 
-*Easy to use. Ruby was designed by Yukihiro Matsumoto (often just called "Matz") in 1995. Matz set out to design a language that emphasized human needs over those of the computer, which is why Ruby is so easy to pick up.
+* Easy to use. Ruby was designed by Yukihiro Matsumoto (often just called "Matz") in 1995. Matz set out to design a language that emphasized human needs over those of the computer, which is why Ruby is so easy to pick up.
 
 
 ## Ruby's Basic DataTypes
@@ -1159,11 +1159,36 @@ DELETE: Whenever you want to delete data from web you will find that the request
 
 ## User management
 
-Rails uses special gem called "devise" for managing the user.
+Rails uses special gem called "devise" for managing the user. This includes 
 You can visit the [github documentation](https://github.com/plataformatec/devise) to follow the steps about the installation of the devise gem.
-For checking the latest version of the devise gem visit [here](https://rubygems.org/gems/devise/versions/3.5.6)
+For checking the latest version of the devise gem visit [here](https://rubygems.org/gems/devise/versions/3.5.6).
 
+# Javascript
 
+Javascript is a programming language which is been used for making the website interactive.
+
+## Types to include javascript in your HTML 
+
+* **External**
+You can create a separate javascript file with ".js" extension and save it in the folder along with the other files of the application.
+Once you have save saved the file successfully, you can give the link to that file by specifying the path under **head** tag, in **script** tag.
+
+```javascript
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Test</title>
+    <script src="demo.js"></script>  // here demo.js is your external javascript file.
+  </head>
+  
+  <body>
+        <h1>Hello</h1>
+  </body>
+
+</html>  
+
+```
 
 
 
