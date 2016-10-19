@@ -1167,7 +1167,7 @@ For checking the latest version of the devise gem visit [here](https://rubygems.
 
 Javascript is a programming language which is been used for making the website interactive.
 
-## Types to include javascript in your HTML 
+**Types to include javascript in your HTML** 
 
 * **External**
 You can create a separate javascript file with ".js" extension and save it in the folder along with the other files of the application.
