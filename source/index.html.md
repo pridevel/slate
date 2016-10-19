@@ -1175,26 +1175,39 @@ Once you have save saved the file successfully, you can give the link to that fi
 
 ```javascript
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Javascript Test</title>
-    //here demo.js is your external javascript file.
-    <script src="demo.js"></script>  
-  </head>
-  
-  <body>
-        <h1>Hello</h1>
-  </body>
-
-</html>  
+    <html>
+      <head>
+        <title>Javascript Test</title>
+        //here demo.js is your external javascript file.
+        <script src="demo.js"></script>  
+      </head>
+      
+      <body>
+            <h1>Hello</h1>
+      </body>
+    </html>  
 
 ```
 
+* **Internal**
+In this type you can directly include javascript code in the HTML code under **head** tags.
 
-
-
-
+```javascript
+    <html>
+      <head>
+        <title>Javascript Test</title>
+        //here demo.js is your external javascript file.
+        <script>
+            alert("Hello from inside of the HTML");
+            prompt("What is ypur Name?")
+        </script>  
+      </head>
+      
+      <body>
+            <h1>Welcome</h1>
+      </body>
+    </html> 
+```
 
 
 
