@@ -1505,7 +1505,13 @@ In for loop we write 3 statements, 1) In the first statement we declare a variab
 
 <h2 id="array">Array</h2>
 
-<p>Arrays are used to store a collection of data.  It lets you store multiple values together such as numbers, strings, arrays, etc.</p>
+<p>Arrays are used to store a collection of data. 
+In an array you can save the data of the same type or different types.
+Arrays are fixed length datatype. The elements stored in the array possess property of index. 
+Index are nothing but numbers or the positions that each elements in an array possess.
+We can access the elements in an array with the help of this index.
+Array index starts from &#39;0&rsquo;, which means that the first element in an array will have index zero.
+It lets you store multiple values together such as numbers, strings, arrays, etc.</p>
 
 <p>Types to declare Array</p>
 
@@ -1524,17 +1530,36 @@ To remove an element in an array we use .pop method.</p>
 
 <span class="c1">//output: ["string",5,33]</span>
 
-<span class="nx">x</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span>
+<span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">;</span>    <span class="c1">// accessing the element by specifying their index</span>
+
+<span class="c1">// output: "string"</span>
+
+<span class="nx">x</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span>                 <span class="c1">// to remove an element from an array</span>
 <span class="c1">//output: 33         //returns an item that is removed from an array.</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
 <span class="c1">//output: ["string",5]</span>
 
 </code></pre>
+<pre class="highlight javascript"><code> <span class="c1">// To iterate over an array</span>
+
+ <span class="kd">var</span> <span class="nx">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"HTML"</span><span class="p">,</span><span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Ruby"</span><span class="p">];</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">subjects</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+ <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">subjects</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>   
+<span class="p">}</span>
+
+<span class="c1">//output: </span>
+
+<span class="nx">HTML</span>
+<span class="nx">JavaScript</span>
+<span class="nx">Ruby</span>
+
+</code></pre>
 
 <h2 id="functions">Functions</h2>
 
-<p>Functions in javascript helps us to reuse a block of code, so that we dont have to keep rewriting thing in multiple parts of our program.
+<p>Functions in javascript helps us to reuse a block of code, so that we dont have to keep rewriting things in multiple parts of our program.
 We write function name in camelCase. To declare a function we use a special keyword <strong>function</strong>.</p>
 <pre class="highlight javascript"><code>
 <span class="c1">// declaring the add function with two parameters.</span>
@@ -1546,6 +1571,26 @@ We write function name in camelCase. To declare a function we use a special keyw
 <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>  <span class="c1">// calling the add function by passing the parameters.</span>
 
 <span class="c1">//output: 11</span>
+
+</code></pre>
+
+<h2 id="object">Object</h2>
+
+<p>Objects are another datatypes in javascript. They allow us to organize our code.
+Object has properties and methods.
+They store the data in the form of key-value pair,the key can be number, string or variable.</p>
+
+<p>Ways to define an object:</p>
+
+<p>1) var myself = {}              // creates an empty object.
+2) var myself = new Object();     //</p>
+<pre class="highlight javascript"><code>
+<span class="kd">var</span> <span class="nx">myself</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="na">name</span><span class="p">:</span> <span class="s2">"Savi"</span><span class="p">,</span>
+    <span class="na">place</span><span class="p">:</span> <span class="s2">"Mumbai"</span><span class="p">,</span>
+    <span class="na">phone</span><span class="p">:</span> <span class="mi">222</span><span class="o">-</span><span class="mi">222</span><span class="o">-</span><span class="mi">222</span>
+<span class="p">}</span>
 
 </code></pre>
 
