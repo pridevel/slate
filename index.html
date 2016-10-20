@@ -1632,6 +1632,31 @@ They store the data in the form of key-value pair,the key can be number, string 
 
 </code></pre>
 
+<h3 id="creating-an-object-with-user-defined-function">Creating an object with user defined function</h3>
+
+<p>First of all we define a constructor by passing it the desired number of parameter and then use that function to create our objects.
+The constructor uses this keyword to set the dynamic properties that we pass to a constructor function.</p>
+<pre class="highlight javascript"><code><span class="c1">// creating a constructor</span>
+<span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>  <span class="c1">//this.name is a placeholder that holds the value of name property</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="c1">// creating object using that constructor.</span>
+<span class="nx">sav</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Savitri"</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>   
+<span class="c1">// output: Person {name: "Savitri", age: 20}</span>
+
+<span class="nx">bob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"BOB"</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
+<span class="c1">// output: Person {name: "BOB", age: 25}</span>
+
+<span class="nx">bob</span><span class="p">.</span><span class="nx">name</span>      <span class="c1">//accessing the name property of bob object</span>
+<span class="c1">// output: "BOB"</span>
+
+<span class="nx">sav</span><span class="p">.</span><span class="nx">name</span>      <span class="c1">//accessing the name property of sav object</span>
+<span class="c1">// output: "Savitri"</span>
+
+</code></pre>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
