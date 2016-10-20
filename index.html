@@ -1582,15 +1582,53 @@ They store the data in the form of key-value pair,the key can be number, string 
 
 <p>Ways to define an object:</p>
 
-<p>1) var myself = {}              // creates an empty object.
-2) var myself = new Object();     //</p>
+<p>1) var myself = {}              // creates an empty object.</p>
+
+<p>2) var myself = new Object();     //</p>
 <pre class="highlight javascript"><code>
+<span class="c1">// literal notation to create an object</span>
 <span class="kd">var</span> <span class="nx">myself</span> <span class="o">=</span> <span class="p">{</span>
 
     <span class="na">name</span><span class="p">:</span> <span class="s2">"Savi"</span><span class="p">,</span>
     <span class="na">place</span><span class="p">:</span> <span class="s2">"Mumbai"</span><span class="p">,</span>
-    <span class="na">phone</span><span class="p">:</span> <span class="mi">222</span><span class="o">-</span><span class="mi">222</span><span class="o">-</span><span class="mi">222</span>
+    <span class="na">phone</span><span class="p">:</span> <span class="s2">"222-222-222"</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">20</span>
 <span class="p">}</span>
+
+<span class="c1">// constructor notation</span>
+<span class="kd">var</span> <span class="nx">myself</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+<span class="nx">myself</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">"Savi"</span><span class="p">;</span>
+<span class="nx">myself</span><span class="p">.</span><span class="nx">place</span> <span class="o">=</span> <span class="s2">"Mumbai"</span><span class="p">;</span>
+<span class="nx">myself</span><span class="p">.</span><span class="nx">phone</span> <span class="o">=</span> <span class="s2">"222-222-222"</span><span class="p">;</span>
+<span class="nx">myself</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+<span class="c1">//output : Object {name: "Savi", place: "Mumbai", phone: "222-222-222", age: 20}</span>
+</code></pre>
+<pre class="highlight javascript"><code>
+<span class="nx">You</span> <span class="nx">can</span> <span class="nx">add</span> <span class="nx">functions</span> <span class="nx">as</span> <span class="nx">property</span> <span class="nx">of</span> <span class="nx">an</span> <span class="nx">object</span> <span class="nx">externally</span>
+<span class="nx">myself</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"You are the worst!!"</span><span class="p">)}</span>
+
+<span class="nx">myself</span><span class="p">.</span><span class="nx">say</span>          
+<span class="c1">// output: { console.log("You are the worst!!")}</span>
+
+<span class="nx">myself</span><span class="p">.</span><span class="nx">say</span><span class="p">()</span>
+<span class="c1">// output: "You are the worst!!"</span>
+
+<span class="nx">Accessing</span> <span class="nx">Data</span> <span class="nx">From</span> <span class="nx">Objects</span><span class="err">:</span>
+
+<span class="nx">myself</span><span class="p">.</span><span class="nx">name</span>           <span class="c1">// accessing the name property</span>
+<span class="c1">//output: "Savi"</span>
+
+<span class="nx">myself</span><span class="p">.</span><span class="nx">phone</span>          <span class="c1">// accessing the phone property</span>
+<span class="c1">//output: "222-222-222"</span>
+
+<span class="nx">Alternate</span> <span class="nx">methods</span> <span class="nx">to</span> <span class="nx">access</span> <span class="nx">the</span> <span class="nx">data</span> <span class="nx">from</span> <span class="nx">object</span><span class="err">:</span>
+
+<span class="nx">myself</span><span class="p">[</span><span class="s2">"phone"</span><span class="p">]</span>
+<span class="c1">//output: "222-222-222"</span>
+
+<span class="nx">myself</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span>
+<span class="c1">//output: 20</span>
 
 </code></pre>
 
