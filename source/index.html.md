@@ -1441,7 +1441,13 @@ for(var i = 0; i<5; i++){
 
 ## Array
 
-Arrays are used to store a collection of data.  It lets you store multiple values together such as numbers, strings, arrays, etc.
+Arrays are used to store a collection of data. 
+In an array you can save the data of the same type or different types.
+Arrays are fixed length datatype. The elements stored in the array possess property of index. 
+Index are nothing but numbers or the positions that each elements in an array possess.
+We can access the elements in an array with the help of this index.
+Array index starts from '0', which means that the first element in an array will have index zero.
+It lets you store multiple values together such as numbers, strings, arrays, etc.
 
 Types to declare Array
 
@@ -1462,7 +1468,11 @@ x.push("string",5,33)
 
 //output: ["string",5,33]
 
-x.pop()
+x[0] ;    // accessing the element by specifying their index
+
+// output: "string"
+
+x.pop()                 // to remove an element from an array
 //output: 33         //returns an item that is removed from an array.
 
 console.log(x);
@@ -1470,9 +1480,26 @@ console.log(x);
 
 ```
 
+```javascript
+ // To iterate over an array
+ 
+ var subjects = ["HTML","JavaScript", "Ruby"];
+for(var i = 0; i < subjects.length; i++)
+{
+ console.log(subjects[i]);   
+}
+
+//output: 
+
+HTML
+JavaScript
+Ruby
+
+```
+
 ## Functions
 
-Functions in javascript helps us to reuse a block of code, so that we dont have to keep rewriting thing in multiple parts of our program.
+Functions in javascript helps us to reuse a block of code, so that we dont have to keep rewriting things in multiple parts of our program.
 We write function name in camelCase. To declare a function we use a special keyword **function**.
 
 ```javascript
@@ -1489,10 +1516,27 @@ add(5,6)  // calling the add function by passing the parameters.
 
 ```
 
+## Object
 
+Objects are another datatypes in javascript. They allow us to organize our code.
+Object has properties and methods.
+They store the data in the form of key-value pair,the key can be number, string or variable.
 
+Ways to define an object:
 
+1) var myself = {}              // creates an empty object.
+2) var myself = new Object();     //
 
+```javascript
+
+var myself = {
+    
+    name: "Savi",
+    place: "Mumbai",
+    phone: 222-222-222
+}
+
+```
 
 
 
