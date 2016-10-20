@@ -1525,18 +1525,82 @@ They store the data in the form of key-value pair,the key can be number, string 
 Ways to define an object:
 
 1) var myself = {}              // creates an empty object.
+
 2) var myself = new Object();     //
 
 ```javascript
 
+// literal notation to create an object
 var myself = {
     
     name: "Savi",
     place: "Mumbai",
-    phone: 222-222-222
+    phone: "222-222-222",
+    age: 20
 }
 
+// constructor notation
+var myself = new Object();
+myself.name = "Savi";
+myself.place = "Mumbai";
+myself.phone = "222-222-222";
+myself.age = 20;
+
+//output : Object {name: "Savi", place: "Mumbai", phone: "222-222-222", age: 20}
 ```
+
+```javascript
+
+You can add functions as property of an object externally
+myself.say = function(){ console.log("You are the worst!!")}
+
+myself.say          
+// output: { console.log("You are the worst!!")}
+
+myself.say()
+// output: "You are the worst!!"
+
+Accessing Data From Objects:
+
+myself.name           // accessing the name property
+//output: "Savi"
+
+myself.phone          // accessing the phone property
+//output: "222-222-222"
+
+Alternate methods to access the data from object:
+
+myself["phone"]
+//output: "222-222-222"
+
+myself["age"]
+//output: 20
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
