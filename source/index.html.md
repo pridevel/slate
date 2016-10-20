@@ -1578,7 +1578,32 @@ myself["age"]
 
 ```
 
+### Creating an object with user defined function
 
+First of all we define a constructor by passing it the desired number of parameter and then use that function to create our objects.
+The constructor uses this keyword to set the dynamic properties that we pass to a constructor function.
+
+```javascript
+// creating a constructor
+function Person(name,age) {
+  this.name = name;  //this.name is a placeholder that holds the value of name property
+  this.age = age;
+ }
+ 
+ // creating object using that constructor.
+sav = new Person("Savitri", 20);   
+// output: Person {name: "Savitri", age: 20}
+
+bob = new Person("BOB", 25);
+// output: Person {name: "BOB", age: 25}
+
+bob.name      //accessing the name property of bob object
+// output: "BOB"
+
+sav.name      //accessing the name property of sav object
+// output: "Savitri"
+
+```
 
 
 
