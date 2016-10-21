@@ -1665,45 +1665,81 @@ The constructor uses this keyword to set the dynamic properties that we pass to 
 <p>jQuery also allows us to add interactive code to our website or to HTML content.
 The Html document is designed and structured according to the <a href="http://www.w3schools.com/js/js_htmldom.asp">DOM</a>.
 With the help of DOM we can access and modify the HTML.</p>
-<pre class="highlight javascript"><code><span class="nx">Accessing</span> <span class="nx">an</span> <span class="nx">html</span> <span class="nx">element</span>
+<pre class="highlight plaintext"><code>
+Accessing an html element
 
- <span class="o">&lt;</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
-</span>        <span class="c1">//here demo.js is your external javascript file.</span>
-        <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"demo.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script&gt; </span><span class="err"> 
-</span>      <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
-</span>
-      <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-            <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"h1"</span><span class="o">&gt;</span><span class="nx">Welcome</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
-</span>
-            <span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
-</span>            <span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">another</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
-</span>
-            <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-                <span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">);</span>
-    <span class="c1">//output:    &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;         </span>
+ &lt;DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Javascript Test&lt;/title&gt;
+        //here demo.js is your external javascript file.
+        &lt;script src="demo.js"&gt;&lt;/script&gt;  
+      &lt;/head&gt;
 
-               <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClass</span><span class="p">(</span><span class="s2">"para"</span><span class="p">);</span>
-    <span class="c1">//output:  returns an array </span>
-    <span class="p">[</span><span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p&gt;, &lt;p class="para" &gt;This is another paragraph.&lt;/</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">]</span>            
+      &lt;body&gt;
+            &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;
 
-                <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"para"</span><span class="p">);</span>
-    <span class="c1">//output:    returns an array </span>
-    <span class="p">[</span><span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p&gt;, &lt;p class="para" &gt;This is another paragraph.&lt;/</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">]</span>       
+            &lt;p class="para" &gt;This is a paragraph.&lt;/p&gt;
+            &lt;p class="para" &gt;This is another paragraph.&lt;/p&gt;
 
-<span class="c1">// querySelector allows us to grab things using the CSS.                </span>
-                <span class="kd">var</span> <span class="nx">q</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">)</span>
-    <span class="c1">//output: &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;            </span>
+            &lt;script&gt;
+                var h = document.getElementById("h1");
+                output: &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;         
 
-                <span class="kd">var</span> <span class="nx">q1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#h1"</span><span class="p">)</span>
-    <span class="c1">//output: &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;            </span>
+                var p = document.getElementsByClassName("para");
+                output:  returns an array 
+                [&lt;p class="para" &gt;This is a paragraph.&lt;/p&gt;, &lt;p class="para" &gt;This is another paragraph.&lt;/p&gt;]            
 
-            <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
-</span>      <span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
-</span>    <span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
-</span>
+                var t = document.getElementsByTagName("para");
+                output:    returns an array 
+                [&lt;p class="para" &gt;This is a paragraph.&lt;/p&gt;, &lt;p class="para" &gt;This is another paragraph.&lt;/p&gt;]       
+
+                querySelector allows us to grab things using the CSS.                
+                var q = document.querySelector("h1")
+                output: &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;            
+
+                // Accessing all the h1 tags using CSS
+                var q1 = document.querySelectorAll("#h1")
+                output: &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;            
+
+            &lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+
+</code></pre>
+
+<h2 id="jquery-syntax">jQuery Syntax</h2>
+
+<p>Syntax: $(selector).action()</p>
+
+<p>Syntax Explanation:  jQuery uses special symbol <strong>&ldquo;$&rdquo;</strong> to <strong>access</strong> jQuery, the <strong>selector</strong> is <strong>find the specified html element</strong> and the <strong>action</strong> is <strong>operation to be performed on the targeted element</strong>.</p>
+
+<p>jQuery allows us to access the html elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
+You can find the numbers of styles that you can use <a href="http://www.w3schools.com/jsref/dom_obj_style.asp">here</a>.</p>
+
+<h2 id="events">Events</h2>
+
+<p>Javascript has the concepts of events that allows us to track all kinds of events, eg mouseclick, scroll, keypress etc.
+Using javascript we can put event_handlers on the HTML elements so that when an event occours it can show some action kind of thing.
+You can find different types of event handlers <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">here</a>. which you can use in your website.</p>
+
+<p>event listner:
+event listeneris a function that takes two parameter, the first parameter is the event_name such as click, drag, scroll etc. and the second parameter is the action that we want to happen when the event occours.</p>
+<pre class="highlight plaintext"><code>//Example of adding event listner
+
+&lt;script&gt;
+      var q = document.querySelector("h1")          // targeting the html element
+
+      var func = function myFunction() {
+        alert ("Hello World!")
+      }
+
+      document.addEventListener("click", func);
+
+&lt;/script&gt;
+
+//output: here when you click on the h1 you will get an alert message displaying the message Hello World! .
+
 </code></pre>
 
           <h1 id="errors">Errors</h1>
