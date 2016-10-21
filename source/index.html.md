@@ -1343,12 +1343,14 @@ Boolean value returns true or false as an output. Based on the value of the bool
 
 ## Control Flow 
 
+**If-else Statement**
+
 Control Flow includes "If-else" statement.
 It means that depending upon the condition either one piece of code will execute or the other piece of code will execute.
 
 ```javascript
 
-Syntax 
+Syntax:
 
 if(condition){
     // some code
@@ -1370,6 +1372,39 @@ else
 }
 
 ```
+
+<hr>
+
+**Switch Statement**
+
+Another type of control flow statement is **switch** statement.
+You can use switch statement if you are annoyed by typing if-else statement for more number of times. At that time you can use switch statement.
+The switch statement provides you to present multiple option called the cases then check an expression to see if it matches any of them. 
+If there's a match, the program will perform the action for the matching case, if there's no match, it can execute a default option.
+Have a look at example to know about the switch case.
+
+```javascript
+
+var subject = prompt("Which is your favorite subject ?","Type your subject choice here");
+
+switch(subject){
+  case 'java':
+    console.log("Sure thing! you have to learn OOPS!!");
+    break;
+  case 'HTML':
+    console.log("Got it! You want to build a website.");
+    break;
+  case 'AngularJs':
+    console.log("Sounds good! Its a new technonlogy. Go with it");
+    break;
+ 
+  default:
+    console.log(" Everyone has their own choice !! Yours is " + subject );
+}
+
+```
+
+
 ## Comments
 
 To use comments you need to put two forward slashes (//) in front of any statement that you need to comment out.
@@ -1458,8 +1493,8 @@ Types to declare Array
 
 2) []  // creates an empty array
 
-To insert an element in an array we use .push method.
-To remove an element in an array we use .pop method.
+To insert an element in an array we use .push method. The push method insert an element at the last position of an array or at the end of an array, ypu can check the example below.
+To remove an element in an array we use .pop method. The pop method removes the elemet at the very last position and returns it.
 
 ```javascript
 
@@ -1482,6 +1517,9 @@ console.log(x);
 //output: ["string",5]
 
 ```
+x.push("Hello")
+// output: ["string",5,"Hello"]
+
 
 ```javascript
  // To iterate over an array
@@ -1657,10 +1695,12 @@ Accessing an html element
 Javascript has the concepts of events that allows us to track all kinds of events, eg mouseclick, scroll, keypress etc.
 Using javascript we can put event_handlers on the HTML elements so that when an event occours it can show some action kind of thing.
 You can find different types of event handlers [here](http://www.w3schools.com/jsref/dom_obj_event.asp). which you can use in your website.
+You can refer above examples to see how we cantarget the HTML elements.
 
 
-event listner:
-event listeneris a function that takes two parameter, the first parameter is the event_name such as click, drag, scroll etc. and the second parameter is the action that we want to happen when the event occours.
+**Event listner:**
+
+Event listener is a function that takes two parameter, the first parameter is the event_name such as click, drag, scroll etc. and the second parameter is the action that we want to happen when the event occours.
 
 ```script
 //Example of adding event listner
@@ -1688,17 +1728,20 @@ With the help of DOM we can access and modify the HTML.
 To use jQuery in your application you need to include it in your Html file and the way you can do that is by searching on web for [jQuery CDN](https://code.jquery.com/).
 Now from there you can pickup any version of jQuery and include in your Html document, so that you can link your application with jQuery.
 
-
 ## jQuery Syntax
 
 Syntax: $(selector).action()
 
 Syntax Explanation:  jQuery uses special symbol **"$"** to **access** jQuery, the **selector** is **find the specified html element** and the **action** is **operation to be performed on the targeted element**.
 
-jQuery allows us to access the html elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
+jQuery uses CSS to access the elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
 You can find the numbers of styles that you can use [here](http://www.w3schools.com/jsref/dom_obj_style.asp).
 
-
+```script
+ $("#notready").fadeOut(1000);
+ 
+// here we are selecting the element by targeting the id="notready" which must be defined in your HTML and then adding the action of fadeOut after 1000ms.
+```
 
 
 
