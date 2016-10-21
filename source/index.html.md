@@ -1375,37 +1375,6 @@ else
 
 ```
 
-<hr>
-
-**Switch Statement**
-
-Another type of control flow statement is **switch** statement.
-You can use switch statement if you are annoyed by typing if-else statement for more number of times. At that time you can use switch statement.
-The switch statement provides you to present multiple option called the cases then check an expression to see if it matches any of them. 
-If there's a match, the program will perform the action for the matching case, if there's no match, it can execute a default option.
-Have a look at example to know about the switch case.
-
-```javascript
-
-var subject = prompt("Which is your favorite subject ?","Type your subject choice here");
-
-switch(subject){
-  case 'java':
-    console.log("Sure thing! you have to learn OOPS!!");
-    break;
-  case 'HTML':
-    console.log("Got it! You want to build a website.");
-    break;
-  case 'AngularJs':
-    console.log("Sounds good! Its a new technonlogy. Go with it");
-    break;
- 
-  default:
-    console.log(" Everyone has their own choice !! Yours is " + subject );
-}
-
-```
-
 
 ## Comments
 
