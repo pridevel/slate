@@ -1659,13 +1659,9 @@ The constructor uses this keyword to set the dynamic properties that we pass to 
 <span class="c1">// output: "Savitri"</span>
 
 </code></pre>
-
-<h1 id="jquery">jQuery</h1>
-
-<p>jQuery also allows us to add interactive code to our website or to HTML content.
-The Html document is designed and structured according to the <a href="http://www.w3schools.com/js/js_htmldom.asp">DOM</a>.
-With the help of DOM we can access and modify the HTML.</p>
 <pre class="highlight plaintext"><code>
+```script
+
 Accessing an html element
 
  &lt;DOCTYPE html&gt;
@@ -1707,25 +1703,37 @@ Accessing an html element
     &lt;/html&gt;
 
 </code></pre>
+<pre class="highlight plaintext"><code>
+# jQuery
 
-<h2 id="jquery-syntax">jQuery Syntax</h2>
+jQuery also allows us to add interactive code to our website or to HTML content.
+The Html document is designed and structured according to the [DOM](http://www.w3schools.com/js/js_htmldom.asp).
+With the help of DOM we can access and modify the HTML.
+To use jQuery in your application you need to include it in your Html file and the way you can do that is by searching on web for [jQuery CDN](https://code.jquery.com/).
+Now from there you can pickup any version of jQuery and include in your Html document, so that you can link your application with jQuery.
 
-<p>Syntax: $(selector).action()</p>
 
-<p>Syntax Explanation:  jQuery uses special symbol <strong>&ldquo;$&rdquo;</strong> to <strong>access</strong> jQuery, the <strong>selector</strong> is <strong>find the specified html element</strong> and the <strong>action</strong> is <strong>operation to be performed on the targeted element</strong>.</p>
+## jQuery Syntax
 
-<p>jQuery allows us to access the html elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
-You can find the numbers of styles that you can use <a href="http://www.w3schools.com/jsref/dom_obj_style.asp">here</a>.</p>
+Syntax: $(selector).action()
 
-<h2 id="events">Events</h2>
+Syntax Explanation:  jQuery uses special symbol **"$"** to **access** jQuery, the **selector** is **find the specified html element** and the **action** is **operation to be performed on the targeted element**.
 
-<p>Javascript has the concepts of events that allows us to track all kinds of events, eg mouseclick, scroll, keypress etc.
+jQuery allows us to access the html elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
+You can find the numbers of styles that you can use [here](http://www.w3schools.com/jsref/dom_obj_style.asp).
+
+## Events
+
+Javascript has the concepts of events that allows us to track all kinds of events, eg mouseclick, scroll, keypress etc.
 Using javascript we can put event_handlers on the HTML elements so that when an event occours it can show some action kind of thing.
-You can find different types of event handlers <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">here</a>. which you can use in your website.</p>
+You can find different types of event handlers [here](http://www.w3schools.com/jsref/dom_obj_event.asp). which you can use in your website.
 
-<p>event listner:
-event listeneris a function that takes two parameter, the first parameter is the event_name such as click, drag, scroll etc. and the second parameter is the action that we want to happen when the event occours.</p>
-<pre class="highlight plaintext"><code>//Example of adding event listner
+
+event listner:
+event listeneris a function that takes two parameter, the first parameter is the event_name such as click, drag, scroll etc. and the second parameter is the action that we want to happen when the event occours.
+
+```script
+//Example of adding event listner
 
 &lt;script&gt;
       var q = document.querySelector("h1")          // targeting the html element
