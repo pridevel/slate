@@ -1387,6 +1387,8 @@ Have a look at example to know about the switch case.
 
 ```javascript
 
+//Example os switch case
+
 var subject = prompt("Which is your favorite subject ?","Type your subject choice here");
 
 switch(subject){
