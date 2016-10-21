@@ -1240,8 +1240,6 @@ In the example we declare the variable in side the script tag.
 
 ## Scope 
 
-
-
 ## String
 
 Strings are declared inside the quotation marks (" " ,' '), else you will get an error.
