@@ -1165,7 +1165,10 @@ For checking the latest version of the devise gem visit [here](https://rubygems.
 
 # Javascript
 
+Html is used to add content on the web-page, CSS allows us to add some colour or postion things on the page.
+It helps to make Html look attractive, but what about interaction ? So here Javascript comes into picture.
 Javascript is a programming language which is been used for making the website interactive.
+Making page interactive means we can click on the button and some action happens or when we hover over a link it colour changes or it enhances etc.
 
 **Types to include javascript in your HTML** 
 
@@ -1605,15 +1608,53 @@ sav.name      //accessing the name property of sav object
 
 ```
 
+# jQuery
 
+jQuery also allows us to add interactive code to our website or to HTML content.
+The Html document is designed and structured according to the [DOM](http://www.w3schools.com/js/js_htmldom.asp).
+With the help of DOM we can access and modify the HTML.
 
+```javascript
+Accessing an html element
 
+ <DOCTYPE html>
+    <html>
+      <head>
+        <title>Javascript Test</title>
+        //here demo.js is your external javascript file.
+        <script src="demo.js"></script>  
+      </head>
+      
+      <body>
+            <h1 id="h1">Welcome</h1>
+            
+            <p class="para" >This is a paragraph.</p>
+            <p class="para" >This is another paragraph.</p>
+            
+            <script>
+                var h = document.getElementById("h1");
+    //output:    <h1 id="h1">Welcome</h1>         
+                
+               var p = document.getElementsByClass("para");
+    //output:  returns an array 
+    [<p class="para" >This is a paragraph.</p>, <p class="para" >This is another paragraph.</p>]            
+                
+                var t = document.getElementsByTagName("para");
+    //output:    returns an array 
+    [<p class="para" >This is a paragraph.</p>, <p class="para" >This is another paragraph.</p>]       
+                
+// querySelector allows us to grab things using the CSS.                
+                var q = document.querySelector("h1")
+    //output: <h1 id="h1">Welcome</h1>            
+                
+                var q1 = document.querySelector("#h1")
+    //output: <h1 id="h1">Welcome</h1>            
+            
+            </script>
+      </body>
+    </html>
 
-
-
-
-
-
+```
 
 
 
