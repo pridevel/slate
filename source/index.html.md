@@ -1608,11 +1608,7 @@ sav.name      //accessing the name property of sav object
 
 ```
 
-# jQuery
-
-jQuery also allows us to add interactive code to our website or to HTML content.
-The Html document is designed and structured according to the [DOM](http://www.w3schools.com/js/js_htmldom.asp).
-With the help of DOM we can access and modify the HTML.
+```script
 
 ```script
 
@@ -1657,6 +1653,18 @@ Accessing an html element
     </html>
 
 ```
+
+
+```
+
+# jQuery
+
+jQuery also allows us to add interactive code to our website or to HTML content.
+The Html document is designed and structured according to the [DOM](http://www.w3schools.com/js/js_htmldom.asp).
+With the help of DOM we can access and modify the HTML.
+To use jQuery in your application you need to include it in your Html file and the way you can do that is by searching on web for [jQuery CDN](https://code.jquery.com/).
+Now from there you can pickup any version of jQuery and include in your Html document, so that you can link your application with jQuery.
+
 
 ## jQuery Syntax
 
