@@ -1345,7 +1345,7 @@ Boolean value returns true or false as an output. Based on the value of the bool
 
 ## Control Flow 
 
-**If-else Statement**
+### **If-else Statement**
 
 Control Flow includes "If-else" statement.
 It means that depending upon the condition either one piece of code will execute or the other piece of code will execute.
@@ -1377,7 +1377,7 @@ else
 
 <hr>
 
-**Switch Statement**
+### **Switch Statement**
 
 Another type of control flow statement is **switch** statement.
 You can use switch statement if you are annoyed by typing if-else statement for more number of times. At that time you can use switch statement.
