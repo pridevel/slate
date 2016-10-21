@@ -1248,7 +1248,10 @@ For checking the latest version of the devise gem visit <a href="https://rubygem
 
 <h1 id="javascript">Javascript</h1>
 
-<p>Javascript is a programming language which is been used for making the website interactive.</p>
+<p>Html is used to add content on the web-page, CSS allows us to add some colour or postion things on the page.
+It helps to make Html look attractive, but what about interaction ? So here Javascript comes into picture.
+Javascript is a programming language which is been used for making the website interactive.
+Making page interactive means we can click on the button and some action happens or when we hover over a link it colour changes or it enhances etc.</p>
 
 <p><strong>Types to include javascript in your HTML</strong> </p>
 
@@ -1655,6 +1658,52 @@ The constructor uses this keyword to set the dynamic properties that we pass to 
 <span class="nx">sav</span><span class="p">.</span><span class="nx">name</span>      <span class="c1">//accessing the name property of sav object</span>
 <span class="c1">// output: "Savitri"</span>
 
+</code></pre>
+
+<h1 id="jquery">jQuery</h1>
+
+<p>jQuery also allows us to add interactive code to our website or to HTML content.
+The Html document is designed and structured according to the <a href="http://www.w3schools.com/js/js_htmldom.asp">DOM</a>.
+With the help of DOM we can access and modify the HTML.</p>
+<pre class="highlight javascript"><code><span class="nx">Accessing</span> <span class="nx">an</span> <span class="nx">html</span> <span class="nx">element</span>
+
+ <span class="o">&lt;</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Javascript</span> <span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span>        <span class="c1">//here demo.js is your external javascript file.</span>
+        <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"demo.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script&gt; </span><span class="err"> 
+</span>      <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span>
+      <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"h1"</span><span class="o">&gt;</span><span class="nx">Welcome</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>
+            <span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">another</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+            <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+                <span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">);</span>
+    <span class="c1">//output:    &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;         </span>
+
+               <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClass</span><span class="p">(</span><span class="s2">"para"</span><span class="p">);</span>
+    <span class="c1">//output:  returns an array </span>
+    <span class="p">[</span><span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p&gt;, &lt;p class="para" &gt;This is another paragraph.&lt;/</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">]</span>            
+
+                <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"para"</span><span class="p">);</span>
+    <span class="c1">//output:    returns an array </span>
+    <span class="p">[</span><span class="o">&lt;</span><span class="nx">p</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"para"</span> <span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">paragraph</span><span class="p">.</span><span class="o">&lt;</span><span class="sr">/p&gt;, &lt;p class="para" &gt;This is another paragraph.&lt;/</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">]</span>       
+
+<span class="c1">// querySelector allows us to grab things using the CSS.                </span>
+                <span class="kd">var</span> <span class="nx">q</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">)</span>
+    <span class="c1">//output: &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;            </span>
+
+                <span class="kd">var</span> <span class="nx">q1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#h1"</span><span class="p">)</span>
+    <span class="c1">//output: &lt;h1 id="h1"&gt;Welcome&lt;/h1&gt;            </span>
+
+            <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span>
 </code></pre>
 
           <h1 id="errors">Errors</h1>
