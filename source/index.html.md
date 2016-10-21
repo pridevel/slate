@@ -1614,7 +1614,8 @@ jQuery also allows us to add interactive code to our website or to HTML content.
 The Html document is designed and structured according to the [DOM](http://www.w3schools.com/js/js_htmldom.asp).
 With the help of DOM we can access and modify the HTML.
 
-```javascript
+```script
+
 Accessing an html element
 
  <DOCTYPE html>
@@ -1633,22 +1634,23 @@ Accessing an html element
             
             <script>
                 var h = document.getElementById("h1");
-    //output:    <h1 id="h1">Welcome</h1>         
+                output: <h1 id="h1">Welcome</h1>         
                 
-               var p = document.getElementsByClass("para");
-    //output:  returns an array 
-    [<p class="para" >This is a paragraph.</p>, <p class="para" >This is another paragraph.</p>]            
+                var p = document.getElementsByClassName("para");
+                output:  returns an array 
+                [<p class="para" >This is a paragraph.</p>, <p class="para" >This is another paragraph.</p>]            
                 
                 var t = document.getElementsByTagName("para");
-    //output:    returns an array 
-    [<p class="para" >This is a paragraph.</p>, <p class="para" >This is another paragraph.</p>]       
-                
-// querySelector allows us to grab things using the CSS.                
+                output:    returns an array 
+                [<p class="para" >This is a paragraph.</p>, <p class="para" >This is another paragraph.</p>]       
+                        
+                querySelector allows us to grab things using the CSS.                
                 var q = document.querySelector("h1")
-    //output: <h1 id="h1">Welcome</h1>            
+                output: <h1 id="h1">Welcome</h1>            
                 
-                var q1 = document.querySelector("#h1")
-    //output: <h1 id="h1">Welcome</h1>            
+                // Accessing all the h1 tags using CSS
+                var q1 = document.querySelectorAll("#h1")
+                output: <h1 id="h1">Welcome</h1>            
             
             </script>
       </body>
@@ -1656,9 +1658,42 @@ Accessing an html element
 
 ```
 
+## jQuery Syntax
+
+Syntax: $(selector).action()
+
+Syntax Explanation:  jQuery uses special symbol **"$"** to **access** jQuery, the **selector** is **find the specified html element** and the **action** is **operation to be performed on the targeted element**.
+
+jQuery allows us to access the html elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
+You can find the numbers of styles that you can use [here](http://www.w3schools.com/jsref/dom_obj_style.asp).
+
+## Events
+
+Javascript has the concepts of events that allows us to track all kinds of events, eg mouseclick, scroll, keypress etc.
+Using javascript we can put event_handlers on the HTML elements so that when an event occours it can show some action kind of thing.
+You can find different types of event handlers [here](http://www.w3schools.com/jsref/dom_obj_event.asp). which you can use in your website.
 
 
+event listner:
+event listeneris a function that takes two parameter, the first parameter is the event_name such as click, drag, scroll etc. and the second parameter is the action that we want to happen when the event occours.
 
+```script
+//Example of adding event listner
+
+<script>
+      var q = document.querySelector("h1")          // targeting the html element
+      
+      var func = function myFunction() {
+        alert ("Hello World!")
+      }
+
+      document.addEventListener("click", func);
+      
+</script>
+
+//output: here when you click on the h1 you will get an alert message displaying the message Hello World! .
+
+```
 
 
 
