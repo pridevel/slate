@@ -1610,8 +1610,6 @@ sav.name      //accessing the name property of sav object
 
 ```script
 
-```script
-
 Accessing an html element
 
  <DOCTYPE html>
@@ -1654,28 +1652,7 @@ Accessing an html element
 
 ```
 
-
-```
-
-# jQuery
-
-jQuery also allows us to add interactive code to our website or to HTML content.
-The Html document is designed and structured according to the [DOM](http://www.w3schools.com/js/js_htmldom.asp).
-With the help of DOM we can access and modify the HTML.
-To use jQuery in your application you need to include it in your Html file and the way you can do that is by searching on web for [jQuery CDN](https://code.jquery.com/).
-Now from there you can pickup any version of jQuery and include in your Html document, so that you can link your application with jQuery.
-
-
-## jQuery Syntax
-
-Syntax: $(selector).action()
-
-Syntax Explanation:  jQuery uses special symbol **"$"** to **access** jQuery, the **selector** is **find the specified html element** and the **action** is **operation to be performed on the targeted element**.
-
-jQuery allows us to access the html elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
-You can find the numbers of styles that you can use [here](http://www.w3schools.com/jsref/dom_obj_style.asp).
-
-## Events
+## Javascript Events
 
 Javascript has the concepts of events that allows us to track all kinds of events, eg mouseclick, scroll, keypress etc.
 Using javascript we can put event_handlers on the HTML elements so that when an event occours it can show some action kind of thing.
@@ -1702,6 +1679,25 @@ event listeneris a function that takes two parameter, the first parameter is the
 //output: here when you click on the h1 you will get an alert message displaying the message Hello World! .
 
 ```
+
+# jQuery
+
+jQuery also allows us to add interactive code to our website or to HTML content.
+The Html document is designed and structured according to the [DOM](http://www.w3schools.com/js/js_htmldom.asp).
+With the help of DOM we can access and modify the HTML.
+To use jQuery in your application you need to include it in your Html file and the way you can do that is by searching on web for [jQuery CDN](https://code.jquery.com/).
+Now from there you can pickup any version of jQuery and include in your Html document, so that you can link your application with jQuery.
+
+
+## jQuery Syntax
+
+Syntax: $(selector).action()
+
+Syntax Explanation:  jQuery uses special symbol **"$"** to **access** jQuery, the **selector** is **find the specified html element** and the **action** is **operation to be performed on the targeted element**.
+
+jQuery allows us to access the html elements and after targeting the specific element we can put some styles on it or we can ask it do some actions, so as to make the website interactive.
+You can find the numbers of styles that you can use [here](http://www.w3schools.com/jsref/dom_obj_style.asp).
+
 
 
 
