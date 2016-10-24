@@ -1319,6 +1319,37 @@ In the example we declare the variable in side the script tag.</p>
 </span>    <span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
 </span></code></pre>
 
+<h2 id="scope">Scope</h2>
+
+<p>Scope is set of variables, object, functions, methods etc which we can access and use to store data.</p>
+
+<p>Local scope of variable means that the variable can be accessed only within a function or method where it has been defined.
+local scope of a variable is set when a function is initialized and is destoryed when the functionis executed. </p>
+
+<p>Global scope of variable means that the variable can be accessed anywhere within the function by other methods.
+It is set when we start the program and is destroyed when the program is stopped.
+Variables with global scope are initialized outside the function.
+We can define global scope variable and local scope variable with the same name.</p>
+
+<p>Checkout the examples to understand more about the scope and how they work.</p>
+<pre class="highlight plaintext"><code>
+A globally-scoped variable
+var a = 1;
+
+// global scope
+function one() {
+  console.log (a); // output in console: 1
+}
+
+// Local scope
+var a = 1;
+
+function two(a) {
+  console.log (a); // output the given argument, not the global value of 1
+}
+
+</code></pre>
+
 <h2 id="string">String</h2>
 
 <p>Strings are declared inside the quotation marks (&ldquo; &rdquo; ,&rsquo; &rsquo;), else you will get an error.
@@ -1772,6 +1803,8 @@ With the help of DOM we can access and modify the HTML.
 To use jQuery in your application you need to include it in your Html file and the way you can do that is by searching on web for <a href="https://code.jquery.com/">jQuery CDN</a>.
 Now from there you can pickup any version of jQuery and include in your Html document, so that you can link your application with jQuery.</p>
 
+<p>To refer a jQuery documentation you can always visit <a href="http://api.jquery.com/">this site</a>. </p>
+
 <h2 id="jquery-syntax">jQuery Syntax</h2>
 
 <p>Syntax: $(selector).action()</p>
@@ -1784,6 +1817,61 @@ You can find the numbers of styles that you can use <a href="http://www.w3school
 
 // here we are selecting the element by targeting the id="notready" which must be defined in your HTML and then adding the action of fadeOut after 1000ms.
 </code></pre>
+
+<p>We write jQuery code in a special block <strong>&ldquo;$(document).ready(function(){ &hellip; jQuery code &hellip; });&rdquo;</strong>. </p>
+
+<p>Explanation: </p>
+
+<p>The <strong>$</strong> sign represent that it is a jQuery code.
+<strong>(document)</strong> tells that we are about to work on HTML document.
+<strong>.ready()</strong> tells that it will run  the function when HTML document is ready. And whatever inside the ready block will execute when Html document is ready.</p>
+<pre class="highlight plaintext"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").fadeOut(2000).fadeIn(5000);
+    });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Welcome to jQuery&lt;/h1&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;button&gt;Click me to see paragraphs fading Out and then fading In!!!&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+<h1 id="angularjs">AngularJs</h1>
+
+<p>AngularJs is a web development framework based on Javascript and is open source means it is freely available to its users.
+Many developer use AngularJs to make dynamic web application. AngularJs is currrently maintained by &ldquo;Google&rdquo;.
+It is categorized as MV* framework. M is model where you can store your data. V is view where user is used to view data on your web-page.
+&rsquo;*&rsquo; can be controller or ViesModel  or can be something else. AngularJs uses Controllers. AngularJs has the ability to extend the Html by the use of <code class="prettyprint">directives</code>.</p>
+
+<h2 id="features">Features</h2>
+
+<p>Data Binding: Means that when the data in the model changes it reflects in the view and when the data in the view changes it is reflected in the model.
+             This means that data-binding is synchronization between model and view.</p>
+
+<p>Dependency Injection:  It helps you to encapuslate a piece of your application code and use it later whenever needed and it also improves testability.</p>
+
+<p>Controller: Everything in angular starts with the <strong>Controller</strong>. In Controller we write the logic. Controller are the function that are bound to <strong>scope</strong>.</p>
+
+<p>View: View contains bindings and directives. Controller can communicate with View by using one-way or two-way binding.</p>
+
+<p>Services:</p>
+
+<p>Directives:</p>
 
           <h1 id="errors">Errors</h1>
 
