@@ -1817,7 +1817,7 @@ $(document).ready(function(){
 AngularJs is a web development framework based on Javascript and is open source means it is freely available to its users.
 Many developer use AngularJs to make dynamic web application. AngularJs is currrently maintained by "Google".
 It is categorized as MV* framework. M is model where you can store your data. V is view where user is used to view data on your web-page.
-'*' can be Controller or ViewModel  or can be something else. AngularJs uses Controllers.
+'*' can be Controller or ViewModel  or can be something else. AngularJs uses Controllers and hence we call it is as MVC based framework.
 
 ## Features
 
@@ -1839,10 +1839,67 @@ It is categorized as MV* framework. M is model where you can store your data. V 
 
 * Scope: This are the objects that refer to the model. They allow controller and view to communicate with each other.
 
+## Expression 
 
+Expression in AngularJs are used to bind data to the Html.
+They are always denoted by "{{ }}" two curly braces.
+We can write operators, numbers, variable etc in the expressions.
+Expressions can also be written inside a directive: ng-bind="expression"
 
+In the example different types of expessions are been given along with its output.
+You can find the description of directive in its section.
 
+```script
 
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app ng-init="f_name = 'Savitri'; l_name = 'Mhatre'">
+
+<p>{{ "Hello"}} </p>
+<p>{{ 5 + 5 }}</p>
+<p>This is me: <span ng-bind="f_name+ ' ' +  l_name" ></span></p>
+</div>
+
+</body>
+</html>
+
+// output: 
+Hello
+
+10
+
+This is me: Savitri Mhatre
+
+```
+
+## Modules 
+
+An AngularJS module defines an application.
+It is a container for every piece of angular application. The modules in the Angularjs is created by using "angular.modules".
+It takes two inputs, the first is the name of the application. This name is same as that which we define in the "ng-app" in out Html document.
+The second parameter is the list of other modules that this module is dependent on. If there is no other dependent module then simply declare an empty array "[]".
+
+After declaring a module you can further define controller, directive, services etc to your angular application.
+
+```script
+<html ng-app="myApp">...</html>
+
+<script>
+
+var app = angular.module("myApp", []); 
+
+</script>
+
+```
+
+## Directive
+
+Angular has build-in directives that are used to add functionality to your application..
+
+ng-app : It is used to tell Angular Html page is an AngularJs application.
 
 
 
