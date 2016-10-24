@@ -1748,7 +1748,7 @@ Event listener is a function that takes two parameter, the first parameter is th
       
 </script>
 
-//output: here when you click anywhere in the broswer you will get an alert message displaying the message Hello World! .
+//output: here when you click anywhere in the broswer you will get an alert box displaying the message Hello World! .
 
 ```
 
