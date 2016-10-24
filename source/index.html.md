@@ -1739,17 +1739,16 @@ Event listener is a function that takes two parameter, the first parameter is th
 //Example of adding event listner
 
 <script>
-      var q = document.querySelector("h1")          // targeting the html element
-      
+  
       var func = function myFunction() {
-        alert ("Hello World!")
+       alert ("Hello World!")
       }
 
       document.addEventListener("click", func);
       
 </script>
 
-//output: here when you click on the h1 you will get an alert message displaying the message Hello World! .
+//output: here when you click anywhere in the broswer you will get an alert message displaying the message Hello World! .
 
 ```
 
@@ -1834,10 +1833,11 @@ It is categorized as MV* framework. M is model where you can store your data. V 
 * Services: Services are also kind of functions, which holds complex logic of our application.
 
 * Directives: AngularJs has the ability to extend the Html by the use of `directives`. They are prefixed with **ng-**.
+              They can be used to make custom Html tags.
 
 * Filters: Filters are used to Format, Sort and Filter Data. It is used with the binding expression or directives.
 
-* Scope: This are the objects that refer to the model
+* Scope: This are the objects that refer to the model. They allow controller and view to communicate with each other.
 
 
 
