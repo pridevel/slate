@@ -1854,7 +1854,7 @@ $(document).ready(function(){
 <p>AngularJs is a web development framework based on Javascript and is open source means it is freely available to its users.
 Many developer use AngularJs to make dynamic web application. AngularJs is currrently maintained by &ldquo;Google&rdquo;.
 It is categorized as MV* framework. M is model where you can store your data. V is view where user is used to view data on your web-page.
-&rsquo;*&rsquo; can be Controller or ViewModel  or can be something else. AngularJs uses Controllers.</p>
+&rsquo;*&rsquo; can be Controller or ViewModel  or can be something else. AngularJs uses Controllers and hence we call it is as MVC based framework.</p>
 
 <h2 id="features">Features</h2>
 
@@ -1870,6 +1870,64 @@ It is categorized as MV* framework. M is model where you can store your data. V 
 <li><p>Filters: Filters are used to Format, Sort and Filter Data. It is used with the binding expression or directives.</p></li>
 <li><p>Scope: This are the objects that refer to the model. They allow controller and view to communicate with each other.</p></li>
 </ul>
+
+<h2 id="expression">Expression</h2>
+
+<p>Expression in AngularJs are used to bind data to the Html.
+They are always denoted by &ldquo;{{ }}&rdquo; two curly braces.
+We can write operators, numbers, variable etc in the expressions.
+Expressions can also be written inside a directive: ng-bind=&ldquo;expression&rdquo;</p>
+
+<p>In the example different types of expessions are been given along with its output.
+You can find the description of directive in its section.</p>
+<pre class="highlight plaintext"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app ng-init="f_name = 'Savitri'; l_name = 'Mhatre'"&gt;
+
+&lt;p&gt;{{ "Hello"}} &lt;/p&gt;
+&lt;p&gt;{{ 5 + 5 }}&lt;/p&gt;
+&lt;p&gt;This is me: &lt;span ng-bind="f_name+ ' ' +  l_name" &gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+// output: 
+Hello
+
+10
+
+This is me: Savitri Mhatre
+
+</code></pre>
+
+<h2 id="modules">Modules</h2>
+
+<p>An AngularJS module defines an application.
+It is a container for every piece of angular application. The modules in the Angularjs is created by using &ldquo;angular.modules&rdquo;.
+It takes two inputs, the first is the name of the application. This name is same as that which we define in the &ldquo;ng-app&rdquo; in out Html document.
+The second parameter is the list of other modules that this module is dependent on. If there is no other dependent module then simply declare an empty array &ldquo;[]&rdquo;.</p>
+
+<p>After declaring a module you can further define controller, directive, services etc to your angular application.</p>
+<pre class="highlight plaintext"><code>&lt;html ng-app="myApp"&gt;...&lt;/html&gt;
+
+&lt;script&gt;
+
+var app = angular.module("myApp", []); 
+
+&lt;/script&gt;
+
+</code></pre>
+
+<h2 id="directive">Directive</h2>
+
+<p>Angular has build-in directives that are used to add functionality to your application..</p>
+
+<p>ng-app : It is used to tell Angular Html page is an AngularJs application.</p>
 
           <h1 id="errors">Errors</h1>
 
