@@ -1550,10 +1550,9 @@ x.pop()                 // to remove an element from an array
 console.log(x);
 //output: ["string",5]
 
-```
 x.push("Hello")
 // output: ["string",5,"Hello"]
-
+```
 
 ```javascript
  // To iterate over an array
@@ -1838,7 +1837,7 @@ It is categorized as MV* framework. M is model where you can store your data. V 
 
 * Filters: Filters are used to Format, Sort and Filter Data. It is used with the binding expression or directives.
 
-
+* Scope: This are the objects that refer to the model
 
 
 
