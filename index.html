@@ -1780,17 +1780,16 @@ You can refer above examples to see how we cantarget the HTML elements.</p>
 <pre class="highlight plaintext"><code>//Example of adding event listner
 
 &lt;script&gt;
-      var q = document.querySelector("h1")          // targeting the html element
 
       var func = function myFunction() {
-        alert ("Hello World!")
+       alert ("Hello World!")
       }
 
       document.addEventListener("click", func);
 
 &lt;/script&gt;
 
-//output: here when you click on the h1 you will get an alert message displaying the message Hello World! .
+//output: here when you click anywhere in the broswer you will get an alert message displaying the message Hello World! .
 
 </code></pre>
 
@@ -1866,9 +1865,10 @@ It is categorized as MV* framework. M is model where you can store your data. V 
 <li><p>Controller: Everything in angular starts with the <strong>Controller</strong>. In Controller we write the logic. Controller are the function that are bound to <strong>scope</strong>.</p></li>
 <li><p>View: View contains bindings and directives. Controller can communicate with View by using one-way or two-way binding.</p></li>
 <li><p>Services: Services are also kind of functions, which holds complex logic of our application.</p></li>
-<li><p>Directives: AngularJs has the ability to extend the Html by the use of <code class="prettyprint">directives</code>. They are prefixed with <strong>ng-</strong>.</p></li>
+<li><p>Directives: AngularJs has the ability to extend the Html by the use of <code class="prettyprint">directives</code>. They are prefixed with <strong>ng-</strong>.
+          They can be used to make custom Html tags.</p></li>
 <li><p>Filters: Filters are used to Format, Sort and Filter Data. It is used with the binding expression or directives.</p></li>
-<li><p>Scope: This are the objects that refer to the model</p></li>
+<li><p>Scope: This are the objects that refer to the model. They allow controller and view to communicate with each other.</p></li>
 </ul>
 
           <h1 id="errors">Errors</h1>
