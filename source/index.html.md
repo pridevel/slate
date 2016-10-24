@@ -1238,7 +1238,38 @@ In the example we declare the variable in side the script tag.
     </html>
 ```
 
+## Scope
 
+Scope is set of variables, object, functions, methods etc which we can access and use to store data.
+
+Local scope of variable means that the variable can be accessed only within a function or method where it has been defined.
+local scope of a variable is set when a function is initialized and is destoryed when the functionis executed. 
+
+Global scope of variable means that the variable can be accessed anywhere within the function by other methods.
+It is set when we start the program and is destroyed when the program is stopped.
+Variables with global scope are initialized outside the function.
+We can define global scope variable and local scope variable with the same name.
+
+Checkout the examples to understand more about the scope and how they work.
+
+```script
+
+A globally-scoped variable
+var a = 1;
+
+// global scope
+function one() {
+  console.log (a); // output in console: 1
+}
+
+// Local scope
+var a = 1;
+
+function two(a) {
+  console.log (a); // output the given argument, not the global value of 1
+}
+
+```
 
 ## String
 
@@ -1731,6 +1762,8 @@ With the help of DOM we can access and modify the HTML.
 To use jQuery in your application you need to include it in your Html file and the way you can do that is by searching on web for [jQuery CDN](https://code.jquery.com/).
 Now from there you can pickup any version of jQuery and include in your Html document, so that you can link your application with jQuery.
 
+To refer a jQuery documentation you can always visit [this site](http://api.jquery.com/). 
+
 ## jQuery Syntax
 
 Syntax: $(selector).action()
@@ -1746,18 +1779,62 @@ You can find the numbers of styles that you can use [here](http://www.w3schools.
 // here we are selecting the element by targeting the id="notready" which must be defined in your HTML and then adding the action of fadeOut after 1000ms.
 ```
 
+We write jQuery code in a special block **"$(document).ready(function(){ ... jQuery code ... });"**. 
 
+Explanation: 
 
+The **$** sign represent that it is a jQuery code.
+**(document)** tells that we are about to work on HTML document.
+**.ready()** tells that it will run  the function when HTML document is ready. And whatever inside the ready block will execute when Html document is ready.
 
+```script
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").fadeOut(2000).fadeIn(5000);
+    });
+});
+</script>
+</head>
+<body>
 
+<h1>Welcome to jQuery</h1>
 
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
 
+<button>Click me to see paragraphs fading Out and then fading In!!!</button>
 
+</body>
+</html>
 
+```
 
+# AngularJs 
 
+AngularJs is a web development framework based on Javascript and is open source means it is freely available to its users.
+Many developer use AngularJs to make dynamic web application. AngularJs is currrently maintained by "Google".
+It is categorized as MV* framework. M is model where you can store your data. V is view where user is used to view data on your web-page.
+'*' can be controller or ViesModel  or can be something else. AngularJs uses Controllers. AngularJs has the ability to extend the Html by the use of `directives`.
 
+## Features
 
+Data Binding: Means that when the data in the model changes it reflects in the view and when the data in the view changes it is reflected in the model.
+             This means that data-binding is synchronization between model and view.
+ 
+Dependency Injection:  It helps you to encapuslate a piece of your application code and use it later whenever needed and it also improves testability.
+
+Controller: Everything in angular starts with the **Controller**. In Controller we write the logic. Controller are the function that are bound to **scope**.
+
+View: View contains bindings and directives. Controller can communicate with View by using one-way or two-way binding.
+
+Services:
+
+Directives:
 
 
 
