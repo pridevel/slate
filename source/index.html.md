@@ -1819,24 +1819,24 @@ $(document).ready(function(){
 AngularJs is a web development framework based on Javascript and is open source means it is freely available to its users.
 Many developer use AngularJs to make dynamic web application. AngularJs is currrently maintained by "Google".
 It is categorized as MV* framework. M is model where you can store your data. V is view where user is used to view data on your web-page.
-'*' can be controller or ViesModel  or can be something else. AngularJs uses Controllers. AngularJs has the ability to extend the Html by the use of `directives`.
+'*' can be Controller or ViewModel  or can be something else. AngularJs uses Controllers.
 
 ## Features
 
-Data Binding: Means that when the data in the model changes it reflects in the view and when the data in the view changes it is reflected in the model.
+* Data Binding: Means that when the data in the model changes it reflects in the view and when the data in the view changes it is reflected in the model.
              This means that data-binding is synchronization between model and view.
  
-Dependency Injection:  It helps you to encapuslate a piece of your application code and use it later whenever needed and it also improves testability.
+* Dependency Injection:  It helps you to encapuslate a piece of your application code and use it later whenever needed and it also improves testability.
 
-Controller: Everything in angular starts with the **Controller**. In Controller we write the logic. Controller are the function that are bound to **scope**.
+* Controller: Everything in angular starts with the **Controller**. In Controller we write the logic. Controller are the function that are bound to **scope**.
 
-View: View contains bindings and directives. Controller can communicate with View by using one-way or two-way binding.
+* View: View contains bindings and directives. Controller can communicate with View by using one-way or two-way binding.
 
-Services:
+* Services: Services are also kind of functions, which holds complex logic of our application.
 
-Directives:
+* Directives: AngularJs has the ability to extend the Html by the use of `directives`. They are prefixed with **ng-**.
 
-
+* Filters: Filters are used to Format, Sort and Filter Data. It is used with the binding expression or directives.
 
 
 
