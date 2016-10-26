@@ -1975,6 +1975,8 @@ We can also define the controller object in a separate JS file and refer that fi
 
 <div ng-app="myApp" ng-controller="personCtrl">
 
+// accessing the properties using ng-model
+
 First Name: <input type="text" ng-model="firstName"><br>
 Last Name: <input type="text" ng-model="lastName"><br>
 <br>
@@ -1985,6 +1987,9 @@ Full Name: {{fullName()}}
 <script>
 var app = angular.module('myApp', []);
 app.controller('personCtrl', function($scope) {
+
+// declaring the properties using "$scope" object.
+
     $scope.firstName = "John";
     $scope.lastName = "Doe";
     $scope.fullName = function() {
@@ -2005,6 +2010,7 @@ Last Name: Mhatre
 Full Name: Savi Mhatre
 
 ```
+
 
 
 
