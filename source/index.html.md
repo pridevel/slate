@@ -1882,24 +1882,71 @@ It is a container for every piece of angular application. The modules in the Ang
 It takes two inputs, the first is the name of the application. This name is same as that which we define in the "ng-app" in out Html document.
 The second parameter is the list of other modules that this module is dependent on. If there is no other dependent module then simply declare an empty array "[]".
 
+The [] parameter in the module is used to define dependent modules.
+
 After declaring a module you can further define controller, directive, services etc to your angular application.
 
-```script
-<html ng-app="myApp">...</html>
-
-<script>
-
-var app = angular.module("myApp", []); 
-
-</script>
-
-```
 
 ## Directive
 
 Angular has build-in directives that are used to add functionality to your application..
 
-ng-app : It is used to tell Angular Html page is an AngularJs application.
+* ng-app : It is used to tell Angular Html page is an AngularJs application.
+The ng-app is called a directive.
+It tells AngularJS that the myApp module will live within the <html> element.
+We used the ng-app directive to define the application scope.
+
+```script
+<html ng-app="myApp">...</html>                 // directive.
+
+<script>
+
+var app = angular.module("myApp", []);       // module.
+
+</script>
+
+```
+
+* ng-init: This directive is used to initialize the application data.
+ It is used to assign values to the variables. In the following example, we initialize an array of countries.
+
+<div ng-app="" ng-init="countries=['India','United States','United Kingdom','France']">
+...
+
+* ng-model: The ng-model directive defines the model/variable to be used in AngularJSmApplication. 
+In the following example, we define a model named name.
+
+```script
+<div ng-app="">
+...
+<p>Enter your Name: <input type="text" ng-model="name"></p>
+</div>
+```
+
+* ng-repeat: ng-repeat directive repeats the Html for each item in a collection.
+
+```script
+<div ng-app="">
+...
+ <p>List of Countries:</p>
+ <ol>
+ <li ng-repeat="country in countries">
+ {{ 'Country: ' + country.name }}
+ </li>
+ </ol>
+</div>
+
+//output: 
+List of Countries:
+1. Country: .India
+2. Country: United States
+3. Country: United Kingdom
+4. Country: France
+
+```
+
+## Controller 
+
 
 
 
