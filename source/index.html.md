@@ -1961,8 +1961,50 @@ List of Countries:
 
 ## Controller 
 
+Controller control the data of AngularJs application.
+It is defined as "ng-controller". It is also a kind of directive.
+It has a "$scope" object.
+Using the $scope object we can create the properties on the Controller and then can access it later by using ng-model or using expressions.
+We can also define the controller object in a separate JS file and refer that file in the HTML page.
+
+```script
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{fullName()}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    };
+});
+</script>
+
+</body>
+</html>
+
+//output:
+First Name: Savi
+
+Last Name: Mhatre
 
 
+Full Name: Savi Mhatre
+
+```
 
 
 
