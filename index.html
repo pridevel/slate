@@ -1912,22 +1912,70 @@ It is a container for every piece of angular application. The modules in the Ang
 It takes two inputs, the first is the name of the application. This name is same as that which we define in the &ldquo;ng-app&rdquo; in out Html document.
 The second parameter is the list of other modules that this module is dependent on. If there is no other dependent module then simply declare an empty array &ldquo;[]&rdquo;.</p>
 
+<p>The [] parameter in the module is used to define dependent modules.</p>
+
 <p>After declaring a module you can further define controller, directive, services etc to your angular application.</p>
-<pre class="highlight plaintext"><code>&lt;html ng-app="myApp"&gt;...&lt;/html&gt;
-
-&lt;script&gt;
-
-var app = angular.module("myApp", []); 
-
-&lt;/script&gt;
-
-</code></pre>
 
 <h2 id="directive">Directive</h2>
 
 <p>Angular has build-in directives that are used to add functionality to your application..</p>
 
-<p>ng-app : It is used to tell Angular Html page is an AngularJs application.</p>
+<ul>
+<li>ng-app : It is used to tell Angular Html page is an AngularJs application.
+The ng-app is called a directive.
+It tells AngularJS that the myApp module will live within the <html> element.
+We used the ng-app directive to define the application scope.</li>
+</ul>
+<pre class="highlight plaintext"><code>&lt;html ng-app="myApp"&gt;...&lt;/html&gt;                 // directive.
+
+&lt;script&gt;
+
+var app = angular.module("myApp", []);       // module.
+
+&lt;/script&gt;
+
+</code></pre>
+
+<ul>
+<li>ng-init: This directive is used to initialize the application data.
+It is used to assign values to the variables. In the following example, we initialize an array of countries.</li>
+</ul>
+
+<div ng-app="" ng-init="countries=['India','United States','United Kingdom','France']">
+&hellip;
+
+* ng-model: The ng-model directive defines the model/variable to be used in AngularJSmApplication. 
+In the following example, we define a model named name.
+
+&ldquo;`script
+<div ng-app="">
+&hellip;
+<p>Enter your Name: <input type="text" ng-model="name"></p>
+</div>
+<pre class="highlight plaintext"><code>
+* ng-repeat: ng-repeat directive repeats the Html for each item in a collection.
+
+```script
+&lt;div ng-app=""&gt;
+...
+ &lt;p&gt;List of Countries:&lt;/p&gt;
+ &lt;ol&gt;
+ &lt;li ng-repeat="country in countries"&gt;
+ {{ 'Country: ' + country.name }}
+ &lt;/li&gt;
+ &lt;/ol&gt;
+&lt;/div&gt;
+
+//output: 
+List of Countries:
+1. Country: .India
+2. Country: United States
+3. Country: United Kingdom
+4. Country: France
+
+</code></pre>
+
+<h2 id="controller">Controller</h2>
 
           <h1 id="errors">Errors</h1>
 
