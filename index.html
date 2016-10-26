@@ -1881,6 +1881,7 @@ Expressions can also be written inside a directive: ng-bind=&ldquo;expression&rd
 <p>In the example different types of expessions are been given along with its output.
 You can find the description of directive in its section.</p>
 <pre class="highlight plaintext"><code>
+// Example of Expression
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
@@ -1926,7 +1927,7 @@ The ng-app is called a directive.
 It tells AngularJS that the myApp module will live within the <html> element.
 We used the ng-app directive to define the application scope.</li>
 </ul>
-<pre class="highlight plaintext"><code>
+<pre class="highlight plaintext"><code>// Example of directive and module
 &lt;html ng-app="myApp"&gt;...&lt;/html&gt;                 // directive.
 
 &lt;script&gt;
@@ -1942,6 +1943,7 @@ var app = angular.module("myApp", []);       // module.
 It is used to assign values to the variables. In the following example, we initialize an array of countries.</li>
 </ul>
 <pre class="highlight plaintext"><code>
+//Example of ng-init
 &lt;div ng-app="" ng-init="countries=['India','United States','United Kingdom','France']"&gt;
 ...
 </code></pre>
@@ -1951,6 +1953,7 @@ It is used to assign values to the variables. In the following example, we initi
 In the following example, we define a model named name.</li>
 </ul>
 <pre class="highlight plaintext"><code>
+//Example of ng-model
 &lt;div ng-app=""&gt;
 ...
 &lt;p&gt;Enter your Name: &lt;input type="text" ng-model="name"&gt;&lt;/p&gt;
@@ -1961,7 +1964,7 @@ In the following example, we define a model named name.</li>
 <ul>
 <li>ng-repeat: ng-repeat directive repeats the Html for each item in a collection.</li>
 </ul>
-<pre class="highlight plaintext"><code>
+<pre class="highlight plaintext"><code>// Example of ng-repeat
 &lt;div ng-app=""&gt;
 ...
  &lt;p&gt;List of Countries:&lt;/p&gt;
