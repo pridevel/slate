@@ -2003,6 +2003,8 @@ We can also define the controller object in a separate JS file and refer that fi
 
 &lt;div ng-app="myApp" ng-controller="personCtrl"&gt;
 
+// accessing the properties using ng-model
+
 First Name: &lt;input type="text" ng-model="firstName"&gt;&lt;br&gt;
 Last Name: &lt;input type="text" ng-model="lastName"&gt;&lt;br&gt;
 &lt;br&gt;
@@ -2013,6 +2015,9 @@ Full Name: {{fullName()}}
 &lt;script&gt;
 var app = angular.module('myApp', []);
 app.controller('personCtrl', function($scope) {
+
+// declaring the properties using "$scope" object.
+
     $scope.firstName = "John";
     $scope.lastName = "Doe";
     $scope.fullName = function() {
