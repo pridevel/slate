@@ -1991,6 +1991,49 @@ List of Countries:
 
 <h2 id="controller">Controller</h2>
 
+<p>Controller control the data of AngularJs application.
+It is defined as &ldquo;ng-controller&rdquo;. It is also a kind of directive.
+It has a &ldquo;$scope&rdquo; object.
+Using the $scope object we can create the properties on the Controller and then can access it later by using ng-model or using expressions.
+We can also define the controller object in a separate JS file and refer that file in the HTML page.</p>
+<pre class="highlight plaintext"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="personCtrl"&gt;
+
+First Name: &lt;input type="text" ng-model="firstName"&gt;&lt;br&gt;
+Last Name: &lt;input type="text" ng-model="lastName"&gt;&lt;br&gt;
+&lt;br&gt;
+Full Name: {{fullName()}}
+
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    };
+});
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+//output:
+First Name: Savi
+
+Last Name: Mhatre
+
+
+Full Name: Savi Mhatre
+
+</code></pre>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
