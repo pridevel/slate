@@ -1926,7 +1926,8 @@ The ng-app is called a directive.
 It tells AngularJS that the myApp module will live within the <html> element.
 We used the ng-app directive to define the application scope.</li>
 </ul>
-<pre class="highlight plaintext"><code>&lt;html ng-app="myApp"&gt;...&lt;/html&gt;                 // directive.
+<pre class="highlight plaintext"><code>
+&lt;html ng-app="myApp"&gt;...&lt;/html&gt;                 // directive.
 
 &lt;script&gt;
 
@@ -1940,22 +1941,27 @@ var app = angular.module("myApp", []);       // module.
 <li>ng-init: This directive is used to initialize the application data.
 It is used to assign values to the variables. In the following example, we initialize an array of countries.</li>
 </ul>
-
-<div ng-app="" ng-init="countries=['India','United States','United Kingdom','France']">
-&hellip;
-
-* ng-model: The ng-model directive defines the model/variable to be used in AngularJSmApplication. 
-In the following example, we define a model named name.
-
-&ldquo;`script
-<div ng-app="">
-&hellip;
-<p>Enter your Name: <input type="text" ng-model="name"></p>
-</div>
 <pre class="highlight plaintext"><code>
-* ng-repeat: ng-repeat directive repeats the Html for each item in a collection.
+&lt;div ng-app="" ng-init="countries=['India','United States','United Kingdom','France']"&gt;
+...
+</code></pre>
 
-```script
+<ul>
+<li>ng-model: The ng-model directive defines the model/variable to be used in AngularJSmApplication. 
+In the following example, we define a model named name.</li>
+</ul>
+<pre class="highlight plaintext"><code>
+&lt;div ng-app=""&gt;
+...
+&lt;p&gt;Enter your Name: &lt;input type="text" ng-model="name"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+<ul>
+<li>ng-repeat: ng-repeat directive repeats the Html for each item in a collection.</li>
+</ul>
+<pre class="highlight plaintext"><code>
 &lt;div ng-app=""&gt;
 ...
  &lt;p&gt;List of Countries:&lt;/p&gt;
