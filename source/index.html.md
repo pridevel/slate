@@ -1851,6 +1851,7 @@ You can find the description of directive in its section.
 
 ```script
 
+// Example of Expression
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -1897,7 +1898,7 @@ It tells AngularJS that the myApp module will live within the <html> element.
 We used the ng-app directive to define the application scope.
 
 ```script
-
+// Example of directive and module
 <html ng-app="myApp">...</html>                 // directive.
 
 <script>
@@ -1913,6 +1914,7 @@ var app = angular.module("myApp", []);       // module.
 
 ```script
 
+//Example of ng-init
 <div ng-app="" ng-init="countries=['India','United States','United Kingdom','France']">
 ...
 ```
@@ -1921,6 +1923,7 @@ In the following example, we define a model named name.
 
 ```script
 
+//Example of ng-model
 <div ng-app="">
 ...
 <p>Enter your Name: <input type="text" ng-model="name"></p>
@@ -1931,7 +1934,7 @@ In the following example, we define a model named name.
 * ng-repeat: ng-repeat directive repeats the Html for each item in a collection.
 
 ```script
-
+// Example of ng-repeat
 <div ng-app="">
 ...
  <p>List of Countries:</p>
