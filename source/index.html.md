@@ -1959,6 +1959,34 @@ List of Countries:
 
 ```
 
+* ng-show: It is used to show a given control.
+ 
+```script
+// Example of ng-show directive
+
+<input type="checkbox" ng-model="showHide1">Show Button
+<button ng-show="showHide1">Click Me!</button>
+
+```
+
+* ng-hide: It is used to hide a given control.
+ 
+```script
+// Example of ng-hide directive
+
+<input type="checkbox" ng-model="hide1">Hide Button
+<button ng-hide="hide1">Click Me!</button>
+
+```
+
+* ng-click: It is used to add click event in the angular application.
+
+```script
+<p>Total click: {{ clickCounter }}</p></td>
+<button ng-click="clickCounter = clickCounter + 1">Click Me!</button>
+ 
+```
+
 ## Controller 
 
 Controller control the data of AngularJs application.
@@ -2081,8 +2109,6 @@ Customers:
 
 ```
 
-
-## Table
 ## View
 ## Scope
 ## Services
