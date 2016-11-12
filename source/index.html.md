@@ -1945,7 +1945,7 @@ In the following example, we define a model named name.
  <p>List of Countries:</p>
  <ol>
  <li ng-repeat="country in countries">
- {{ 'Country: ' + country.name }}
+ {{ 'Country: ' + country }}
  </li>
  </ol>
 </div>
