@@ -1952,7 +1952,7 @@ In the following example, we define a model named name.
 
 //output: 
 List of Countries:
-1. Country: .India
+1. Country: India
 2. Country: United States
 3. Country: United Kingdom
 4. Country: France
@@ -1990,8 +1990,8 @@ app.controller('personCtrl', function($scope) {
 
 // declaring the properties using "$scope" object.
 
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
+    $scope.firstName = "Savitri";
+    $scope.lastName = "Mhatre";
     $scope.fullName = function() {
         return $scope.firstName + " " + $scope.lastName;
     };
@@ -2002,18 +2002,94 @@ app.controller('personCtrl', function($scope) {
 </html>
 
 //output:
-First Name: Savi
+First Name: Savitri
 
 Last Name: Mhatre
 
 
-Full Name: Savi Mhatre
+Full Name: Savitri Mhatre
+
+```
+
+## Filters
+
+Filters are used to modify data. We can club them in expression or directives using pipe(|) character.
+
+Types of filters:
+
+* uppercase: It converts text to uppercase text.
+
+```script
+// Uppercase Example:
+
+Enter first name:<input type="text" ng-model="person.firstName">
+Enter last name: <input type="text" ng-model="person.lastName">
+Name in Upper Case: {{person.fullName() | uppercase}}
+
+```
+
+* lowercase: It converts text to lowercase text.
+ 
+```script
+// Lowercase Example:
+
+Enter first name:<input type="text" ng-model="person.firstName">
+Enter last name: <input type="text" ng-model="person.lastName">
+Name in Lower Case: {{person.fullName() | lowercase}} 
+
+```
+
+* currency: It formats the text into the currency format.
+
+```script
+// Currency filter Example:
+
+Enter fees: <input type="text" ng-model="cart.cost">
+fees: {{cart.cost | currency}}
+ 
+```
+
+* filter: It returns the subset of an array based on the given condition.
+
+```script
+
+// Example of the Filter
+
+Enter subject: <input type="text" ng-model="subjectName">
+Subject:
+<ul>
+ <li ng-repeat="subject in student.subjects | filter: subjectName">
+ {{ subject.name + ', marks:' + subject.marks }}
+ </li>
+</ul>
+
+```
+
+* orderby: It is used to order the array based on the given condition.
+ 
+```script
+
+// Orderby Filter Example:
+
+Customers:
+<ul>
+ <li ng-repeat="customer in customer.customers | orderBy:'age'">
+ {{ customer.name + ', Age:' + customer.age }}
+ </li>
+</ul>
+
 
 ```
 
 
+## Table
+## View
+## Scope
+## Services
 
+# Firebase 
 
+CRUD
 
 
 
