@@ -1982,7 +1982,7 @@ In the following example, we define a model named name.</li>
 
 //output: 
 List of Countries:
-1. Country: .India
+1. Country: India
 2. Country: United States
 3. Country: United Kingdom
 4. Country: France
@@ -2018,8 +2018,8 @@ app.controller('personCtrl', function($scope) {
 
 // declaring the properties using "$scope" object.
 
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
+    $scope.firstName = "Savitri";
+    $scope.lastName = "Mhatre";
     $scope.fullName = function() {
         return $scope.firstName + " " + $scope.lastName;
     };
@@ -2030,14 +2030,96 @@ app.controller('personCtrl', function($scope) {
 &lt;/html&gt;
 
 //output:
-First Name: Savi
+First Name: Savitri
 
 Last Name: Mhatre
 
 
-Full Name: Savi Mhatre
+Full Name: Savitri Mhatre
 
 </code></pre>
+
+<h2 id="filters">Filters</h2>
+
+<p>Filters are used to modify data. We can club them in expression or directives using pipe(|) character.</p>
+
+<p>Types of filters:</p>
+
+<ul>
+<li>uppercase: It converts text to uppercase text.</li>
+</ul>
+<pre class="highlight plaintext"><code>// Uppercase Example:
+
+Enter first name:&lt;input type="text" ng-model="person.firstName"&gt;
+Enter last name: &lt;input type="text" ng-model="person.lastName"&gt;
+Name in Upper Case: {{person.fullName() | uppercase}}
+
+</code></pre>
+
+<ul>
+<li>lowercase: It converts text to lowercase text.</li>
+</ul>
+<pre class="highlight plaintext"><code>// Lowercase Example:
+
+Enter first name:&lt;input type="text" ng-model="person.firstName"&gt;
+Enter last name: &lt;input type="text" ng-model="person.lastName"&gt;
+Name in Lower Case: {{person.fullName() | lowercase}} 
+
+</code></pre>
+
+<ul>
+<li>currency: It formats the text into the currency format.</li>
+</ul>
+<pre class="highlight plaintext"><code>// Currency filter Example:
+
+Enter fees: &lt;input type="text" ng-model="cart.cost"&gt;
+fees: {{cart.cost | currency}}
+
+</code></pre>
+
+<ul>
+<li>filter: It returns the subset of an array based on the given condition.</li>
+</ul>
+<pre class="highlight plaintext"><code>
+// Example of the Filter
+
+Enter subject: &lt;input type="text" ng-model="subjectName"&gt;
+Subject:
+&lt;ul&gt;
+ &lt;li ng-repeat="subject in student.subjects | filter: subjectName"&gt;
+ {{ subject.name + ', marks:' + subject.marks }}
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+</code></pre>
+
+<ul>
+<li>orderby: It is used to order the array based on the given condition.</li>
+</ul>
+<pre class="highlight plaintext"><code>
+// Orderby Filter Example:
+
+Customers:
+&lt;ul&gt;
+ &lt;li ng-repeat="customer in customer.customers | orderBy:'age'"&gt;
+ {{ customer.name + ', Age:' + customer.age }}
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+
+</code></pre>
+
+<h2 id="table">Table</h2>
+
+<h2 id="view">View</h2>
+
+<h2 id="scope">Scope</h2>
+
+<h2 id="services">Services</h2>
+
+<h1 id="firebase">Firebase</h1>
+
+<p>CRUD</p>
 
           <h1 id="errors">Errors</h1>
 
