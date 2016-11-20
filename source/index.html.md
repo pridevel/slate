@@ -2110,8 +2110,54 @@ Customers:
 ```
 
 ## View
+
+AngularJs supports single page application via multiple views on a single page. It means we can link multiple page on the single page.
+To do this angular provides ng-view directive and $routeProvider service.
+
+* ng-view directive
+
+ng-view directive acts as a placeholder where a corresponding ng-template/view can be placed.
+
+```script
+// Example of ng-view
+
+<div ng-app="myApp">
+    ...
+ <div ng-view></div>
+</div>
+
+```
+
+* $routeProvider Service
+
+If you want to navigate to different pages in your application without reloading the page you can use the ngRoute module.
+The $routeProvider is used to set the configuration of URLs, maps them with the corresponding HTML page, and attaches a controller with the same.
+To use the routeProvider service we need the "ngRoute" module to be installed.
+
+```script
+
+app.config(function($routeProvider) {
+  $routeProvider
+  .when("/", {
+    templateUrl : "main.htm"
+  })
+  .when("/home", {
+    templateUrl : "red.htm"
+  })
+   .when("/about", {
+    templateUrl : "red.htm"
+  })
+  
+});
+
+```
+
+
 ## Scope
-## Services
+
+Scope provides binding between view and controller.
+
+## Services, Dependency Injection
 
 # Firebase 
 
