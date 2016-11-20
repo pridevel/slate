@@ -2182,7 +2182,25 @@ app.config(function($routeProvider) {
 
 <h2 id="scope">Scope</h2>
 
-<p>Scope provides binding between view and controller.</p>
+<p>Scope provides binding between view and controller.
+To access the data we use $scope object.
+$scope is used to create variables and functions in the controller.</p>
+<pre class="highlight plaintext"><code>
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+
+&lt;h1&gt;{{petname}}&lt;/h1&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+    $scope.petname = "Tito";
+});
+&lt;/script&gt;
+
+</code></pre>
 
 <h2 id="services-dependency-injection">Services, Dependency Injection</h2>
 
