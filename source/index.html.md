@@ -2156,6 +2156,26 @@ app.config(function($routeProvider) {
 ## Scope
 
 Scope provides binding between view and controller.
+To access the data we use $scope object.
+$scope is used to create variables and functions in the controller.
+
+```script
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1>{{petname}}</h1>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+    $scope.petname = "Tito";
+});
+</script>
+
+```
 
 ## Services, Dependency Injection
 
