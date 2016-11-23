@@ -2202,7 +2202,47 @@ app.controller('myCtrl', function($scope) {
 
 </code></pre>
 
-<h2 id="services-dependency-injection">Services, Dependency Injection</h2>
+<h2 id="services">Services</h2>
+
+<p>To perform specific function or task we use services.
+By the means of services we can keep our logic separate from the main code to avoid complexity.
+Also we can use the same piece of code multiple times whenever needed so as to avoid repeatation.
+We can use a particular service by simply using the concept of dependency injection.
+Angular has provided us with default services such as $http, $route, $window, $location etc and also provided the ability to create new services.
+The inbuilt services are always prefixed with &ldquo;$&rdquo; symbol.</p>
+
+<p>There are two ways to create a service by using the keywords as follows.</p>
+
+<p>1) Factory:</p>
+
+<p>In this method, we first define a factory and then assign method to it.</p>
+<pre class="highlight plaintext"><code>
+// to declare a service using "factory" keyword:
+
+var myApp = angular.module("myApp", []);
+ myApp.factory('Maths', function() {
+ var factory = {};
+ factory.multiply = function(a, b) {
+ return a * b
+ }
+ return factory;
+ });
+
+</code></pre>
+
+<p>2) Service:</p>
+
+<p>In this method, we define a service and then assign method to it. We can also inject an already available service into this.</p>
+<pre class="highlight plaintext"><code>
+myApp.service('CalcService', function(Maths){
+this.square = function(a) {
+return Maths.multiply(a,a);
+}
+});
+
+</code></pre>
+
+<h2 id="dependency-injection">Dependency Injection</h2>
 
 <h1 id="firebase">Firebase</h1>
 
