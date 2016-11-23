@@ -2177,7 +2177,50 @@ app.controller('myCtrl', function($scope) {
 
 ```
 
-## Services, Dependency Injection
+## Services
+To perform specific function or task we use services.
+By the means of services we can keep our logic separate from the main code to avoid complexity.
+Also we can use the same piece of code multiple times whenever needed so as to avoid repeatation.
+We can use a particular service by simply using the concept of dependency injection.
+Angular has provided us with default services such as $http, $route, $window, $location etc and also provided the ability to create new services.
+The inbuilt services are always prefixed with "$" symbol.
+
+There are two ways to create a service by using the keywords as follows.
+
+1) Factory:
+
+In this method, we first define a factory and then assign method to it.
+
+```script
+
+// to declare a service using "factory" keyword:
+
+var myApp = angular.module("myApp", []);
+ myApp.factory('Maths', function() {
+ var factory = {};
+ factory.multiply = function(a, b) {
+ return a * b
+ }
+ return factory;
+ });
+
+```
+
+2) Service:
+
+In this method, we define a service and then assign method to it. We can also inject an already available service into this.
+
+```script
+
+myApp.service('CalcService', function(Maths){
+this.square = function(a) {
+return Maths.multiply(a,a);
+}
+});
+
+```
+
+##Dependency Injection
 
 # Firebase 
 
