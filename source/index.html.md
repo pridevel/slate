@@ -2190,6 +2190,7 @@ There are two ways to create a service by using the keywords as follows.
 1) Factory:
 
 In this method, we first define a factory and then assign method to it.
+Factory is a function which is used to return value.
 
 ```script
 
@@ -2209,6 +2210,7 @@ var myApp = angular.module("myApp", []);
 2) Service:
 
 In this method, we define a service and then assign method to it. We can also inject an already available service into this.
+Service is defined using service() function and it is then injected into the respective controller as needed.
 
 ```script
 
@@ -2220,7 +2222,6 @@ return Maths.multiply(a,a);
 
 ```
 
-##Dependency Injection
 
 # Firebase 
 
