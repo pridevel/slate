@@ -2215,7 +2215,8 @@ The inbuilt services are always prefixed with &ldquo;$&rdquo; symbol.</p>
 
 <p>1) Factory:</p>
 
-<p>In this method, we first define a factory and then assign method to it.</p>
+<p>In this method, we first define a factory and then assign method to it.
+Factory is a function which is used to return value.</p>
 <pre class="highlight plaintext"><code>
 // to declare a service using "factory" keyword:
 
@@ -2232,7 +2233,8 @@ var myApp = angular.module("myApp", []);
 
 <p>2) Service:</p>
 
-<p>In this method, we define a service and then assign method to it. We can also inject an already available service into this.</p>
+<p>In this method, we define a service and then assign method to it. We can also inject an already available service into this.
+Service is defined using service() function and it is then injected into the respective controller as needed.</p>
 <pre class="highlight plaintext"><code>
 myApp.service('CalcService', function(Maths){
 this.square = function(a) {
@@ -2241,8 +2243,6 @@ return Maths.multiply(a,a);
 });
 
 </code></pre>
-
-<h2 id="dependency-injection">Dependency Injection</h2>
 
 <h1 id="firebase">Firebase</h1>
 
