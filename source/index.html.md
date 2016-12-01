@@ -2224,18 +2224,88 @@ return Maths.multiply(a,a);
 
 
 # Firebase 
+Firebase provides us the facility to store and manage our data with its “No SQL” cloud database.
+Data is synced across all clients in realtime and data also remains available if the app goes offline.
+The data stored in the firebase is in the JSON format.
 
-CRUD
+## Setup
+To use Firebase as your database you need to do the following setup:
+1.	Create a Firebase project by going to the [firebase console](https://console.firebase.google.com/) if you don’t have a project.
+Click n Create New Project to create a new project.
+You can also import your project by clicking on Import Google Project.
+
+2.	Once you are done with Step 1, click on the project. Once you are redirected to the new page click on “Add Firebase to your web app”.
+
+3.	A pop with will appear which contains some code snippet. Copy that snippet and add it into your project.
+This snippet contains initialization information to configure firebase into your project.
+
+## Authentication
+
+###Anonymous Authentication: 
+
+Anonymous authentication is been done when the user wants to login only for a single session. The user does not have to enter any credentials to login as anonymous.
+Anonymous Login setup:
+
+You need to follow the steps below
+a)	In the Firebase console open the Auth section.
+b)	On the Sign-in Methods page, enable the Anonymous sign-in method.
+c)	Call the firebase signInAnonymously() function in your controller file.
+
+#### Code:
+Firebase.auth().signInAnonymously().then(function(){
+//Successful
+}).catch(function(error){
+// Handel Error
+});
+
+### Password Authentication 
+We use this type of authentication method when the user needs to login to the account
+You need to follow the steps below:
+a)	In the Firebase console open the Auth section.
+b)	On the Sign-in Methods page, enable the Email/password sign-in method.
+c) Add the below code to your controllerfile.
+
+The `createUserWithEmailAndPassword()` method is used when we want to create a new user or when the user logins for the first time.
+
+The `signInWithEmailAndPassword()` method is used so the user can login with the same credentials as he used when he logged in for the first time. 
+
+The `signOut()` method is used so that user can successfully signout.
+
+####Code:
+firebase.auth().signInWithEmailAndPassword(email, pass).then(function(){
+console.log('Signed In Success')
+});
+promise.catch(e => console.log(e.message));
+
+});
 
 
+firebase.auth().createUserWithEmailAndPassword(email, pass);
+promise.catch(e => console.log(e.message));
+
+});
 
 
+firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}, function(error) {
+  // An error happened.
+});
 
 
+### SignIn with Facebook
 
+Using this method the user can use his facebook account credentials to login to an application.
 
+Follow the [video]( https://www.youtube.com/watch?v=8XnUs2xY5c4&feature=youtu.be) do the setup setp by step.
 
+####Code
 
+auth.$signInWithPopup("facebook").then(function() {
+// successful signin
+}).catch((function(err) {
+// An error happened.
+})
 
 
 
