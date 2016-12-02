@@ -2246,6 +2246,8 @@ return Maths.multiply(a,a);
 
 <h1 id="firebase">Firebase</h1>
 
+<h2 id="introduction">Introduction</h2>
+
 <p>Firebase provides us the facility to store and manage our data with its “No SQL” cloud database.
 Data is synced across all clients in realtime and data also remains available if the app goes offline.
 The data stored in the firebase is in the JSON format.</p>
@@ -2330,6 +2332,58 @@ promise.catch(e =&gt; console.log(e.message));</p>
 }).catch((function(err) {
 // An error happened.
 })</p>
+
+<h2 id="read-write-data">Read Write Data:</h2>
+
+<p>To read and write data to the database you need a instance of firebase.database.Reference:</p>
+
+<h4 id="code">Code</h4>
+
+<p>// Get a reference to the database service
+var database = firebase.database().ref();</p>
+
+<ul>
+<li>Write:
+For write operations, you can use &ldquo;$add()&rdquo; to save data to a specified reference.</li>
+</ul>
+
+<h4 id="code">Code</h4>
+
+<p>// Inside  Controller named as CategoriesCtrl
+function() {
+      firebase.database().ref().child(&ldquo;/categories/&rdquo;).$add({name: this.newCategoryName});
+}</p>
+
+<p>In the example we are storing the data to the child reference named as &ldquo;categories&rdquo; which has the property as &ldquo;name&rdquo;.
+You can add as many properties to this child node.</p>
+
+<ul>
+<li>Read:</li>
+</ul>
+
+<p>For the read operation you again need the reference of the child node from which you want to retrive or read the data that is available in the firebase database.
+Here we are using the firebase&rsquo;s &ldquo;$firebaseArray() service&rdquo; to retrive the data from the firebase database.
+This service takes a Firebase reference and returns a JavaScript array which contains the data at the provided Firebase reference.</p>
+
+<h4 id="code">Code</h4>
+
+<p>// in controller file</p>
+
+<p>var ref = firebase.database().ref().child(&ldquo;/categories/&rdquo;);</p>
+
+<p>$scope.categories = $firebaseArray(ref);</p>
+
+<p>// in view file</p>
+
+<div class="row" ng-controller="CategoriesCtrl">
+
+<div ng-repeat="category in categories">
+  {{category.name}}
+</div>
+
+<p></div></p>
+
+<p>In the ng-repeat loop the &ldquo;categories&rdquo; is defined in the controller file and we are linking the controller file and view file by using &ldquo;ng-controller&rdquo;.</p>
 
           <h1 id="errors">Errors</h1>
 
