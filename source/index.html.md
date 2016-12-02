@@ -2224,6 +2224,9 @@ return Maths.multiply(a,a);
 
 
 # Firebase 
+
+##Introduction
+
 Firebase provides us the facility to store and manage our data with its “No SQL” cloud database.
 Data is synced across all clients in realtime and data also remains available if the app goes offline.
 The data stored in the firebase is in the JSON format.
@@ -2307,23 +2310,51 @@ auth.$signInWithPopup("facebook").then(function() {
 // An error happened.
 })
 
+## Read Write Data:
+
+To read and write data to the database you need a instance of firebase.database.Reference:
+
+####Code
+// Get a reference to the database service
+var database = firebase.database().ref();
+
+* Write:
+For write operations, you can use "$add()" to save data to a specified reference.
+
+####Code
+// Inside  Controller named as CategoriesCtrl
+function() {
+      firebase.database().ref().child("/categories/").$add({name: this.newCategoryName});
+}
+
+In the example we are storing the data to the child reference named as "categories" which has the property as "name".
+You can add as many properties to this child node.
 
 
+* Read:
+
+For the read operation you again need the reference of the child node from which you want to retrive or read the data that is available in the firebase database.
+Here we are using the firebase's "$firebaseArray() service" to retrive the data from the firebase database.
+This service takes a Firebase reference and returns a JavaScript array which contains the data at the provided Firebase reference.
+
+####Code 
+
+// in controller file
+
+var ref = firebase.database().ref().child("/categories/");
+
+$scope.categories = $firebaseArray(ref);
 
 
+// in view file
+
+<div class="row" ng-controller="CategoriesCtrl">
+
+<div ng-repeat="category in categories">
+  {{category.name}}
+</div>
+
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In the ng-repeat loop the "categories" is defined in the controller file and we are linking the controller file and view file by using "ng-controller".
