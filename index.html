@@ -2276,14 +2276,16 @@ Anonymous Login setup:</p>
 a)  In the Firebase console open the Auth section.
 b)  On the Sign-in Methods page, enable the Anonymous sign-in method.
 c)  Call the firebase signInAnonymously() function in your controller file.</p>
-
-<h4 id="code">Code:</h4>
-
-<p>Firebase.auth().signInAnonymously().then(function(){
+<pre class="highlight plaintext"><code>
+Firebase.auth().signInAnonymously().then(function(){
 //Successful
 }).catch(function(error){
 // Handel Error
-});</p>
+});
+
+</code></pre>
+
+<p><hr></p>
 
 <h3 id="password-authentication">Password Authentication</h3>
 
@@ -2298,64 +2300,73 @@ c) Add the below code to your controllerfile.</p>
 <p>The <code class="prettyprint">signInWithEmailAndPassword()</code> method is used so the user can login with the same credentials as he used when he logged in for the first time. </p>
 
 <p>The <code class="prettyprint">signOut()</code> method is used so that user can successfully signout.</p>
-
-<h4 id="code">Code:</h4>
-
-<p>firebase.auth().signInWithEmailAndPassword(email, pass).then(function(){
-console.log(&#39;Signed In Success&rsquo;)
+<pre class="highlight plaintext"><code>
+firebase.auth().signInWithEmailAndPassword(email, pass).then(function(){
+console.log('Signed In Success')
 });
-promise.catch(e =&gt; console.log(e.message));</p>
+promise.catch(e =&gt; console.log(e.message));
 
-<p>});</p>
+});
 
-<p>firebase.auth().createUserWithEmailAndPassword(email, pass);
-promise.catch(e =&gt; console.log(e.message));</p>
 
-<p>});</p>
+firebase.auth().createUserWithEmailAndPassword(email, pass);
+promise.catch(e =&gt; console.log(e.message));
 
-<p>firebase.auth().signOut().then(function() {
+});
+
+
+firebase.auth().signOut().then(function() {
   // Sign-out successful.
 }, function(error) {
   // An error happened.
-});</p>
+});
+
+</code></pre>
+
+<p><hr></p>
 
 <h3 id="signin-with-facebook">SignIn with Facebook</h3>
 
 <p>Using this method the user can use his facebook account credentials to login to an application.</p>
 
 <p>Follow the <a href="https://www.youtube.com/watch?v=8XnUs2xY5c4&amp;feature=youtu.be">video</a> do the setup setp by step.</p>
-
-<h4 id="code">Code</h4>
-
-<p>auth.$signInWithPopup(&ldquo;facebook&rdquo;).then(function() {
+<pre class="highlight plaintext"><code>
+auth.$signInWithPopup("facebook").then(function() {
 // successful signin
 }).catch((function(err) {
 // An error happened.
-})</p>
+})
+</code></pre>
 
 <h2 id="read-write-data">Read Write Data:</h2>
 
-<p>To read and write data to the database you need a instance of firebase.database.Reference:</p>
+<p>To read and write data to the database you need a instance of firebase.database.Reference.
+A Reference represents a specific location in your database and can be used for reading or writing data to that database.</p>
+<pre class="highlight plaintext"><code>
+// Get a reference to the database service
+var database = firebase.database().ref();
 
-<h4 id="code">Code</h4>
+or
 
-<p>// Get a reference to the database service
-var database = firebase.database().ref();</p>
+var database = firebase.database().ref("child/path");
+
+</code></pre>
 
 <ul>
 <li>Write:
+Write means we are writing or storing the data to the firebase database.
+In firebase we need to provide the reference where we want to store the data.
 For write operations, you can use &ldquo;$add()&rdquo; to save data to a specified reference.</li>
 </ul>
-
-<h4 id="code">Code</h4>
-
-<p>// Inside  Controller named as CategoriesCtrl
+<pre class="highlight plaintext"><code>
+// Inside  Controller named as CategoriesCtrl
 function() {
-      firebase.database().ref().child(&ldquo;/categories/&rdquo;).$add({name: this.newCategoryName});
-}</p>
+      firebase.database().ref().child("/categories/").$add({name: this.newCategoryName});
+}
 
-<p>In the example we are storing the data to the child reference named as &ldquo;categories&rdquo; which has the property as &ldquo;name&rdquo;.
-You can add as many properties to this child node.</p>
+In the example we are storing the data to the child reference named as "categories" which has the property as "name".
+You can add as many properties to this child node.
+</code></pre>
 
 <ul>
 <li>Read:</li>
@@ -2364,26 +2375,44 @@ You can add as many properties to this child node.</p>
 <p>For the read operation you again need the reference of the child node from which you want to retrive or read the data that is available in the firebase database.
 Here we are using the firebase&rsquo;s &ldquo;$firebaseArray() service&rdquo; to retrive the data from the firebase database.
 This service takes a Firebase reference and returns a JavaScript array which contains the data at the provided Firebase reference.</p>
+<pre class="highlight plaintext"><code>
+// in controller file
 
-<h4 id="code">Code</h4>
+var ref = firebase.database().ref().child("/categories/");
 
-<p>// in controller file</p>
+$scope.categories = $firebaseArray(ref);
 
-<p>var ref = firebase.database().ref().child(&ldquo;/categories/&rdquo;);</p>
 
-<p>$scope.categories = $firebaseArray(ref);</p>
+// in view file
 
-<p>// in view file</p>
+&lt;div class="row" ng-controller="CategoriesCtrl"&gt;
 
-<div class="row" ng-controller="CategoriesCtrl">
-
-<div ng-repeat="category in categories">
+&lt;div ng-repeat="category in categories"&gt;
   {{category.name}}
-</div>
+&lt;/div&gt;
 
-<p></div></p>
+&lt;/div&gt;
+
+</code></pre>
 
 <p>In the ng-repeat loop the &ldquo;categories&rdquo; is defined in the controller file and we are linking the controller file and view file by using &ldquo;ng-controller&rdquo;.</p>
+
+<ul>
+<li>Delete</li>
+</ul>
+
+<p>To remove a data from the firebase database we use firebase&rsquo;s &ldquo;$remove()&rdquo; method.
+This method returns a promise that will be fulfilled when the data has been removed from the server. </p>
+
+<p>In the example  $scope.removeCategory is the name of the function which we we will call when we want to remove a particular data.</p>
+<pre class="highlight plaintext"><code>
+// in controller file
+
+$scope.removeCategory = function(contact){
+    $scope.contacts.$remove(contact);
+}
+
+</code></pre>
 
           <h1 id="errors">Errors</h1>
 
