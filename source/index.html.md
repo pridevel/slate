@@ -2220,8 +2220,19 @@ return Maths.multiply(a,a);
 }
 });
 
-```
+// injecting the service in the controller.
+myApp.controller('CalcController', function($scope, CalcService) {
+$scope.square = function() {
+$scope.result = CalcService.square($scope.number);
+}
+});
 
+
+//Example:
+Enter the number: 5
+
+Result: 25
+```
 
 # Firebase 
 
