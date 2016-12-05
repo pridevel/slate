@@ -2254,14 +2254,19 @@ a)	In the Firebase console open the Auth section.
 b)	On the Sign-in Methods page, enable the Anonymous sign-in method.
 c)	Call the firebase signInAnonymously() function in your controller file.
 
-#### Code:
+```firebase
+
 Firebase.auth().signInAnonymously().then(function(){
 //Successful
 }).catch(function(error){
 // Handel Error
 });
 
+```
+<hr>
+
 ### Password Authentication 
+
 We use this type of authentication method when the user needs to login to the account
 You need to follow the steps below:
 a)	In the Firebase console open the Auth section.
@@ -2274,7 +2279,8 @@ The `signInWithEmailAndPassword()` method is used so the user can login with the
 
 The `signOut()` method is used so that user can successfully signout.
 
-####Code:
+```firebase
+
 firebase.auth().signInWithEmailAndPassword(email, pass).then(function(){
 console.log('Signed In Success')
 });
@@ -2295,6 +2301,8 @@ firebase.auth().signOut().then(function() {
   // An error happened.
 });
 
+```
+<hr>
 
 ### SignIn with Facebook
 
@@ -2302,26 +2310,38 @@ Using this method the user can use his facebook account credentials to login to 
 
 Follow the [video]( https://www.youtube.com/watch?v=8XnUs2xY5c4&feature=youtu.be) do the setup setp by step.
 
-####Code
+```firebase
 
 auth.$signInWithPopup("facebook").then(function() {
 // successful signin
 }).catch((function(err) {
 // An error happened.
 })
+```
 
 ## Read Write Data:
 
-To read and write data to the database you need a instance of firebase.database.Reference:
+To read and write data to the database you need a instance of firebase.database.Reference.
+A Reference represents a specific location in your database and can be used for reading or writing data to that database.
 
-####Code
+```firebase
+
 // Get a reference to the database service
 var database = firebase.database().ref();
 
+or
+
+var database = firebase.database().ref("child/path");
+
+```
+
 * Write:
+Write means we are writing or storing the data to the firebase database.
+In firebase we need to provide the reference where we want to store the data.
 For write operations, you can use "$add()" to save data to a specified reference.
 
-####Code
+```firebase
+
 // Inside  Controller named as CategoriesCtrl
 function() {
       firebase.database().ref().child("/categories/").$add({name: this.newCategoryName});
@@ -2329,7 +2349,7 @@ function() {
 
 In the example we are storing the data to the child reference named as "categories" which has the property as "name".
 You can add as many properties to this child node.
-
+```
 
 * Read:
 
@@ -2337,7 +2357,7 @@ For the read operation you again need the reference of the child node from which
 Here we are using the firebase's "$firebaseArray() service" to retrive the data from the firebase database.
 This service takes a Firebase reference and returns a JavaScript array which contains the data at the provided Firebase reference.
 
-####Code 
+```firebase
 
 // in controller file
 
@@ -2356,5 +2376,24 @@ $scope.categories = $firebaseArray(ref);
 
 </div>
 
+```
 
 In the ng-repeat loop the "categories" is defined in the controller file and we are linking the controller file and view file by using "ng-controller".
+
+
+* Delete
+
+To remove a data from the firebase database we use firebase's "$remove()" method.
+This method returns a promise that will be fulfilled when the data has been removed from the server. 
+
+In the example  $scope.removeCategory is the name of the function which we we will call when we want to remove a particular data.
+
+```firebase
+
+// in controller file
+
+$scope.removeCategory = function(contact){
+    $scope.contacts.$remove(contact);
+}
+
+```
