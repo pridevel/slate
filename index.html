@@ -2249,6 +2249,14 @@ $scope.result = CalcService.square($scope.number);
 }
 });
 
+// to take input and display output.
+
+&lt;div ng-app="myApp" ng-controller="CalcController"&gt;
+&lt;p&gt;Enter a number: &lt;input type="number" ng-model="number" /&gt;
+&lt;button ng-click="square()"&gt;&lt;/button&gt;
+&lt;p&gt;Result: {{result}}&lt;/p&gt;
+&lt;/div&gt;
+
 
 //Example:
 Enter the number: 5
