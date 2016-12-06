@@ -2355,6 +2355,7 @@ var database = firebase.database().ref("child/path");
 ```
 
 * Write:
+
 Write means we are writing or storing the data to the firebase database.
 In firebase we need to provide the reference where we want to store the data.
 For write operations, you can use "$add()" to save data to a specified reference.
@@ -2365,10 +2366,10 @@ For write operations, you can use "$add()" to save data to a specified reference
 function() {
       firebase.database().ref().child("/categories/").$add({name: this.newCategoryName});
 }
+```
 
 In the example we are storing the data to the child reference named as "categories" which has the property as "name".
 You can add as many properties to this child node.
-```
 
 * Read:
 
@@ -2389,12 +2390,10 @@ $scope.categories = $firebaseArray(ref);
 
 <div class="row" ng-controller="CategoriesCtrl">
 
-<div ng-repeat="category in categories">
-  {{category.name}}
+<tr ng-repeat="category in categories">
+  <td>{{category.name}}</td>
+</tr>
 </div>
-
-</div>
-
 ```
 
 In the ng-repeat loop the "categories" is defined in the controller file and we are linking the controller file and view file by using "ng-controller".
@@ -2409,10 +2408,72 @@ In the example  $scope.removeCategory is the name of the function which we we wi
 
 ```firebase
 
+//in view file
+
+<tr ng-repeat="category in categories">
+  <td>{{category.name}}</td>
+  <td><a class= btn btn-danger" ng-click="removeCategory(category)">Delete</a>
+</tr>
+
 // in controller file
 
 $scope.removeCategory = function(contact){
     $scope.contacts.$remove(contact);
 }
 
+```
+
+* Update
+
+This are the steps to update the stored data in the database.
+
+```firebase
+
+//in view file
+
+<tr ng-repeat="category in categories">
+  <td>{{category.name}}</td>
+  
+  // to select the category that we want to edit.
+  <td><a class= btn btn-primary" ng-click="EditCategory(category)">Edit</a> 
+  
+  <td>
+  //to update the edited category.
+    <button type="button" class="btn btn-primary" ng-click="$ctrl.updateCategory()">Update</button>
+    
+ // to cancel if you dont want to perform edit.    
+    <button type="button" class="btn btn-warning " ng-click="$ctrl.cancelEdit()">Cancel</button>
+  </td>
+
+</tr>
+
+// in the controller file
+
+//  this function is used to select the data that we want to edit.
+
+$scope.EditCategory = function(category){
+    $scope.id = category.$id;
+    $scope.name = category.name;
+}
+
+// to save the data after we are done with the editing
+
+$scope.updateCategory = function(){
+	var id = $scope.id;
+			
+// Returns the record from the array for the given key, If key isn't found it returns null. 
+	var record = $scope.events.$getRecord(id);
+	console.log(record);
+	record.e_name = $scope.e_name;
+			
+	$scope.categories.$save(record).then(function(){
+	    	console.log('updated category');
+	}		
+}
+
+// Cancel the Edit
+
+$scope.cancelEdit = function(){
+    // return to the home page.
+}
 ```
